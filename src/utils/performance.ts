@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { debounce, throttle } from 'lodash-es';
-import type { DebouncedFunc, ThrottledFunc } from 'lodash-es';
+import type { DebouncedFunc } from 'lodash-es';
 
 // =============================================================================
 // Debouncing and Throttling
@@ -30,7 +30,7 @@ export const createThrottled = <T extends (...args: any[]) => any>(
   func: T,
   wait: number = 100,
   options?: Parameters<typeof throttle>[2]
-): ThrottledFunc<T> => {
+) => {
   return throttle(func, wait, options);
 };
 

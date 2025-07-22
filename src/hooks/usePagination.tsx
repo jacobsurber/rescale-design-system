@@ -271,7 +271,7 @@ export const useHybridScroll = ({
     pagination,
     infiniteScroll: infiniteScrollHook,
     // Helper to get current page items for pagination mode
-    getCurrentPageItems: useCallback(<T>(items: T[]) => {
+    getCurrentPageItems: useCallback(<T,>(items: T[]) => {
       if (infiniteScroll) return items;
       return items.slice(pagination.startIndex, pagination.endIndex);
     }, [infiniteScroll, pagination.startIndex, pagination.endIndex]),

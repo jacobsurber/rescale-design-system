@@ -5,8 +5,7 @@ import { CheckOutlined, CloseCircleOutlined } from '@ant-design/icons';
 import { 
   scaleVariants, 
   shakeVariants, 
-  fadeVariants, 
-  transitions 
+  fadeVariants
 } from '../../../utils/animations';
 import { useAnimationVariants } from '../../../providers/MotionProvider';
 

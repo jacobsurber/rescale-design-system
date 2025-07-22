@@ -29,7 +29,6 @@ export const createLazyComponent = <P extends {}>(
 ) => {
   const {
     fallback: CustomFallback = LoadingSpinner,
-    loadingMessage = 'Loading component...',
     errorBoundary: ErrorBoundary,
   } = options;
 
@@ -51,7 +50,7 @@ export const createLazyComponent = <P extends {}>(
     return component;
   };
 
-  LazyWrapper.displayName = `LazyWrapper(${LazyComponent.displayName || 'Component'})`;
+  LazyWrapper.displayName = 'LazyWrapper';
 
   return LazyWrapper;
 };

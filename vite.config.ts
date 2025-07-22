@@ -6,8 +6,6 @@ import path from 'path'
 export default defineConfig({
   plugins: [
     react({
-      // Enable React Fast Refresh
-      fastRefresh: true,
       // Babel configuration for better optimization
       babel: {
         plugins: [
@@ -89,7 +87,7 @@ export default defineConfig({
     // Increase chunk size warning limit
     chunkSizeWarningLimit: 1000,
     // Enable tree shaking
-    target: 'es2015',
+    target: 'es2020',
   },
   // Development optimizations
   server: {
