@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react';
 import { RescaleThemeProvider } from '../src/theme/ThemeProvider';
+import { MotionProvider } from '../src/providers/MotionProvider';
 import '../src/theme/cssVariables.css';
 import '../src/index.css';
 
@@ -81,9 +82,11 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <RescaleThemeProvider>
-        <div style={{ padding: '1rem' }}>
-          <Story />
-        </div>
+        <MotionProvider>
+          <div style={{ padding: '1rem' }}>
+            <Story />
+          </div>
+        </MotionProvider>
       </RescaleThemeProvider>
     ),
   ],

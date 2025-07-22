@@ -17,12 +17,12 @@ export default defineConfig({
           //   libraryDirectory: 'es',
           //   style: true,
           // }, 'antd'],
-          // Enable AntD icons tree shaking
-          ['babel-plugin-import', {
-            libraryName: '@ant-design/icons',
-            libraryDirectory: 'es/icons',
-            camel2DashComponentName: false,
-          }, 'ant-design-icons'],
+          // Enable AntD icons tree shaking - temporarily disabled to fix icon undefined errors
+          // ['babel-plugin-import', {
+          //   libraryName: '@ant-design/icons',
+          //   libraryDirectory: 'es/icons',
+          //   camel2DashComponentName: false,
+          // }, 'ant-design-icons'],
         ],
       },
     }),
