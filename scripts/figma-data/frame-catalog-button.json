@@ -1,0 +1,164 @@
+{
+  "fileInfo": {
+    "id": "B0H99zI9iTyU7vusGYP3rk",
+    "name": "Rescale Data+AI",
+    "lastModified": "2025-07-22T20:46:42Z",
+    "exportDate": "2025-07-22T21:08:56.944Z"
+  },
+  "searchTerm": "button",
+  "totalFrames": 8,
+  "frames": [
+    {
+      "id": "I3943:91786;47416:1916",
+      "name": "_Logout Button",
+      "type": "INSTANCE",
+      "page": "Study Entity MS4",
+      "depth": 2,
+      "hasChildren": false,
+      "childCount": 0,
+      "dimensions": {
+        "width": 118,
+        "height": 32
+      },
+      "isButton": true,
+      "isNavigation": false,
+      "isCard": false,
+      "isForm": false,
+      "isModal": false,
+      "searchRelevance": "name"
+    },
+    {
+      "id": "3852:126741",
+      "name": "_Logout Button",
+      "type": "COMPONENT",
+      "page": "Study Entity MS4",
+      "depth": 1,
+      "hasChildren": true,
+      "childCount": 1,
+      "dimensions": {
+        "width": 230,
+        "height": 32
+      },
+      "isButton": true,
+      "isNavigation": false,
+      "isCard": false,
+      "isForm": false,
+      "isModal": false,
+      "searchRelevance": "name"
+    },
+    {
+      "id": "3852:126733",
+      "name": "Button",
+      "type": "INSTANCE",
+      "page": "Study Entity MS4",
+      "depth": 2,
+      "hasChildren": false,
+      "childCount": 0,
+      "dimensions": {
+        "width": 214,
+        "height": 24
+      },
+      "isButton": true,
+      "isNavigation": false,
+      "isCard": false,
+      "isForm": false,
+      "isModal": false,
+      "searchRelevance": "name"
+    },
+    {
+      "id": "8638:222187",
+      "name": "New Button Active",
+      "type": "FRAME",
+      "page": "Studiy Entity MS6",
+      "depth": 1,
+      "hasChildren": true,
+      "childCount": 2,
+      "dimensions": {
+        "width": 1720,
+        "height": 968
+      },
+      "isButton": true,
+      "isNavigation": false,
+      "isCard": false,
+      "isForm": false,
+      "isModal": false,
+      "searchRelevance": "name"
+    },
+    {
+      "id": "8638:223360",
+      "name": "New Button Open",
+      "type": "FRAME",
+      "page": "Studiy Entity MS6",
+      "depth": 1,
+      "hasChildren": true,
+      "childCount": 2,
+      "dimensions": {
+        "width": 1720,
+        "height": 968
+      },
+      "isButton": true,
+      "isNavigation": false,
+      "isCard": false,
+      "isForm": false,
+      "isModal": false,
+      "searchRelevance": "name"
+    },
+    {
+      "id": "8638:224625",
+      "name": "New Button Open Templates",
+      "type": "FRAME",
+      "page": "Studiy Entity MS6",
+      "depth": 1,
+      "hasChildren": true,
+      "childCount": 2,
+      "dimensions": {
+        "width": 1720,
+        "height": 968
+      },
+      "isButton": true,
+      "isNavigation": false,
+      "isCard": false,
+      "isForm": false,
+      "isModal": false,
+      "searchRelevance": "name"
+    },
+    {
+      "id": "1190:44648",
+      "name": "Type=Combo Button",
+      "type": "COMPONENT",
+      "page": "Rescale Data Components",
+      "depth": 2,
+      "hasChildren": false,
+      "childCount": 0,
+      "dimensions": {
+        "width": 149,
+        "height": 34
+      },
+      "isButton": true,
+      "isNavigation": false,
+      "isCard": false,
+      "isForm": false,
+      "isModal": false,
+      "searchRelevance": "name"
+    },
+    {
+      "id": "8638:226468",
+      "name": "_Logout Button",
+      "type": "INSTANCE",
+      "page": "Rescale Data Components",
+      "depth": 2,
+      "hasChildren": false,
+      "childCount": 0,
+      "dimensions": {
+        "width": 360,
+        "height": 32
+      },
+      "isButton": true,
+      "isNavigation": false,
+      "isCard": false,
+      "isForm": false,
+      "isModal": false,
+      "searchRelevance": "name"
+    }
+  ]
+}
