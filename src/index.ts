@@ -3,7 +3,7 @@
 // =============================================================================
 
 // Theme and Configuration
-export { ThemeProvider } from './theme/ThemeProvider';
+export { RescaleThemeProvider, useRescaleTheme } from './theme/ThemeProvider';
 export { rescaleTheme } from './theme/rescaleTheme';
 export * from './theme/tokens';
 export type { RescaleTheme } from './theme/rescaleTheme';
