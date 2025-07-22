@@ -1,0 +1,8 @@
+{
+  "name": "rescale-design-system-storybook",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd .. && npm install && npm run build-storybook && cp -r storybook-static/* storybook-deploy/"
+  }
+}
