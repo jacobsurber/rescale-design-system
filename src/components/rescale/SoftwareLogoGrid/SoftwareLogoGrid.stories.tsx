@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { SoftwareLogoGrid, SoftwareItem } from './SoftwareLogoGrid';
+import { SoftwareLogoGrid } from './SoftwareLogoGrid'
+import type { SoftwareItem } from './SoftwareLogoGrid';
 import { CodeOutlined, DatabaseOutlined, CloudOutlined, ApiOutlined } from '@ant-design/icons';
 
 /**

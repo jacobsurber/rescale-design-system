@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { AssistantChat, ChatMessage } from './AssistantChat';
+import { AssistantChat } from './AssistantChat';
+import type { ChatMessage } from './AssistantChat';
 import { RobotOutlined, UserOutlined } from '@ant-design/icons';
 
 /**

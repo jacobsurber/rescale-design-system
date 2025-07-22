@@ -1,9 +1,12 @@
-import React, { ReactElement, ReactNode } from 'react';
-import { render, RenderOptions, RenderResult } from '@testing-library/react';
+import React from 'react';
+import type { ReactElement, ReactNode } from 'react';
+import { render } from '@testing-library/react';
+import type { RenderOptions, RenderResult } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 // import { axe, toHaveNoViolations } from 'jest-axe';
 import { RescaleThemeProvider } from '../theme/ThemeProvider';
 import rescaleTheme from '../theme/rescaleTheme';
+import type { ChatMessage } from '../components/rescale/AssistantChat/AssistantChat';
 
 // Temporarily mock axe until jest-axe is properly installed
 const axe = async (container: Element) => ({ violations: [] });
@@ -185,11 +188,11 @@ export const mockData = {
   }),
 
   // Generate mock chat messages
-  generateChatMessages: (count = 3) => {
+  generateChatMessages: (count = 3): ChatMessage[] => {
     return Array.from({ length: count }, (_, index) => ({
       id: `message-${index}`,
       content: `Mock message ${index + 1}`,
-      sender: index % 2 === 0 ? 'user' : 'assistant' as const,
+      sender: (index % 2 === 0 ? 'user' : 'assistant') as ChatMessage['sender'],
       timestamp: new Date(Date.now() - index * 60 * 1000),
     }));
   },

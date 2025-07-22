@@ -101,7 +101,7 @@ export const WithTabs: Story = {
           label: 'Settings',
         },
       ],
-      onChange: (key) => console.log('Tab changed:', key),
+      onChange: (key: string) => console.log('Tab changed:', key),
     },
   },
 };
@@ -154,7 +154,7 @@ export const CompleteExample: Story = {
           label: 'Logs',
         },
       ],
-      onChange: (key) => console.log('Tab changed:', key),
+      onChange: (key: string) => console.log('Tab changed:', key),
     },
   },
 };

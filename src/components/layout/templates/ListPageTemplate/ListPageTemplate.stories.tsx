@@ -201,7 +201,7 @@ export const WithTabs: Story = {
         { key: 'data', label: 'Data Files' },
         { key: 'results', label: 'Results' },
       ],
-      onChange: (key) => console.log('Tab changed:', key),
+      onChange: (key: string) => console.log('Tab changed:', key),
     },
     searchPlaceholder: 'Search resources...',
     toolbarActions: (

@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
-import { ThemeProvider } from '../theme/ThemeProvider';
+import { RescaleThemeProvider } from '../theme/ThemeProvider';
 import { 
   JobStatusIndicator,
   SoftwareLogoGrid,
@@ -17,9 +17,9 @@ expect.extend(toHaveNoViolations);
 describe('Accessibility Compliance', () => {
   const renderWithTheme = (component: React.ReactElement) => {
     return render(
-      <ThemeProvider>
+      <RescaleThemeProvider>
         {component}
-      </ThemeProvider>
+      </RescaleThemeProvider>
     );
   };
 
@@ -249,7 +249,7 @@ describe('Accessibility Compliance', () => {
     it('ResourceMetrics has proper progress announcements', () => {
       const metrics = [
         { type: 'cpu', usage: 75, current: '3.0 GHz', total: '4.0 GHz' }
-      ] as const;
+      ];
       
       renderWithTheme(
         <ResourceMetrics metrics={metrics} />
@@ -268,7 +268,7 @@ describe('Accessibility Compliance', () => {
       );
 
       const buttons = screen.getAllByRole('button');
-      buttons.forEach((button, index) => {
+      buttons.forEach((button) => {
         expect(button).toHaveAccessibleName();
       });
     });

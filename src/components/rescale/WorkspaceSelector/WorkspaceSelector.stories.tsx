@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { WorkspaceSelector, Workspace } from './WorkspaceSelector';
+import { WorkspaceSelector } from './WorkspaceSelector'
+import type { Workspace } from './WorkspaceSelector';
 import { TeamOutlined, UserOutlined } from '@ant-design/icons';
 
 /**

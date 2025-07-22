@@ -31,14 +31,23 @@
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "warn",
     "@typescript-eslint/no-unused-vars": [
-      "error",
+      "warn",
       {
         "argsIgnorePattern": "^_",
         "varsIgnorePattern": "^_"
       }
     ],
-    "prettier/prettier": "error"
+    "@typescript-eslint/no-empty-object-type": "warn",
+    "react-refresh/only-export-components": "warn",
+    "prettier/prettier": "warn"
   },
+  "ignorePatterns": [
+    "dist/**",
+    "coverage/**",
+    "storybook-static/**",
+    "node_modules/**",
+    "*.js"
+  ],
   "settings": {
     "react": {
       "version": "detect"

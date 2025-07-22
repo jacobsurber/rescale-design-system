@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ResourceMetrics, ResourceMetric } from './ResourceMetrics';
+import { ResourceMetrics } from './ResourceMetrics'
+import type { ResourceMetric } from './ResourceMetrics';
 
 /**
  * The ResourceMetrics component displays system resource usage with circular progress indicators.

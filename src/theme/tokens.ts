@@ -144,15 +144,71 @@ export const animation = {
   },
 } as const;
 
+// Semantic color aliases for easier component usage
+export const semanticColors = {
+  primary: {
+    main: primaryColors.brandBlue,
+    dark: primaryColors.darkBlue,
+    light: primaryColors.lightBlue,
+    contrast: neutralColors.white,
+  },
+  text: {
+    primary: neutralColors.gray900,
+    secondary: neutralColors.gray600,
+    disabled: neutralColors.gray400,
+  },
+  background: {
+    primary: neutralColors.white,
+    secondary: neutralColors.gray50,
+    disabled: neutralColors.gray100,
+    paper: neutralColors.white,
+    hover: neutralColors.gray50,
+  },
+  border: {
+    primary: neutralColors.gray300,
+    secondary: neutralColors.gray200,
+  },
+  error: {
+    main: statusColors.error,
+    light: '#FFEBEE',
+    dark: '#C62828',
+  },
+  success: {
+    main: statusColors.success,
+    light: '#E8F5E8',
+    dark: '#2E7D32',
+  },
+  warning: {
+    main: statusColors.warning,
+    light: '#FFF3E0',
+    dark: '#F57C00',
+  },
+} as const;
+
+// Spacing aliases for easier component usage
+export const spacingAliases = {
+  xs: spacing[1],   // 4px
+  sm: spacing[2],   // 8px
+  md: spacing[4],   // 16px
+  lg: spacing[8],   // 32px
+  xl: spacing[12],  // 48px
+} as const;
+
 // Export all tokens
 export const designTokens = {
   colors: {
-    primary: primaryColors,
+    brand: primaryColors,
     neutral: neutralColors,
     status: statusColors,
+    // Add semantic aliases
+    ...semanticColors,
   },
   typography,
-  spacing,
+  spacing: {
+    ...spacing,
+    // Add spacing aliases
+    ...spacingAliases,
+  },
   borderRadius,
   dimensions,
   shadows,

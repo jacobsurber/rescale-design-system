@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { QuickActions, QuickAction } from './QuickActions';
+import { QuickActions } from './QuickActions'
+import type { QuickAction } from './QuickActions';
 import { 
   RocketOutlined, 
   FileOutlined, 
