@@ -1,0 +1,397 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Design System/Design Tokens" />
+
+# Design Tokens
+
+Design tokens are the visual design atoms of the Rescale design system. They store visual design attributes such as colors, typography, spacing, and more as data that can be used across platforms and technologies.
+
+## Colors
+
+### Primary Colors
+
+The primary color palette represents the core Rescale brand colors.
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+  gap: '16px',
+  margin: '24px 0'
+}}>
+  <div style={{
+    padding: '16px',
+    borderRadius: '8px',
+    backgroundColor: 'var(--rescale-color-brand-blue)',
+    color: 'white'
+  }}>
+    <div style={{ fontWeight: 'bold' }}>Brand Blue</div>
+    <div style={{ fontSize: '12px', opacity: 0.9 }}>--rescale-color-brand-blue</div>
+    <div style={{ fontSize: '12px', opacity: 0.9 }}>#0066cc</div>
+  </div>
+  
+  <div style={{
+    padding: '16px',
+    borderRadius: '8px',
+    backgroundColor: 'var(--rescale-color-light-blue)',
+    color: 'var(--rescale-color-brand-blue)'
+  }}>
+    <div style={{ fontWeight: 'bold' }}>Light Blue</div>
+    <div style={{ fontSize: '12px', opacity: 0.9 }}>--rescale-color-light-blue</div>
+    <div style={{ fontSize: '12px', opacity: 0.9 }}>#e6f3ff</div>
+  </div>
+</div>
+
+### Semantic Colors
+
+Semantic colors convey meaning and state information.
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+  gap: '16px',
+  margin: '24px 0'
+}}>
+  <div style={{
+    padding: '16px',
+    borderRadius: '8px',
+    backgroundColor: 'var(--rescale-color-success)',
+    color: 'white'
+  }}>
+    <div style={{ fontWeight: 'bold' }}>Success</div>
+    <div style={{ fontSize: '12px', opacity: 0.9 }}>--rescale-color-success</div>
+  </div>
+  
+  <div style={{
+    padding: '16px',
+    borderRadius: '8px',
+    backgroundColor: 'var(--rescale-color-warning)',
+    color: 'white'
+  }}>
+    <div style={{ fontWeight: 'bold' }}>Warning</div>
+    <div style={{ fontSize: '12px', opacity: 0.9 }}>--rescale-color-warning</div>
+  </div>
+  
+  <div style={{
+    padding: '16px',
+    borderRadius: '8px',
+    backgroundColor: 'var(--rescale-color-error)',
+    color: 'white'
+  }}>
+    <div style={{ fontWeight: 'bold' }}>Error</div>
+    <div style={{ fontSize: '12px', opacity: 0.9 }}>--rescale-color-error</div>
+  </div>
+  
+  <div style={{
+    padding: '16px',
+    borderRadius: '8px',
+    backgroundColor: 'var(--rescale-color-info)',
+    color: 'white'
+  }}>
+    <div style={{ fontWeight: 'bold' }}>Info</div>
+    <div style={{ fontSize: '12px', opacity: 0.9 }}>--rescale-color-info</div>
+  </div>
+</div>
+
+### Gray Scale
+
+A full range of grays for text, backgrounds, and borders.
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+  gap: '8px',
+  margin: '24px 0'
+}}>
+  {[
+    { name: 'Gray 50', var: '--rescale-color-gray-50', bg: '#fafafa' },
+    { name: 'Gray 100', var: '--rescale-color-gray-100', bg: '#f5f5f5' },
+    { name: 'Gray 200', var: '--rescale-color-gray-200', bg: '#e8e9ea' },
+    { name: 'Gray 300', var: '--rescale-color-gray-300', bg: '#d9d9d9' },
+    { name: 'Gray 400', var: '--rescale-color-gray-400', bg: '#bfbfbf' },
+    { name: 'Gray 500', var: '--rescale-color-gray-500', bg: '#8c8c8c' },
+    { name: 'Gray 600', var: '--rescale-color-gray-600', bg: '#595959' },
+    { name: 'Gray 700', var: '--rescale-color-gray-700', bg: '#434343' },
+    { name: 'Gray 800', var: '--rescale-color-gray-800', bg: '#262626' },
+    { name: 'Gray 900', var: '--rescale-color-gray-900', bg: '#1f1f1f' },
+  ].map(color => (
+    <div key={color.name} style={{
+      padding: '12px 8px',
+      borderRadius: '6px',
+      backgroundColor: color.bg,
+      color: ['Gray 600', 'Gray 700', 'Gray 800', 'Gray 900'].includes(color.name) ? 'white' : 'black',
+      fontSize: '12px',
+      textAlign: 'center'
+    }}>
+      <div style={{ fontWeight: 'bold' }}>{color.name}</div>
+      <div style={{ opacity: 0.8, marginTop: '4px' }}>{color.var}</div>
+    </div>
+  ))}
+</div>
+
+## Typography
+
+### Font Families
+
+```css
+/* Primary font stack */
+--rescale-font-family-base: "Segoe UI", system-ui, -apple-system, "San Francisco", "Helvetica Neue", sans-serif;
+
+/* Monospace font stack */
+--rescale-font-family-code: Monaco, "Fira Code", "Consolas", monospace;
+```
+
+### Font Sizes
+
+<div style={{ margin: '24px 0' }}>
+  {[
+    { name: 'xs', size: '12px', var: '--rescale-font-size-xs' },
+    { name: 'sm', size: '14px', var: '--rescale-font-size-sm' },
+    { name: 'base', size: '16px', var: '--rescale-font-size-base' },
+    { name: 'lg', size: '18px', var: '--rescale-font-size-lg' },
+    { name: 'xl', size: '20px', var: '--rescale-font-size-xl' },
+    { name: '2xl', size: '24px', var: '--rescale-font-size-2xl' },
+    { name: '3xl', size: '30px', var: '--rescale-font-size-3xl' },
+    { name: '4xl', size: '36px', var: '--rescale-font-size-4xl' },
+  ].map(font => (
+    <div key={font.name} style={{
+      display: 'flex',
+      alignItems: 'center',
+      gap: '16px',
+      padding: '8px 0',
+      borderBottom: '1px solid var(--rescale-color-gray-200)'
+    }}>
+      <div style={{
+        fontSize: font.size,
+        fontWeight: 'var(--rescale-font-weight-medium)',
+        minWidth: '200px'
+      }}>
+        The quick brown fox
+      </div>
+      <div style={{
+        fontSize: '12px',
+        color: 'var(--rescale-color-gray-600)',
+        fontFamily: 'var(--rescale-font-family-code)'
+      }}>
+        {font.var} • {font.size}
+      </div>
+    </div>
+  ))}
+</div>
+
+### Font Weights
+
+<div style={{ margin: '24px 0' }}>
+  {[
+    { name: 'Light', weight: '300', var: '--rescale-font-weight-light' },
+    { name: 'Regular', weight: '400', var: '--rescale-font-weight-normal' },
+    { name: 'Medium', weight: '500', var: '--rescale-font-weight-medium' },
+    { name: 'Semibold', weight: '600', var: '--rescale-font-weight-semibold' },
+    { name: 'Bold', weight: '700', var: '--rescale-font-weight-bold' },
+  ].map(weight => (
+    <div key={weight.name} style={{
+      display: 'flex',
+      alignItems: 'center',
+      gap: '16px',
+      padding: '8px 0',
+      borderBottom: '1px solid var(--rescale-color-gray-200)'
+    }}>
+      <div style={{
+        fontSize: '18px',
+        fontWeight: weight.weight,
+        minWidth: '200px'
+      }}>
+        {weight.name}
+      </div>
+      <div style={{
+        fontSize: '12px',
+        color: 'var(--rescale-color-gray-600)',
+        fontFamily: 'var(--rescale-font-family-code)'
+      }}>
+        {weight.var} • {weight.weight}
+      </div>
+    </div>
+  ))}
+</div>
+
+## Spacing
+
+Consistent spacing scale based on 4px increments.
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+  gap: '16px',
+  margin: '24px 0'
+}}>
+  {[
+    { name: 'Space 1', value: '4px', var: '--rescale-space-1' },
+    { name: 'Space 2', value: '8px', var: '--rescale-space-2' },
+    { name: 'Space 3', value: '12px', var: '--rescale-space-3' },
+    { name: 'Space 4', value: '16px', var: '--rescale-space-4' },
+    { name: 'Space 5', value: '20px', var: '--rescale-space-5' },
+    { name: 'Space 6', value: '24px', var: '--rescale-space-6' },
+    { name: 'Space 8', value: '32px', var: '--rescale-space-8' },
+    { name: 'Space 10', value: '40px', var: '--rescale-space-10' },
+    { name: 'Space 12', value: '48px', var: '--rescale-space-12' },
+  ].map(space => (
+    <div key={space.name} style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '8px'
+    }}>
+      <div style={{
+        width: space.value,
+        height: space.value,
+        backgroundColor: 'var(--rescale-color-brand-blue)',
+        borderRadius: '2px'
+      }}></div>
+      <div style={{
+        fontSize: '12px',
+        textAlign: 'center'
+      }}>
+        <div style={{ fontWeight: 'bold' }}>{space.name}</div>
+        <div style={{ color: 'var(--rescale-color-gray-600)' }}>{space.value}</div>
+      </div>
+    </div>
+  ))}
+</div>
+
+## Border Radius
+
+Consistent border radius scale for rounded corners.
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))',
+  gap: '16px',
+  margin: '24px 0'
+}}>
+  {[
+    { name: 'None', value: '0px', var: '--rescale-radius-none' },
+    { name: 'XS', value: '2px', var: '--rescale-radius-xs' },
+    { name: 'SM', value: '4px', var: '--rescale-radius-sm' },
+    { name: 'Base', value: '6px', var: '--rescale-radius-base' },
+    { name: 'MD', value: '8px', var: '--rescale-radius-md' },
+    { name: 'LG', value: '12px', var: '--rescale-radius-lg' },
+    { name: 'XL', value: '16px', var: '--rescale-radius-xl' },
+    { name: 'Full', value: '9999px', var: '--rescale-radius-full' },
+  ].map(radius => (
+    <div key={radius.name} style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '8px'
+    }}>
+      <div style={{
+        width: '60px',
+        height: '40px',
+        backgroundColor: 'var(--rescale-color-brand-blue)',
+        borderRadius: radius.value
+      }}></div>
+      <div style={{
+        fontSize: '12px',
+        textAlign: 'center'
+      }}>
+        <div style={{ fontWeight: 'bold' }}>{radius.name}</div>
+        <div style={{ color: 'var(--rescale-color-gray-600)' }}>{radius.value}</div>
+      </div>
+    </div>
+  ))}
+</div>
+
+## Shadows
+
+Elevation system using box shadows.
+
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
+  gap: '16px',
+  margin: '24px 0'
+}}>
+  {[
+    { name: 'None', var: '--rescale-shadow-none', shadow: 'none' },
+    { name: 'SM', var: '--rescale-shadow-sm', shadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)' },
+    { name: 'Base', var: '--rescale-shadow-base', shadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)' },
+    { name: 'MD', var: '--rescale-shadow-md', shadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)' },
+    { name: 'LG', var: '--rescale-shadow-lg', shadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' },
+    { name: 'XL', var: '--rescale-shadow-xl', shadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)' },
+  ].map(shadow => (
+    <div key={shadow.name} style={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      gap: '8px'
+    }}>
+      <div style={{
+        width: '80px',
+        height: '60px',
+        backgroundColor: 'white',
+        borderRadius: '8px',
+        boxShadow: shadow.shadow
+      }}></div>
+      <div style={{
+        fontSize: '12px',
+        textAlign: 'center'
+      }}>
+        <div style={{ fontWeight: 'bold' }}>{shadow.name}</div>
+        <div style={{ 
+          color: 'var(--rescale-color-gray-600)',
+          fontFamily: 'var(--rescale-font-family-code)'
+        }}>{shadow.var}</div>
+      </div>
+    </div>
+  ))}
+</div>
+
+## Animation
+
+Duration and easing values for consistent motion.
+
+### Durations
+
+- `--rescale-duration-fast`: 150ms
+- `--rescale-duration-base`: 250ms  
+- `--rescale-duration-slow`: 350ms
+- `--rescale-duration-slower`: 500ms
+
+### Easing
+
+- `--rescale-easing-ease`: ease
+- `--rescale-easing-ease-in`: ease-in
+- `--rescale-easing-ease-out`: ease-out
+- `--rescale-easing-ease-in-out`: ease-in-out
+
+## Usage
+
+Design tokens can be used in CSS, styled-components, or directly in component props:
+
+```css
+/* CSS */
+.button {
+  background-color: var(--rescale-color-brand-blue);
+  padding: var(--rescale-space-3) var(--rescale-space-4);
+  border-radius: var(--rescale-radius-base);
+  font-size: var(--rescale-font-size-base);
+}
+```
+
+```jsx
+// Styled Components
+const Button = styled.button`
+  background-color: var(--rescale-color-brand-blue);
+  padding: var(--rescale-space-3) var(--rescale-space-4);
+  border-radius: var(--rescale-radius-base);
+`;
+```
+
+```jsx
+// Inline styles
+<div style={{ 
+  color: 'var(--rescale-color-gray-700)',
+  fontSize: 'var(--rescale-font-size-sm)' 
+}}>
+  Content
+</div>
+```

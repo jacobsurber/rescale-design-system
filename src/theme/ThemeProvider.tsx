@@ -75,10 +75,8 @@ export const RescaleThemeProvider: React.FC<RescaleThemeProviderProps> = ({
  * 
  * @example
  * ```tsx
- * import { useRescaleTheme } from '@/theme';
- * 
+ *  * 
  * function MyComponent() {
- *   const { tokens } = useRescaleTheme();
  *   
  *   return (
  *     <div style={{ color: tokens.colors.primary.brandBlue }}>

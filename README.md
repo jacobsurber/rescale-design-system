@@ -1,30 +1,79 @@
 # Rescale Design System
 
-A comprehensive React TypeScript design system built with Ant Design, Storybook, and modern development tools.
+A comprehensive React component library built on Ant Design, specifically designed for Rescale applications. The design system provides consistent UI components, design tokens, and patterns to accelerate development and ensure design consistency across all Rescale products.
+
+## ✨ Features
+
+- 🎨 **Pre-configured Rescale Theme** - Ready-to-use theme with Rescale branding
+- 🧩 **Extensive Component Library** - 50+ components including specialized Rescale components
+- 🚀 **Built on Ant Design 5.x** - Leverages the power and stability of Ant Design
+- 💎 **Design Tokens** - Consistent spacing, colors, typography, and more
+- 📱 **Responsive Design** - Mobile-first approach with breakpoint system
+- 🔧 **TypeScript Support** - Full TypeScript definitions included
+- 📚 **Comprehensive Documentation** - Storybook with interactive examples
+- ♿ **Accessibility** - WCAG 2.1 compliant components
+- 🎭 **Theming Support** - Easy customization and dark mode support
+
+## 📦 Installation
+
+```bash
+npm install rescale-design-system
+# or
+yarn add rescale-design-system
+```
+
+### Peer Dependencies
+
+```bash
+npm install react react-dom antd @ant-design/icons styled-components dayjs
+```
 
 ## 🚀 Quick Start
 
-```bash
-# Install dependencies
-npm install
+### 1. Setup Theme Provider
 
-# Start development server
-npm run dev
+```jsx
+import React from 'react';
+import { ThemeProvider } from 'rescale-design-system';
+import 'rescale-design-system/dist/index.css';
 
-# Launch Storybook
-npm run storybook
+function App() {
+  return (
+    <ThemeProvider>
+      <YourApplication />
+    </ThemeProvider>
+  );
+}
+
+export default App;
 ```
 
-## 📦 What's Included
+### 2. Use Components
 
-- ⚛️ **React 19** with TypeScript
-- 🎨 **Ant Design** with custom theming
-- 💅 **Styled Components** for custom styling
-- 📚 **Storybook** for component documentation
-- 🧪 **Jest + React Testing Library** for testing
-- ⚡ **Vite** for fast builds and HMR
-- 🔧 **ESLint + Prettier** for code quality
-- 🏗️ **Atomic Design** component structure
+```jsx
+import { Button, JobStatusIndicator, ResourceMetrics } from 'rescale-design-system';
+
+function Dashboard() {
+  return (
+    <div>
+      <Button type="primary">Create New Job</Button>
+      
+      <JobStatusIndicator 
+        status="running" 
+        progress={65} 
+        duration="1h 23m" 
+      />
+      
+      <ResourceMetrics 
+        metrics={[
+          { type: 'cpu', usage: 45, current: '1.8 GHz', total: '4.0 GHz' },
+          { type: 'memory', usage: 67, current: '10.7 GB', total: '16 GB' }
+        ]} 
+      />
+    </div>
+  );
+}
+```
 
 ## 📁 Project Structure
 
@@ -34,14 +83,25 @@ src/
 │   ├── atoms/          # Basic building blocks (Button, Card, etc.)
 │   ├── molecules/      # Combinations of atoms
 │   ├── organisms/      # Complex components
-│   └── templates/      # Page layouts
+│   ├── layout/         # Layout components
+│   ├── navigation/     # Navigation components
+│   ├── forms/          # Form components
+│   ├── display/        # Display components
+│   ├── cards/          # Card components
+│   ├── templates/      # Page layouts
+│   └── rescale/        # Rescale-specific components
+├── theme/
+│   ├── cssVariables.css    # CSS design tokens
+│   ├── rescaleTheme.ts     # Ant Design theme
+│   └── tokens.ts           # Design token definitions
 ├── styles/
-│   ├── theme.ts        # Ant Design theme configuration
-│   └── global.css      # Global styles
+│   ├── breakpoints.ts      # Responsive breakpoints
+│   └── global.css          # Global styles
 ├── hooks/              # Custom React hooks
 ├── utils/              # Utility functions
 ├── types/              # TypeScript type definitions
-└── pages/              # Page components
+├── demo/               # Demo applications
+└── stories/            # Storybook documentation
 ```
 
 ## 🔧 Available Scripts

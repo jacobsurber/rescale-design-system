@@ -1,0 +1,397 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`SoftwareLogoGrid Snapshots matches snapshot in different sizes 1`] = `
+<div
+  class="sc-bRKDuR llfmNz"
+>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm GyTs"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv dlpNph css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="ANSYS Fluent"
+        src="🌊"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA crbPDy"
+    >
+      ANSYS Fluent
+    </span>
+  </div>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm GyTs"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv dlpNph css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="OpenFOAM"
+        src="💨"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA crbPDy"
+    >
+      OpenFOAM
+    </span>
+  </div>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm GyTs"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv dlpNph css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="Abaqus"
+        src="🔧"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA crbPDy"
+    >
+      Abaqus
+    </span>
+  </div>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm GyTs"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv dlpNph css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="MATLAB"
+        src="📊"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA crbPDy"
+    >
+      MATLAB
+    </span>
+  </div>
+</div>
+`;
+
+exports[`SoftwareLogoGrid Snapshots matches snapshot in different sizes 2`] = `
+<div
+  class="sc-bRKDuR cfUdnq"
+>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm biOyrH"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv fTkduH css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="ANSYS Fluent"
+        src="🌊"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA hdWqAX"
+    >
+      ANSYS Fluent
+    </span>
+  </div>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm biOyrH"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv fTkduH css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="OpenFOAM"
+        src="💨"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA hdWqAX"
+    >
+      OpenFOAM
+    </span>
+  </div>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm biOyrH"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv fTkduH css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="Abaqus"
+        src="🔧"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA hdWqAX"
+    >
+      Abaqus
+    </span>
+  </div>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm biOyrH"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv fTkduH css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="MATLAB"
+        src="📊"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA hdWqAX"
+    >
+      MATLAB
+    </span>
+  </div>
+</div>
+`;
+
+exports[`SoftwareLogoGrid Snapshots matches snapshot in different sizes 3`] = `
+<div
+  class="sc-bRKDuR hTvHoB"
+>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm iHdBZO"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv dvyqMm css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="ANSYS Fluent"
+        src="🌊"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA gZZFkY"
+    >
+      ANSYS Fluent
+    </span>
+  </div>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm iHdBZO"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv dvyqMm css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="OpenFOAM"
+        src="💨"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA gZZFkY"
+    >
+      OpenFOAM
+    </span>
+  </div>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm iHdBZO"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv dvyqMm css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="Abaqus"
+        src="🔧"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA gZZFkY"
+    >
+      Abaqus
+    </span>
+  </div>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm iHdBZO"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv dvyqMm css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="MATLAB"
+        src="📊"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA gZZFkY"
+    >
+      MATLAB
+    </span>
+  </div>
+</div>
+`;
+
+exports[`SoftwareLogoGrid Snapshots matches snapshot with few items 1`] = `
+<div
+  class="sc-bRKDuR cfUdnq"
+>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm biOyrH"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv fTkduH css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="ANSYS Fluent"
+        src="🌊"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA hdWqAX"
+    >
+      ANSYS Fluent
+    </span>
+  </div>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm biOyrH"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv fTkduH css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="OpenFOAM"
+        src="💨"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA hdWqAX"
+    >
+      OpenFOAM
+    </span>
+  </div>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm biOyrH"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv fTkduH css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="Abaqus"
+        src="🔧"
+      />
+    </span>
+    <span
+      class="sc-ggWZvA hdWqAX"
+    >
+      Abaqus
+    </span>
+  </div>
+</div>
+`;
+
+exports[`SoftwareLogoGrid Snapshots matches snapshot with overflow 1`] = `
+<div
+  class="sc-bRKDuR cfUdnq"
+>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm joHOqy"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv fTkduH css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="ANSYS Fluent"
+        src="🌊"
+      />
+    </span>
+  </div>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm joHOqy"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv fTkduH css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="OpenFOAM"
+        src="💨"
+      />
+    </span>
+  </div>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm joHOqy"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv fTkduH css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="Abaqus"
+        src="🔧"
+      />
+    </span>
+  </div>
+  <div
+    aria-describedby="test-id"
+    class="sc-hvigdm joHOqy"
+  >
+    <span
+      class="ant-avatar ant-avatar-circle ant-avatar-image sc-fhHczv fTkduH css-dev-only-do-not-override-5rmn7t"
+    >
+      <img
+        alt="MATLAB"
+        src="📊"
+      />
+    </span>
+  </div>
+  <div>
+    <button
+      aria-describedby="test-id"
+      class="ant-btn css-dev-only-do-not-override-5rmn7t ant-btn-text ant-btn-color-default ant-btn-variant-text sc-dTvVRJ jeuxjj"
+      type="button"
+    >
+      <div
+        style="display: flex; flex-direction: column; align-items: center;"
+      >
+        <span
+          aria-label="plus"
+          class="anticon anticon-plus"
+          role="img"
+        >
+          <svg
+            aria-hidden="true"
+            data-icon="plus"
+            fill="currentColor"
+            focusable="false"
+            height="1em"
+            viewBox="64 64 896 896"
+            width="1em"
+          >
+            <path
+              d="M482 152h60q8 0 8 8v704q0 8-8 8h-60q-8 0-8-8V160q0-8 8-8z"
+            />
+            <path
+              d="M192 474h672q8 0 8 8v60q0 8-8 8H160q-8 0-8-8v-60q0-8 8-8z"
+            />
+          </svg>
+        </span>
+        <span
+          class="sc-jwTyAe gARIeo"
+        >
+          4
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+`;

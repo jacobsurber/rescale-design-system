@@ -1,5 +1,5 @@
 import React from 'react';
-import { Space, Typography } from 'antd';
+import { Typography, Space } from 'antd';
 import { Button, Card } from '@components/atoms';
 import styled from 'styled-components';
 

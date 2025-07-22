@@ -1,0 +1,21 @@
+{
+  "projectToken": "CHROMATIC_PROJECT_TOKEN",
+  "buildScriptName": "build:storybook",
+  "exitOnceUploaded": true,
+  "onlyChanged": true,
+  "externals": [
+    "public/**"
+  ],
+  "ignore": [
+    "src/demo/**",
+    "src/test-utils/**",
+    "**/*.test.*",
+    "**/*.spec.*"
+  ],
+  "threshold": 0.2,
+  "delay": 300,
+  "diffThreshold": 0.1,
+  "pauseAnimationAtEnd": true,
+  "uploadBuild": true,
+  "storybookBuildDir": "storybook-static"
+}
