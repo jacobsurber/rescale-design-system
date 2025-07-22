@@ -5,20 +5,29 @@
  */
 
 :root {
-  /* Primary Colors */
+  /* Primary Colors (Updated from Figma) */
   --rescale-color-brand-blue: #0066CC;
-  --rescale-color-dark-blue: #1A5490;
-  --rescale-color-light-blue: #E8F2FF;
+  --rescale-color-dark-blue: #003D7A;
+  --rescale-color-light-blue: #E6F4FF;
   --rescale-color-sky-blue: #40A9FF;
   
-  /* Neutral Colors */
-  --rescale-color-gray-900: #212529;
-  --rescale-color-gray-700: #495057;
-  --rescale-color-gray-500: #6C757D;
-  --rescale-color-gray-300: #DEE2E6;
-  --rescale-color-gray-100: #F8F9FA;
+  /* Neutral Colors (Enhanced Figma Scale) */
+  --rescale-color-gray-50: #FAFAFA;
+  --rescale-color-gray-100: #F5F5F5;
+  --rescale-color-gray-200: #E8E8E8;
+  --rescale-color-gray-300: #D9D9D9;
+  --rescale-color-gray-400: #BFBFBF;
+  --rescale-color-gray-500: #8C8C8C;
+  --rescale-color-gray-600: #595959;
+  --rescale-color-gray-700: #434343;
+  --rescale-color-gray-800: #262626;
+  --rescale-color-gray-900: #1F1F1F;
   --rescale-color-white: #FFFFFF;
   --rescale-color-black: #000000;
+  
+  /* Figma-Specific Backgrounds */
+  --rescale-color-background-light: #CCCCCC;
+  --rescale-color-background-dark: #555E69;
   
   /* Status Colors */
   --rescale-color-success: #52C41A;

@@ -3,23 +3,31 @@
  * Core design tokens that define the visual language of Rescale
  */
 
-// Primary Colors
+// Primary Colors (updated from Figma extraction)
 export const primaryColors = {
   brandBlue: '#0066CC',
-  darkBlue: '#1A5490',
-  lightBlue: '#E8F2FF',
+  darkBlue: '#003D7A', // From Figma tokens
+  lightBlue: '#E6F4FF', // From Figma tokens
   skyBlue: '#40A9FF',
 } as const;
 
-// Neutral Colors
+// Neutral Colors (enhanced with Figma-extracted grays)
 export const neutralColors = {
-  gray900: '#212529', // Primary text
-  gray700: '#495057', // Secondary text
-  gray500: '#6C757D', // Disabled text
-  gray300: '#DEE2E6', // Borders
-  gray100: '#F8F9FA', // Backgrounds
+  gray900: '#1F1F1F', // From Figma tokens
+  gray800: '#262626', // From Figma tokens
+  gray700: '#434343', // From Figma tokens
+  gray600: '#595959', // From Figma tokens
+  gray500: '#8C8C8C', // From Figma tokens
+  gray400: '#BFBFBF', // From Figma tokens
+  gray300: '#D9D9D9', // From Figma tokens
+  gray200: '#E8E8E8', // From Figma tokens
+  gray100: '#F5F5F5', // From Figma tokens
+  gray50: '#FAFAFA',  // From Figma tokens
   white: '#FFFFFF',
   black: '#000000',
+  // Figma-specific backgrounds
+  backgroundLight: '#CCCCCC', // From Figma pages
+  backgroundDark: '#555E69',  // From Figma pages
 } as const;
 
 // Status Colors
