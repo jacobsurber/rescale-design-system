@@ -1,0 +1,40 @@
+name: Quick Check
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  quick-validation:
+    name: 'Quick Type & Build Check'
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Run TypeScript type checking
+      run: npm run typecheck
+      
+    - name: Run build
+      run: npm run build
+      
+    - name: Run validation script
+      run: npm run validate-build
+      continue-on-error: true
+      
+    - name: Show build status
+      run: |
+        echo "✅ TypeScript compilation passed"
+        echo "✅ Build completed successfully"
+        echo "📋 Check the validation report for detailed feedback"

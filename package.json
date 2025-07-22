@@ -53,6 +53,7 @@
     "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx,css,md}\"",
     "typecheck": "tsc --noEmit",
     "fix-types": "node scripts/fix-type-imports.js",
+    "validate-build": "node scripts/validate-build.js",
     "preview": "vite preview",
     "preview:all": "npm run build:all && vite preview",
     "storybook": "storybook dev -p 6006",
