@@ -1,14 +1,13 @@
-import { ConfigProvider } from 'antd'
-import theme from '@styles/theme'
+import { RescaleThemeProvider } from './theme'
 import Home from './pages/Home'
 import '@styles/global.css'
 import './App.css'
 
 function App() {
   return (
-    <ConfigProvider theme={theme}>
+    <RescaleThemeProvider>
       <Home />
-    </ConfigProvider>
+    </RescaleThemeProvider>
   )
 }
 

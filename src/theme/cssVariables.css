@@ -1,0 +1,163 @@
+/**
+ * Rescale Design System - CSS Variables
+ * Custom CSS variables for use outside of Ant Design components
+ * These variables can be used in styled-components, CSS modules, or plain CSS
+ */
+
+:root {
+  /* Primary Colors */
+  --rescale-color-brand-blue: #0066CC;
+  --rescale-color-dark-blue: #1A5490;
+  --rescale-color-light-blue: #E8F2FF;
+  --rescale-color-sky-blue: #40A9FF;
+  
+  /* Neutral Colors */
+  --rescale-color-gray-900: #212529;
+  --rescale-color-gray-700: #495057;
+  --rescale-color-gray-500: #6C757D;
+  --rescale-color-gray-300: #DEE2E6;
+  --rescale-color-gray-100: #F8F9FA;
+  --rescale-color-white: #FFFFFF;
+  --rescale-color-black: #000000;
+  
+  /* Status Colors */
+  --rescale-color-success: #52C41A;
+  --rescale-color-warning: #FA8C16;
+  --rescale-color-error: #FF4D4F;
+  --rescale-color-info: #1890FF;
+  
+  /* Typography */
+  --rescale-font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --rescale-font-size-xs: 12px;
+  --rescale-font-size-sm: 14px;
+  --rescale-font-size-base: 16px;
+  --rescale-font-size-lg: 18px;
+  --rescale-font-size-xl: 20px;
+  --rescale-font-size-2xl: 24px;
+  --rescale-font-size-3xl: 30px;
+  --rescale-font-size-4xl: 38px;
+  
+  --rescale-font-weight-normal: 400;
+  --rescale-font-weight-medium: 500;
+  --rescale-font-weight-semibold: 600;
+  --rescale-font-weight-bold: 700;
+  
+  --rescale-line-height-tight: 1.25;
+  --rescale-line-height-normal: 1.5;
+  --rescale-line-height-relaxed: 1.625;
+  
+  /* Spacing */
+  --rescale-space-0: 0px;
+  --rescale-space-1: 4px;
+  --rescale-space-2: 8px;
+  --rescale-space-3: 12px;
+  --rescale-space-4: 16px;
+  --rescale-space-5: 20px;
+  --rescale-space-6: 24px;
+  --rescale-space-7: 28px;
+  --rescale-space-8: 32px;
+  --rescale-space-10: 40px;
+  --rescale-space-12: 48px;
+  --rescale-space-16: 64px;
+  --rescale-space-20: 80px;
+  --rescale-space-24: 96px;
+  --rescale-space-32: 128px;
+  
+  /* Border Radius */
+  --rescale-radius-none: 0px;
+  --rescale-radius-sm: 2px;
+  --rescale-radius-base: 4px;
+  --rescale-radius-md: 6px;
+  --rescale-radius-lg: 8px;
+  --rescale-radius-xl: 12px;
+  --rescale-radius-2xl: 16px;
+  --rescale-radius-full: 9999px;
+  
+  /* Component Dimensions */
+  --rescale-button-height: 32px;
+  --rescale-input-height: 32px;
+  --rescale-nav-height: 64px;
+  --rescale-sidebar-width: 240px;
+  
+  /* Shadows */
+  --rescale-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --rescale-shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --rescale-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --rescale-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --rescale-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Z-Index */
+  --rescale-z-hide: -1;
+  --rescale-z-auto: auto;
+  --rescale-z-base: 0;
+  --rescale-z-docked: 10;
+  --rescale-z-dropdown: 1000;
+  --rescale-z-sticky: 1100;
+  --rescale-z-banner: 1200;
+  --rescale-z-overlay: 1300;
+  --rescale-z-modal: 1400;
+  --rescale-z-popover: 1500;
+  --rescale-z-skip-link: 1600;
+  --rescale-z-toast: 1700;
+  --rescale-z-tooltip: 1800;
+  
+  /* Animation & Transition */
+  --rescale-duration-fast: 150ms;
+  --rescale-duration-normal: 200ms;
+  --rescale-duration-slow: 300ms;
+  --rescale-duration-slower: 500ms;
+  
+  --rescale-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --rescale-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --rescale-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+}
+
+/* Utility classes for common patterns */
+.rescale-text-primary {
+  color: var(--rescale-color-brand-blue);
+}
+
+.rescale-text-secondary {
+  color: var(--rescale-color-gray-700);
+}
+
+.rescale-text-muted {
+  color: var(--rescale-color-gray-500);
+}
+
+.rescale-bg-primary {
+  background-color: var(--rescale-color-brand-blue);
+}
+
+.rescale-bg-light {
+  background-color: var(--rescale-color-light-blue);
+}
+
+.rescale-bg-gray {
+  background-color: var(--rescale-color-gray-100);
+}
+
+.rescale-shadow {
+  box-shadow: var(--rescale-shadow-base);
+}
+
+.rescale-shadow-lg {
+  box-shadow: var(--rescale-shadow-lg);
+}
+
+.rescale-rounded {
+  border-radius: var(--rescale-radius-base);
+}
+
+.rescale-rounded-lg {
+  border-radius: var(--rescale-radius-lg);
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+  :root {
+    --rescale-font-size-4xl: 32px;
+    --rescale-font-size-3xl: 26px;
+    --rescale-font-size-2xl: 22px;
+  }
+}

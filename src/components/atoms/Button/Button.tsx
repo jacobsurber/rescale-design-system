@@ -3,49 +3,50 @@ import { Button as AntButton } from 'antd';
 import type { ButtonProps as AntButtonProps } from 'antd';
 import styled from 'styled-components';
 
-export interface ButtonProps extends AntButtonProps {
+export interface ButtonProps extends Omit<AntButtonProps, 'variant'> {
   variant?: 'primary' | 'secondary' | 'ghost' | 'text';
 }
 
 const StyledButton = styled(AntButton)<ButtonProps>`
   &.ant-btn {
-    border-radius: 6px;
-    font-weight: 500;
-    transition: all 0.2s ease;
+    border-radius: var(--rescale-radius-base);
+    font-weight: var(--rescale-font-weight-medium);
+    transition: all var(--rescale-duration-normal) var(--rescale-easing-ease-in-out);
     
     ${({ variant }) => {
       switch (variant) {
         case 'secondary':
           return `
-            background-color: #f0f0f0;
-            border-color: #f0f0f0;
-            color: #262626;
+            background-color: var(--rescale-color-gray-100);
+            border-color: var(--rescale-color-gray-300);
+            color: var(--rescale-color-gray-900);
             
             &:hover {
-              background-color: #e6e6e6;
-              border-color: #e6e6e6;
-              color: #262626;
+              background-color: var(--rescale-color-gray-300);
+              border-color: var(--rescale-color-gray-500);
+              color: var(--rescale-color-gray-900);
             }
           `;
         case 'ghost':
           return `
             background-color: transparent;
-            border-color: #d9d9d9;
-            color: #262626;
+            border-color: var(--rescale-color-gray-300);
+            color: var(--rescale-color-gray-900);
             
             &:hover {
-              border-color: #1890ff;
-              color: #1890ff;
+              border-color: var(--rescale-color-brand-blue);
+              color: var(--rescale-color-brand-blue);
             }
           `;
         case 'text':
           return `
             background-color: transparent;
             border: none;
-            color: #1890ff;
+            color: var(--rescale-color-brand-blue);
             
             &:hover {
-              background-color: rgba(24, 144, 255, 0.1);
+              background-color: var(--rescale-color-light-blue);
+              color: var(--rescale-color-dark-blue);
             }
           `;
         default:

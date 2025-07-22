@@ -3,39 +3,39 @@ import { Card as AntCard } from 'antd';
 import type { CardProps as AntCardProps } from 'antd';
 import styled from 'styled-components';
 
-export interface CardProps extends AntCardProps {
+export interface CardProps extends Omit<AntCardProps, 'variant'> {
   variant?: 'default' | 'elevated' | 'outlined';
 }
 
 const StyledCard = styled(AntCard)<CardProps>`
   &.ant-card {
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    border-radius: var(--rescale-radius-lg);
+    transition: all var(--rescale-duration-slow) var(--rescale-easing-ease-in-out);
     
     ${({ variant }) => {
       switch (variant) {
         case 'elevated':
           return `
             border: none;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+            box-shadow: var(--rescale-shadow-md);
             
             &:hover {
-              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+              box-shadow: var(--rescale-shadow-lg);
             }
           `;
         case 'outlined':
           return `
-            border: 1px solid #f0f0f0;
+            border: 1px solid var(--rescale-color-gray-300);
             box-shadow: none;
             
             &:hover {
-              border-color: #1890ff;
+              border-color: var(--rescale-color-brand-blue);
             }
           `;
         default:
           return `
-            border: 1px solid #f0f0f0;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--rescale-color-gray-300);
+            box-shadow: var(--rescale-shadow-sm);
           `;
       }
     }}

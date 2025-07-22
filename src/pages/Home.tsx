@@ -3,24 +3,24 @@ import { Space, Typography } from 'antd';
 import { Button, Card } from '@components/atoms';
 import styled from 'styled-components';
 
-const { Title, Paragraph, Link } = Typography;
+const { Title, Paragraph } = Typography;
 
 const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: var(--rescale-space-10) var(--rescale-space-5);
 `;
 
 const HeroSection = styled.div`
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: var(--rescale-space-16);
 `;
 
 const CardsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px;
-  margin-bottom: 40px;
+  gap: var(--rescale-space-6);
+  margin-bottom: var(--rescale-space-10);
 `;
 
 export const Home: React.FC = () => {
@@ -28,11 +28,11 @@ export const Home: React.FC = () => {
     <Container>
       <HeroSection>
         <Title level={1}>Rescale Design System</Title>
-        <Paragraph style={{ fontSize: '18px', color: '#666' }}>
+        <Paragraph style={{ fontSize: 'var(--rescale-font-size-lg)', color: 'var(--rescale-color-gray-700)' }}>
           A comprehensive design system built with React, TypeScript, and Ant Design.
           Create consistent and beautiful user interfaces with our pre-built components.
         </Paragraph>
-        <Space size="large" style={{ marginTop: '24px' }}>
+        <Space size="large" style={{ marginTop: 'var(--rescale-space-6)' }}>
           <Button size="large" variant="primary" href="/storybook" target="_blank">
             View Storybook
           </Button>
@@ -42,7 +42,7 @@ export const Home: React.FC = () => {
         </Space>
       </HeroSection>
 
-      <Title level={2} style={{ marginBottom: '24px' }}>Features</Title>
+      <Title level={2} style={{ marginBottom: 'var(--rescale-space-6)' }}>Features</Title>
       
       <CardsGrid>
         <Card title="Component Library" variant="elevated">
@@ -70,7 +70,7 @@ export const Home: React.FC = () => {
         </Card>
       </CardsGrid>
 
-      <Card title="Quick Start" style={{ marginTop: '40px' }}>
+      <Card title="Quick Start" style={{ marginTop: 'var(--rescale-space-10)' }}>
         <Paragraph>
           <code>npm install</code> - Install dependencies
         </Paragraph>
