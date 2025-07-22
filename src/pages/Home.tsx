@@ -39,7 +39,7 @@ export const Home: React.FC = () => {
             href={
               window.location.hostname === 'localhost' 
                 ? 'http://localhost:6006' 
-                : `https://${window.location.hostname}` // GitHub Pages URL
+                : 'https://jacobsurber.github.io/rescale-design-system'
             }
             target="_blank"
           >
