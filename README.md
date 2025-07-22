@@ -257,8 +257,8 @@ export const theme: ThemeConfig = {
 
 ## 🔗 Links
 
-- **GitHub Repository**: `https://github.com/your-username/rescale-design-system`
-- **GitHub Pages (Storybook)**: `https://your-username.github.io/rescale-design-system`
+- **GitHub Repository**: `https://github.com/jacobsurber/rescale-design-system`
+- **GitHub Pages (Storybook)**: `https://jacobsurber.github.io/rescale-design-system`
 - **Local Development**: `http://localhost:5173` (main app) | `http://localhost:6006` (Storybook)
 
 ## 🤝 Contributing

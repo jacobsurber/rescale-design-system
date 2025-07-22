@@ -45,7 +45,7 @@ export const Home: React.FC = () => {
           >
             View Storybook
           </Button>
-          <Button size="large" variant="secondary" href="https://github.com/your-username/rescale-design-system" target="_blank">
+          <Button size="large" variant="secondary" href="https://github.com/jacobsurber/rescale-design-system" target="_blank">
             GitHub Repository
           </Button>
         </Space>
