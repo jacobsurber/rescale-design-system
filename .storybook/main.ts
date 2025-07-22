@@ -7,13 +7,7 @@ const config: StorybookConfig = {
   ],
   addons: [
     "@storybook/addon-docs",
-    "@storybook/addon-controls",
     "@storybook/addon-actions",
-    "@storybook/addon-viewport",
-    "@storybook/addon-backgrounds",
-    "@storybook/addon-measure",
-    "@storybook/addon-outline",
-    "@storybook/addon-a11y",
     "@storybook/addon-onboarding"
   ],
   framework: {

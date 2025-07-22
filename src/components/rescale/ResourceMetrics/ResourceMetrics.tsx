@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Progress, Tooltip, Card } from 'antd';
 import { 
-  CpuOutlined, 
+  ApiOutlined, 
   DatabaseOutlined, 
   CloudServerOutlined,
   ThunderboltOutlined,
@@ -251,7 +251,7 @@ export const ResourceMetrics: React.FC<ResourceMetricsProps> = ({
   const getIcon = (type: string) => {
     switch (type) {
       case 'cpu':
-        return <CpuOutlined />;
+        return <ApiOutlined />;
       case 'memory':
         return <DatabaseOutlined />;
       case 'storage':
@@ -259,7 +259,7 @@ export const ResourceMetrics: React.FC<ResourceMetricsProps> = ({
       case 'network':
         return <ThunderboltOutlined />;
       default:
-        return <CpuOutlined />;
+        return <ApiOutlined />;
     }
   };
 
