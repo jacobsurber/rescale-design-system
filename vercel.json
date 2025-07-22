@@ -1,18 +1,4 @@
 {
-  "buildCommand": "npm run build:all",
-  "outputDirectory": "dist",
-  "rewrites": [
-    {
-      "source": "/storybook$",
-      "destination": "/storybook/index.html"
-    },
-    {
-      "source": "/storybook/(.*)",
-      "destination": "/storybook/$1"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/$1"
-    }
-  ]
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist"
 }
