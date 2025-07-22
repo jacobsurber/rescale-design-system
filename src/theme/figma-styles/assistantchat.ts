@@ -27,20 +27,21 @@ export const figmaAssistantChatStyles = {
   container: {
     backgroundColor: assistantChatStyles.colors.background,
     width: '100%',
-    maxWidth: '400px', // More reasonable chat width
+    maxWidth: '420px', // Wider than original for more visual difference
     height: 'auto',
-    borderRadius: '12px',
-    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.12)',
-    border: '1px solid #E5E7EB',
+    borderRadius: '16px', // More rounded corners
+    boxShadow: '0 12px 32px rgba(0, 102, 204, 0.15)', // Branded blue shadow
+    border: '2px solid #0066CC', // Rescale blue border
   },
   
   // Chat header styles (inferred from Figma context)
   header: {
-    backgroundColor: '#F9FAFB',
-    borderBottom: '1px solid #E5E7EB',
-    padding: '16px 20px',
-    borderTopLeftRadius: '12px',
-    borderTopRightRadius: '12px',
+    backgroundColor: '#0066CC', // Rescale blue header
+    borderBottom: '1px solid #0066CC',
+    padding: '20px 24px', // More padding
+    borderTopLeftRadius: '16px',
+    borderTopRightRadius: '16px',
+    color: '#FFFFFF', // White text on blue background
   },
   
   // Message area styles

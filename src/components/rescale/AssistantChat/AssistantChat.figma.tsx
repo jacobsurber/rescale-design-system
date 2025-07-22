@@ -28,21 +28,30 @@ const { Text } = Typography;
  */
 const FigmaChatDrawer = styled(Drawer)`
   .ant-drawer-content-wrapper {
-    width: ${AssistantChatStyledProps.containerMaxWidth} !important;
+    width: 420px !important; /* Wider for Figma version */
     max-width: calc(100vw - 32px);
+    border-radius: 16px !important; /* More rounded */
+    box-shadow: 0 12px 32px rgba(0, 102, 204, 0.15) !important; /* Blue shadow */
+    border: 2px solid #0066CC !important; /* Blue border */
+    overflow: hidden;
   }
   
   .ant-drawer-header {
-    background: ${AssistantChatStyledProps.headerBg};
-    padding: ${AssistantChatStyledProps.headerPadding};
-    border-bottom: ${AssistantChatStyledProps.headerBorder};
+    background: #0066CC !important; /* Blue header background */
+    padding: 20px 24px !important; /* More padding */
+    border-bottom: 1px solid #0066CC !important;
+    color: white !important;
+    
+    .ant-drawer-header-title {
+      color: white !important;
+    }
   }
   
   .ant-drawer-body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 120px);
+    height: calc(100vh - 140px); /* Adjust for larger header */
     background: ${AssistantChatStyledProps.containerBg};
   }
 `;
@@ -69,12 +78,12 @@ const AssistantInfo = styled.div`
 const AssistantName = styled.span`
   font-size: var(--rescale-font-size-base);
   font-weight: var(--rescale-font-weight-semibold);
-  color: var(--rescale-color-gray-900);
+  color: #FFFFFF; /* White text for blue header */
 `;
 
 const AssistantStatus = styled.span`
   font-size: var(--rescale-font-size-xs);
-  color: var(--rescale-color-success);
+  color: #E6F4FF; /* Light blue for status on blue background */
 `;
 
 /**
@@ -186,16 +195,16 @@ const FigmaSendButton = styled(Button)`
  * Figma-styled float button
  */
 const FigmaFloatButton = styled(FloatButton)`
-  width: ${AssistantChatStyledProps.floatButtonWidth} !important;
-  height: ${AssistantChatStyledProps.floatButtonHeight} !important;
-  background: ${AssistantChatStyledProps.floatButtonBg} !important;
-  box-shadow: ${AssistantChatStyledProps.floatButtonShadow} !important;
-  border: none !important;
+  width: 64px !important; /* Larger than original 56px */
+  height: 64px !important;
+  background: linear-gradient(135deg, #0066CC, #003D7A) !important; /* Gradient */
+  box-shadow: 0 8px 24px rgba(0, 102, 204, 0.4) !important; /* Stronger shadow */
+  border: 3px solid #FFFFFF !important; /* White border for contrast */
   
   &:hover {
-    background: ${AssistantChatStyledProps.floatButtonBg} !important;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.4) !important;
+    background: linear-gradient(135deg, #0066CC, #003D7A) !important;
+    transform: translateY(-4px) scale(1.05); /* More dramatic hover */
+    box-shadow: 0 12px 32px rgba(0, 102, 204, 0.5) !important;
   }
   
   .ant-float-btn-body {
@@ -346,15 +355,16 @@ export const FigmaAssistantChat: React.FC<AssistantChatProps> = ({
             <Avatar icon={assistantAvatar} />
             <AssistantInfo>
               <AssistantName>{assistantName}</AssistantName>
-              <AssistantStatus>Online • Figma Styled</AssistantStatus>
+              <AssistantStatus>🎨 Figma Styled • Frame 17279:269520</AssistantStatus>
             </AssistantInfo>
             <HeaderActions>
               {messages.length > 0 && (
                 <Button
                   type="text"
-                  icon={<ClearOutlined />}
+                  icon={<ClearOutlined style={{ color: '#FFFFFF' }} />}
                   onClick={onClear}
                   size="small"
+                  style={{ color: '#FFFFFF' }}
                 />
               )}
             </HeaderActions>
