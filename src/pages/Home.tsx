@@ -33,11 +33,11 @@ export const Home: React.FC = () => {
           Create consistent and beautiful user interfaces with our pre-built components.
         </Paragraph>
         <Space size="large" style={{ marginTop: 'var(--rescale-space-6)' }}>
-          <Button size="large" variant="primary" href="https://rescale-design-system-storybook.vercel.app" target="_blank">
+          <Button size="large" variant="primary" href="/storybook">
             View Storybook
           </Button>
-          <Button size="large" variant="secondary" href="https://github.com" target="_blank">
-            GitHub
+          <Button size="large" variant="secondary" href="https://github.com/your-username/rescale-design-system" target="_blank">
+            GitHub Repository
           </Button>
         </Space>
       </HeroSection>

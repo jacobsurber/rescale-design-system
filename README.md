@@ -122,30 +122,34 @@ src/
 
 ## 🌐 Deployment
 
-### Vercel (Recommended)
+### GitHub Pages (Recommended)
 
-This project is configured for automatic deployment on Vercel:
+This project is configured for automatic deployment on GitHub Pages:
 
-1. Push your code to a GitHub repository
-2. Connect your repository to Vercel
-3. Vercel will automatically:
-   - Build the main app and deploy to the root domain
-   - Build Storybook and make it available at `/storybook`
+1. Push your code to your GitHub repository
+2. Enable GitHub Pages in repository settings
+3. GitHub Actions will automatically:
+   - Run tests and quality checks
+   - Build Storybook
+   - Deploy to GitHub Pages
 
-The `vercel.json` configuration handles:
-- Building both the main app and Storybook
-- Routing Storybook to `/storybook` path
-- Proper caching headers for assets
+The GitHub Actions workflow handles:
+- Running the complete CI/CD pipeline
+- Building and deploying Storybook
+- Visual regression testing with Chromatic
+- Accessibility testing
 
-### Manual Deployment
+### Local Development
 
 ```bash
-# Build everything
-npm run build:all
+# Start development server
+npm run dev
 
-# The dist/ folder contains:
-# - Main app files in the root
-# - Storybook in dist/storybook/
+# Start Storybook
+npm run storybook
+
+# Build for production
+npm run build:lib
 ```
 
 ## 🎨 Component Development
@@ -253,9 +257,9 @@ export const theme: ThemeConfig = {
 
 ## 🔗 Links
 
-- **Main App**: Your Vercel domain
-- **Storybook**: `your-domain.vercel.app/storybook`
-- **Repository**: Link to your GitHub repo
+- **GitHub Repository**: `https://github.com/your-username/rescale-design-system`
+- **GitHub Pages (Storybook)**: `https://your-username.github.io/rescale-design-system`
+- **Local Development**: `http://localhost:5173` (main app) | `http://localhost:6006` (Storybook)
 
 ## 🤝 Contributing
 
