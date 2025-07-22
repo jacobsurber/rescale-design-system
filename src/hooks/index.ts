@@ -60,3 +60,27 @@ export {
   useConnectionStatus,
   useRealTimeUpdates,
 } from './useWebSocket';
+
+// Performance hooks
+export {
+  useDebounce,
+  useDebouncedCallback,
+  useThrottledCallback,
+  usePrevious,
+  useStableCallback,
+  useEffectOnce,
+  useMountedRef,
+  useAsyncCallback,
+  useLocalStorage,
+  useIntersectionObserverLazy,
+  useWindowSize,
+  useMediaQuery,
+  useRenderCount,
+} from './usePerformance';
+
+// Pagination and infinite scroll hooks
+export {
+  usePagination,
+  useInfiniteScroll,
+  useHybridScroll,
+} from './usePagination';

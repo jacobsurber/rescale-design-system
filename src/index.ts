@@ -38,6 +38,9 @@ export * from './components/cards';
 // Template Components
 export * from './components/templates';
 
+// Utility Components
+export * from './components/utils';
+
 // Rescale-specific Components
 export * from './components/rescale/JobStatusIndicator';
 export * from './components/rescale/SoftwareLogoGrid';
@@ -50,7 +53,7 @@ export * from './components/rescale/AssistantChat';
 export * from './utils';
 
 // Hooks  
-// export * from './hooks'; // TODO: Add hooks
+export * from './hooks';
 
 // Styles and Breakpoints
 export * from './styles/breakpoints';

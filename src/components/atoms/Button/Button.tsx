@@ -65,7 +65,7 @@ const StyledButton = styled(MotionButton)<ButtonProps>`
   }
 `;
 
-export const Button: React.FC<ButtonProps> = ({ 
+export const Button: React.FC<ButtonProps> = React.memo(({ 
   variant = 'primary', 
   type, 
   disableAnimations = false,
@@ -91,6 +91,8 @@ export const Button: React.FC<ButtonProps> = ({
       variant={variant}
     />
   );
-};
+});
+
+Button.displayName = 'Button';
 
 export default Button;

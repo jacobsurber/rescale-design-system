@@ -91,3 +91,9 @@ export {
 
 // Animation utilities
 export * from './animations';
+
+// Performance utilities
+export * from './performance';
+
+// Lazy loading utilities
+export * from './lazy';
