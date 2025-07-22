@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import { CheckOutlined, CloseCircleOutlined } from '@ant-design/icons';
 import { 
   scaleVariants, 
-  shakeVariants, 
-  fadeVariants
+  shakeVariants
 } from '../../../utils/animations';
 import { useAnimationVariants } from '../../../providers/MotionProvider';
 
@@ -110,7 +109,7 @@ const successIconVariants = {
     scale: 1, 
     rotate: 0, 
     transition: { 
-      type: 'spring', 
+      type: 'spring' as const, 
       stiffness: 500, 
       damping: 25 
     } 
@@ -123,7 +122,7 @@ const loadingDotVariants = {
     transition: {
       duration: 0.6,
       repeat: Infinity,
-      ease: 'easeInOut',
+      ease: 'easeInOut' as const,
     },
   },
 };
@@ -191,7 +190,7 @@ export const AnimatedFeedback: React.FC<AnimatedFeedbackProps> = ({
   icon,
   className,
 }) => {
-  const fadeAnimation = useAnimationVariants(fadeVariants);
+  // const fadeAnimation = useAnimationVariants(fadeVariants);
   const scaleAnimation = useAnimationVariants(scaleVariants);
   const shakeAnimation = useAnimationVariants(shakeVariants);
   

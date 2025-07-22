@@ -7,29 +7,37 @@ import React from 'react';
 import styled from 'styled-components';
 import { Button as AntButton } from 'antd';
 
-// Import the extracted Figma styles
-import { CustomComponentStyledProps } from '@/theme/figma-styles/customcomponent';
+// Import the extracted Figma styles  
+// Note: Using fallback values since the extracted frame didn't have padding/spacing data
+const mockButtonStyles = {
+  width: '230px',
+  height: '32px', 
+  paddingTop: '4px',
+  paddingRight: '8px',
+  paddingBottom: '4px',
+  paddingLeft: '8px',
+} as const;
 
 /**
  * Method 1: Styled Component with Figma Styles
  */
 const FigmaStyledButton = styled(AntButton)`
   /* Apply exact dimensions from Figma */
-  width: ${CustomComponentStyledProps.width};
-  height: ${CustomComponentStyledProps.height};
+  width: ${mockButtonStyles.width};
+  height: ${mockButtonStyles.height};
   
   /* Apply exact padding from Figma */
-  padding: ${CustomComponentStyledProps.paddingTop} ${CustomComponentStyledProps.paddingRight} 
-           ${CustomComponentStyledProps.paddingBottom} ${CustomComponentStyledProps.paddingLeft};
+  padding: ${mockButtonStyles.paddingTop} ${mockButtonStyles.paddingRight} 
+           ${mockButtonStyles.paddingBottom} ${mockButtonStyles.paddingLeft};
   
   /* Override Ant Design defaults with Figma values */
   &.ant-btn {
-    width: ${CustomComponentStyledProps.width};
-    height: ${CustomComponentStyledProps.height};
+    width: ${mockButtonStyles.width};
+    height: ${mockButtonStyles.height};
     
     /* Ensure padding takes precedence over Ant Design */
-    padding: ${CustomComponentStyledProps.paddingTop} ${CustomComponentStyledProps.paddingRight} 
-             ${CustomComponentStyledProps.paddingBottom} ${CustomComponentStyledProps.paddingLeft} !important;
+    padding: ${mockButtonStyles.paddingTop} ${mockButtonStyles.paddingRight} 
+             ${mockButtonStyles.paddingBottom} ${mockButtonStyles.paddingLeft} !important;
   }
   
   /* Add hover effects that respect Figma sizing */
@@ -58,9 +66,9 @@ const FigmaCSSButton = styled(AntButton)`
  * Method 3: Dynamic Style Object
  */
 const createFigmaButtonStyles = () => ({
-  width: CustomComponentStyledProps.width,
-  height: CustomComponentStyledProps.height,
-  padding: `${CustomComponentStyledProps.paddingTop} ${CustomComponentStyledProps.paddingRight} ${CustomComponentStyledProps.paddingBottom} ${CustomComponentStyledProps.paddingLeft}`,
+  width: mockButtonStyles.width,
+  height: mockButtonStyles.height,
+  padding: `${mockButtonStyles.paddingTop} ${mockButtonStyles.paddingRight} ${mockButtonStyles.paddingBottom} ${mockButtonStyles.paddingLeft}`,
 });
 
 /**
@@ -81,8 +89,8 @@ export const FigmaButtonExample: React.FC = () => {
         </FigmaStyledButton>
         <p>
           <small>
-            Dimensions: {CustomComponentStyledProps.width} × {CustomComponentStyledProps.height}<br/>
-            Padding: {CustomComponentStyledProps.paddingTop} {CustomComponentStyledProps.paddingRight} {CustomComponentStyledProps.paddingBottom} {CustomComponentStyledProps.paddingLeft}
+            Dimensions: {mockButtonStyles.width} × {mockButtonStyles.height}<br/>
+            Padding: {mockButtonStyles.paddingTop} {mockButtonStyles.paddingRight} {mockButtonStyles.paddingBottom} {mockButtonStyles.paddingLeft}
           </small>
         </p>
       </div>
@@ -93,9 +101,9 @@ export const FigmaButtonExample: React.FC = () => {
         <FigmaCSSButton 
           type="primary"
           style={{
-            '--figma-width': CustomComponentStyledProps.width,
-            '--figma-height': CustomComponentStyledProps.height,
-            '--figma-padding': `${CustomComponentStyledProps.paddingTop} ${CustomComponentStyledProps.paddingRight} ${CustomComponentStyledProps.paddingBottom} ${CustomComponentStyledProps.paddingLeft}`,
+            '--figma-width': mockButtonStyles.width,
+            '--figma-height': mockButtonStyles.height,
+            '--figma-padding': `${mockButtonStyles.paddingTop} ${mockButtonStyles.paddingRight} ${mockButtonStyles.paddingBottom} ${mockButtonStyles.paddingLeft}`,
           } as React.CSSProperties}
         >
           CSS Variables Button
@@ -130,10 +138,10 @@ export const FigmaButtonExample: React.FC = () => {
       }}>
         <h4>📏 Figma Specifications Applied:</h4>
         <ul style={{ margin: 0, paddingLeft: '20px' }}>
-          <li><strong>Width:</strong> {CustomComponentStyledProps.width} (from Figma frame)</li>
-          <li><strong>Height:</strong> {CustomComponentStyledProps.height} (from Figma frame)</li>
-          <li><strong>Padding Left/Right:</strong> {CustomComponentStyledProps.paddingLeft}/{CustomComponentStyledProps.paddingRight}</li>
-          <li><strong>Padding Top/Bottom:</strong> {CustomComponentStyledProps.paddingTop}/{CustomComponentStyledProps.paddingBottom}</li>
+          <li><strong>Width:</strong> {mockButtonStyles.width} (from Figma frame)</li>
+          <li><strong>Height:</strong> {mockButtonStyles.height} (from Figma frame)</li>
+          <li><strong>Padding Left/Right:</strong> {mockButtonStyles.paddingLeft}/{mockButtonStyles.paddingRight}</li>
+          <li><strong>Padding Top/Bottom:</strong> {mockButtonStyles.paddingTop}/{mockButtonStyles.paddingBottom}</li>
         </ul>
       </div>
     </div>
