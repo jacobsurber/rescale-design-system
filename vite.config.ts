@@ -11,12 +11,12 @@ export default defineConfig({
         plugins: [
           // Add babel plugins for better performance
           ['babel-plugin-styled-components', { displayName: true, ssr: false }],
-          // Enable AntD tree shaking
-          ['babel-plugin-import', {
-            libraryName: 'antd',
-            libraryDirectory: 'es',
-            style: true,
-          }, 'antd'],
+          // Enable AntD tree shaking - temporarily disabled to fix ConfigProvider issue
+          // ['babel-plugin-import', {
+          //   libraryName: 'antd',
+          //   libraryDirectory: 'es',
+          //   style: true,
+          // }, 'antd'],
           // Enable AntD icons tree shaking
           ['babel-plugin-import', {
             libraryName: '@ant-design/icons',
