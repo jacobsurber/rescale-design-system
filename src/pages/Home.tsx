@@ -33,7 +33,16 @@ export const Home: React.FC = () => {
           Create consistent and beautiful user interfaces with our pre-built components.
         </Paragraph>
         <Space size="large" style={{ marginTop: 'var(--rescale-space-6)' }}>
-          <Button size="large" variant="primary" href="/storybook">
+          <Button 
+            size="large" 
+            variant="primary" 
+            href={
+              window.location.hostname === 'localhost' 
+                ? 'http://localhost:6006' 
+                : `https://${window.location.hostname}` // GitHub Pages URL
+            }
+            target="_blank"
+          >
             View Storybook
           </Button>
           <Button size="large" variant="secondary" href="https://github.com/your-username/rescale-design-system" target="_blank">
