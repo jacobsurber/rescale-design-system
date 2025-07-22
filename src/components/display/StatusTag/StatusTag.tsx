@@ -1,5 +1,8 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { pulseVariants, scaleOnTap } from '../../../utils/animations';
+import { useAnimationVariants } from '../../../providers/MotionProvider';
 type StatusVariant = 
   | 'success' 
   | 'warning' 
@@ -34,6 +37,8 @@ export interface StatusTagProps {
   onClick?: () => void;
   /** Whether tag is clickable */
   clickable?: boolean;
+  /** Enable pulse animation for running states */
+  enablePulse?: boolean;
 }
 
 const getStatusColors = (variant: StatusVariant) => {
@@ -137,7 +142,9 @@ const getSizeStyles = (size: StatusSize) => {
   return sizeMap[size];
 };
 
-const StatusTagContainer = styled.span<{
+const MotionStatusTag = motion.span;
+
+const StatusTagContainer = styled(MotionStatusTag)<{
   $variant: StatusVariant;
   $size: StatusSize;
   $clickable: boolean;
@@ -185,7 +192,9 @@ const StatusTagContainer = styled.span<{
   `}
 `;
 
-const StatusDot = styled.span<{ $variant: StatusVariant; $size: StatusSize }>`
+const MotionStatusDot = motion.span;
+
+const StatusDot = styled(MotionStatusDot)<{ $variant: StatusVariant; $size: StatusSize }>`
   ${({ $variant, $size }) => {
     const colors = getStatusColors($variant);
     const sizeStyles = getSizeStyles($size);
@@ -229,7 +238,14 @@ export const StatusTag: React.FC<StatusTagProps> = ({
   style,
   onClick,
   clickable = false,
+  enablePulse = true,
 }) => {
+  const pulseAnimation = useAnimationVariants(pulseVariants);
+  const tapAnimation = useAnimationVariants(scaleOnTap);
+  
+  // Determine if we should show pulse animation
+  const shouldPulse = enablePulse && (variant === 'running' || variant === 'processing');
+  const shouldAnimateTap = clickable;
 
   const handleClick = () => {
     if (clickable && onClick) {
@@ -256,8 +272,17 @@ export const StatusTag: React.FC<StatusTagProps> = ({
       role={clickable ? 'button' : undefined}
       tabIndex={clickable ? 0 : undefined}
       aria-label={typeof children === 'string' ? `Status: ${children}` : undefined}
+      variants={shouldAnimateTap ? tapAnimation : undefined}
+      whileTap={shouldAnimateTap ? "tap" : undefined}
     >
-      {showDot && <StatusDot $variant={variant} $size={size} />}
+      {showDot && (
+        <StatusDot 
+          $variant={variant} 
+          $size={size}
+          variants={shouldPulse ? pulseAnimation : undefined}
+          animate={shouldPulse ? "pulse" : undefined}
+        />
+      )}
       {icon && <StatusIcon $size={size}>{icon}</StatusIcon>}
       <StatusText>{children}</StatusText>
     </StatusTagContainer>

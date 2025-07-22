@@ -88,3 +88,6 @@ export {
   ERROR_CODES,
   FEATURE_FLAGS,
 } from './constants';
+
+// Animation utilities
+export * from './animations';

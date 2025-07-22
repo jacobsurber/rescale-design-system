@@ -4,6 +4,9 @@
 
 // Theme and Configuration
 export { RescaleThemeProvider, useRescaleTheme } from './theme/ThemeProvider';
+
+// Motion and Animation Providers
+export { MotionProvider, useMotion, useAnimationVariants } from './providers/MotionProvider';
 export { rescaleTheme } from './theme/rescaleTheme';
 export * from './theme/tokens';
 export type { RescaleTheme } from './theme/rescaleTheme';
@@ -44,7 +47,7 @@ export * from './components/rescale/QuickActions';
 export * from './components/rescale/AssistantChat';
 
 // Utilities
-// export * from './utils'; // TODO: Add utilities
+export * from './utils';
 
 // Hooks  
 // export * from './hooks'; // TODO: Add hooks

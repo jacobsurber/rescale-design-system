@@ -1,17 +1,26 @@
 import React from 'react';
 import { Button as AntButton } from 'antd';
 import type { ButtonProps as AntButtonProps } from 'antd';
+import { motion } from 'framer-motion';
 import styled from 'styled-components';
+import { buttonVariants } from '../../../utils/animations';
+import { useAnimationVariants } from '../../../providers/MotionProvider';
 
 export interface ButtonProps extends Omit<AntButtonProps, 'variant'> {
   variant?: 'primary' | 'secondary' | 'ghost' | 'text';
+  /** Disable animations for this button */
+  disableAnimations?: boolean;
 }
 
-const StyledButton = styled(AntButton)<ButtonProps>`
+const MotionButton = motion(AntButton);
+
+const StyledButton = styled(MotionButton)<ButtonProps>`
   &.ant-btn {
     border-radius: var(--rescale-radius-base);
     font-weight: var(--rescale-font-weight-medium);
     transition: all var(--rescale-duration-normal) var(--rescale-easing-ease-in-out);
+    transform-origin: center;
+    will-change: transform;
     
     ${({ variant }) => {
       switch (variant) {
@@ -56,10 +65,32 @@ const StyledButton = styled(AntButton)<ButtonProps>`
   }
 `;
 
-export const Button: React.FC<ButtonProps> = ({ variant = 'primary', type, ...props }) => {
+export const Button: React.FC<ButtonProps> = ({ 
+  variant = 'primary', 
+  type, 
+  disableAnimations = false,
+  ...props 
+}) => {
+  const variants = useAnimationVariants(buttonVariants);
   const buttonType = variant === 'primary' ? 'primary' : type || 'default';
   
-  return <StyledButton {...props} type={buttonType} variant={variant} />;
+  const animationProps = disableAnimations 
+    ? {} 
+    : {
+        variants,
+        initial: "initial",
+        whileHover: "hover",
+        whileTap: "tap",
+      };
+  
+  return (
+    <StyledButton 
+      {...props} 
+      {...animationProps}
+      type={buttonType} 
+      variant={variant}
+    />
+  );
 };
 
 export default Button;
