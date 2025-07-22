@@ -33,7 +33,7 @@ export const Home: React.FC = () => {
           Create consistent and beautiful user interfaces with our pre-built components.
         </Paragraph>
         <Space size="large" style={{ marginTop: 'var(--rescale-space-6)' }}>
-          <Button size="large" variant="primary" href="/storybook" target="_blank">
+          <Button size="large" variant="primary" href="/storybook/" target="_blank">
             View Storybook
           </Button>
           <Button size="large" variant="secondary" href="https://github.com" target="_blank">
