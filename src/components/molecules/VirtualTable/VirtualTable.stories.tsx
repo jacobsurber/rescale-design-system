@@ -191,7 +191,7 @@ export const WithInfiniteScroll: Story = {
           email: `user${startId + index}@example.com`,
         }));
         
-        setData(prev => [...prev, ...updatedData]);
+        setData((prev: any[]) => [...prev, ...updatedData]);
         setLoading(false);
       }, 1000);
     }, [data.length, loading]);

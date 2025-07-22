@@ -144,7 +144,7 @@ export const Pagination: React.FC<PaginationProps> = ({
   setItemsPerPage,
   showSizeChanger = true,
   pageSizeOptions = [10, 20, 50, 100],
-  showQuickJumper = false,
+  showQuickJumper: _showQuickJumper = false,
   showTotal = true,
   showTotalFormatter,
   size = 'default',

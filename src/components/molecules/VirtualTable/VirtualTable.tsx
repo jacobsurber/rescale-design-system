@@ -4,7 +4,7 @@ import { useVirtualizer } from '@tanstack/react-virtual';
 import type { ColumnsType } from 'antd/es/table';
 import styled from 'styled-components';
 
-export interface VirtualTableProps<T = any> extends Omit<TableProps<T>, 'scroll' | 'pagination'> {
+export interface VirtualTableProps<T = any> {
   /** Height of the virtual table container */
   height: number;
   /** Estimated row height for virtual scrolling */

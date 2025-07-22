@@ -43,7 +43,7 @@
   "homepage": "https://jacobsurber.github.io/rescale-design-system",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "vite build",
     "build:lib": "vite build --config vite.config.lib.ts",
     "build:storybook": "storybook build",
     "build:all": "npm run build:lib && npm run build:storybook",
@@ -129,6 +129,7 @@
     "prettier": "^3.6.2",
     "storybook": "^8.4.6",
     "styled-components": "^6.1.19",
+    "terser": "^5.43.1",
     "ts-jest": "^29.4.0",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1",
