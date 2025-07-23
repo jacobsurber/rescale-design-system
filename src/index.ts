@@ -11,43 +11,22 @@ export { rescaleTheme } from './theme/rescaleTheme';
 export * from './theme/tokens';
 export type { RescaleTheme } from './theme/rescaleTheme';
 
-// Atoms
+// Atomic Design System Components
+
+// Atoms - Basic building blocks
 export * from './components/atoms';
 
-// Molecules  
+// Molecules - Composed components  
 export * from './components/molecules';
 
-// Organisms
+// Organisms - Complex composed components
 export * from './components/organisms';
-
-// Navigation Components
-export * from './components/navigation';
 
 // Layout Components
 export * from './components/layout';
 
-// Form Components
-export * from './components/forms';
-
-// Display Components
-export * from './components/display';
-
-// Card Components
-export * from './components/cards';
-
-// Template Components
-export * from './components/templates';
-
 // Utility Components
 export * from './components/utils';
-
-// Rescale-specific Components
-export * from './components/rescale/JobStatusIndicator';
-export * from './components/rescale/SoftwareLogoGrid';
-export * from './components/rescale/ResourceMetrics';
-export * from './components/rescale/WorkspaceSelector';
-export * from './components/rescale/QuickActions';
-export * from './components/rescale/AssistantChat';
 
 // Utilities
 export * from './utils';

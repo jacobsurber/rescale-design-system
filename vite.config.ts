@@ -61,17 +61,19 @@ export default defineConfig({
           // Component chunks
           'components-atoms': [
             './src/components/atoms/Button',
-            './src/components/atoms/Card',
             './src/components/atoms/LoadingSpinner',
             './src/components/atoms/Skeleton',
+            './src/components/atoms/StatusTag',
           ],
-          'components-rescale': [
-            './src/components/rescale/AssistantChat',
-            './src/components/rescale/JobStatusIndicator',
-            './src/components/rescale/QuickActions',
-            './src/components/rescale/ResourceMetrics',
-            './src/components/rescale/SoftwareLogoGrid',
-            './src/components/rescale/WorkspaceSelector',
+          'components-molecules': [
+            './src/components/molecules/JobStatusIndicator',
+            './src/components/molecules/QuickActions',
+            './src/components/molecules/ResourceMetrics',
+            './src/components/molecules/WorkspaceSelector',
+          ],
+          'components-organisms': [
+            './src/components/organisms/AssistantChat',
+            './src/components/organisms/SoftwareLogoGrid',
           ],
         },
       },

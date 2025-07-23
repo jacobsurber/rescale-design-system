@@ -111,7 +111,7 @@ export const preloadComponents = (
  * Lazy load heavy components that are not immediately visible
  */
 export const LazyPerformanceDashboard = createLazyComponent(
-  () => import('../components/utils/PerformanceDashboard/PerformanceDashboard'),
+  () => import('../components/organisms/PerformanceDashboard/PerformanceDashboard'),
   {
     loadingMessage: 'Loading Performance Dashboard...',
   }
@@ -125,7 +125,7 @@ export const LazyVirtualTable = createLazyComponent(
 );
 
 export const LazyAssistantChat = createLazyComponent(
-  () => import('../components/rescale/AssistantChat/AssistantChat'),
+  () => import('../components/organisms/AssistantChat/AssistantChat'),
   {
     loadingMessage: 'Loading Assistant Chat...',
   }

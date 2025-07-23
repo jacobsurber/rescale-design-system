@@ -3,11 +3,11 @@ import { Card, Button } from 'antd';
 import { ArrowLeftOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import { MainLayout } from '../../MainLayout';
-import { PageHeader } from '../../PageHeader';
+import { PageHeader } from '../../../molecules/PageHeader';
 import { Container } from '../../Container';
 import { Grid, Col } from '../../Grid';
 import { Stack } from '../../Spacing';
-import type { PageHeaderProps, PageAction } from '../../PageHeader';
+import type { PageHeaderProps, PageAction } from '../../../molecules/PageHeader';
 import { mediaQueries } from '../../../../styles/breakpoints';
 
 export interface DetailSection {

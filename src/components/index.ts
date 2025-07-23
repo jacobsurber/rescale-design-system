@@ -1,29 +1,16 @@
+// Atomic Design System Exports
+
+// Atoms - Basic building blocks
+export * from './atoms';
+
+// Molecules - Composed components 
+export * from './molecules';
+
+// Organisms - Complex composed components
+export * from './organisms';
+
 // Layout Components
 export * from './layout';
 
-// Navigation Components
-export * from './navigation';
-
-// Display Components
-export * from './display';
-
-// Card Components
-export * from './cards';
-
-// Form Components
-export * from './forms';
-
-// Rescale-Specific Components
-export * from './rescale';
-
-// Atoms
-export * from './atoms';
-
-// Molecules
-export * from './molecules';
-
-// Organisms
-export * from './organisms';
-
-// Templates
-export * from './templates';
+// Utility Components
+export * from './utils';

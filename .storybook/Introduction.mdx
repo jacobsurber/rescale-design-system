@@ -1,0 +1,218 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Welcome/Introduction" />
+
+# Rescale Design System
+
+Welcome to the **Rescale Design System** – a comprehensive component library and design language built specifically for computational engineering and scientific computing applications.
+
+## 🎯 Purpose
+
+This design system provides a consistent, accessible, and scalable foundation for building user interfaces across the Rescale platform. It embodies our commitment to:
+
+- **Consistency**: Unified visual language and interaction patterns
+- **Accessibility**: WCAG-compliant components for all users
+- **Performance**: Optimized components built with modern React patterns
+- **Developer Experience**: Well-documented, type-safe, and easy to use
+
+## 🏗️ Architecture
+
+Our design system follows **Atomic Design** principles, organizing components into five distinct levels:
+
+### Atoms
+Basic building blocks that cannot be broken down further:
+- **Button** - Interactive elements with comprehensive variants
+- **Icon** - Standardized iconography with theme support
+- **Logo** - Brand and software logo components
+- **StatusTag** - Status indicators with semantic colors
+- **LoadingSpinner** - Animated loading states
+
+### Molecules
+Simple combinations of atoms functioning together:
+- **Card** - Flexible containers with elevation and sizing
+- **FormInput** - Labeled input fields with validation
+- **MetricCard** - Data visualization with trends and progress
+- **PageHeader** - Page titles with breadcrumbs and actions
+
+### Organisms
+Complex UI components composed of molecules and atoms:
+- **JobsTable** - Feature-rich data tables with sorting and filtering
+- **Sidebar** - Navigation menus with user profiles
+- **SoftwareLogoGrid** - Grid displays for software packages
+
+### Templates
+Page-level layouts combining organisms and molecules:
+- **DashboardLayout** - Complete application shell with sidebar and header
+- **JobsListPage** - Full-featured job listing with filters and pagination
+- **JobDetailsPage** - Comprehensive job management interface
+
+## 🎨 Design Tokens
+
+Our design system is built on a comprehensive token system extracted from Figma designs:
+
+- **Colors**: Brand colors, semantic colors, and interaction states
+- **Typography**: Consistent type scales and font weights
+- **Spacing**: 4px-based spacing system for consistent layouts
+- **Shadows**: Elevation system for depth and hierarchy
+- **Animation**: Smooth transitions and micro-interactions
+
+## 🚀 Getting Started
+
+### Installation
+
+```bash
+npm install @rescale/design-system
+```
+
+### Basic Usage
+
+```tsx
+import { Button, Card, DashboardLayout } from '@rescale/design-system';
+
+function MyApp() {
+  return (
+    <DashboardLayout
+      menuItems={menuItems}
+      userProfile={userProfile}
+    >
+      <Card title="Welcome">
+        <p>Get started building with Rescale components!</p>
+        <Button variant="primary">
+          Start Building
+        </Button>
+      </Card>
+    </DashboardLayout>
+  );
+}
+```
+
+### TypeScript Support
+
+All components include comprehensive TypeScript definitions:
+
+```tsx
+import type { ButtonProps, CardProps } from '@rescale/design-system';
+
+// Full type safety and IntelliSense support
+const MyButton: React.FC<ButtonProps> = (props) => {
+  return <Button {...props} />;
+};
+```
+
+## 📱 Responsive Design
+
+Every component is designed with mobile-first principles:
+
+- **Breakpoints**: Consistent breakpoint system across all components
+- **Flexible Layouts**: Components adapt to different screen sizes
+- **Touch-Friendly**: Appropriate touch targets for mobile devices
+- **Progressive Enhancement**: Enhanced experiences on larger screens
+
+## ♿ Accessibility
+
+Accessibility is built into every component:
+
+- **Keyboard Navigation**: Full keyboard support for all interactive elements
+- **Screen Readers**: Proper ARIA labels and semantic HTML
+- **Color Contrast**: WCAG AA compliant color combinations
+- **Focus Management**: Clear focus indicators and logical tab order
+
+## 🔧 Development
+
+### Local Development
+
+```bash
+# Clone the repository
+git clone https://github.com/rescale/design-system
+
+# Install dependencies
+npm install
+
+# Start Storybook
+npm run storybook
+
+# Run tests
+npm test
+
+# Build the library
+npm run build
+```
+
+### Contributing
+
+We welcome contributions! Please see our [Contributing Guide](https://github.com/rescale/design-system/blob/main/CONTRIBUTING.md) for details on:
+
+- Code standards and conventions
+- Testing requirements
+- Pull request process
+- Design token updates
+
+## 📖 Documentation
+
+### Story Organization
+
+Stories are organized by atomic design levels:
+
+- **Atoms/** - Basic components
+- **Molecules/** - Composed components  
+- **Organisms/** - Complex components
+- **Templates/** - Page layouts
+- **Design System/** - Tokens and guidelines
+
+### Component APIs
+
+Each component includes:
+
+- **Props Documentation** - Complete prop tables with types
+- **Usage Examples** - Common usage patterns
+- **Accessibility Notes** - ARIA labels and keyboard support
+- **Design Guidelines** - When and how to use each component
+
+## 🎨 Design Resources
+
+### Figma Integration
+
+Our design system is directly connected to Figma:
+
+- **Design Tokens** - Extracted from Figma 2.5 Flow [JS] specification
+- **Color Palette** - Brand blues, semantic colors, and interaction states  
+- **Typography** - Font scales and weights from design specs
+- **Spacing System** - 4px grid system for consistent layouts
+
+### Brand Assets
+
+- **Software Logos** - Comprehensive library of engineering software logos
+- **Icons** - Standardized icon system with consistent sizing
+- **Illustrations** - (Coming soon) Custom illustrations for empty states
+
+## 🔄 Changelog
+
+### Version 1.0.0 (Current)
+
+**New Components:**
+- Complete atomic design system implementation
+- Three compound page templates
+- Comprehensive design token system
+- Full TypeScript support
+
+**Features:**
+- Figma design token extraction
+- Automatic software logo mapping
+- Responsive design system
+- Accessibility compliance
+- Comprehensive Storybook documentation
+
+## 🤝 Support
+
+Need help? We're here for you:
+
+- **Documentation** - Browse stories and component APIs
+- **GitHub Issues** - Report bugs or request features
+- **Design System Team** - Reach out for design guidance
+- **Community** - Join our Slack channel for discussions
+
+---
+
+**Ready to build amazing computational engineering interfaces?** 
+
+Explore the components in the sidebar to get started, or jump directly to our [Design Tokens](?path=/docs/design-system-tokens--docs) to understand the foundation of our system.

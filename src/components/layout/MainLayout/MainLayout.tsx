@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Layout, Drawer } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
-import { Sidebar } from '../../navigation/Sidebar';
-import { TopBar } from '../../navigation/TopBar';
+import { Sidebar } from '../../organisms/Sidebar';
+import { TopBar } from '../../organisms/TopBar';
 import { mediaQueries } from '../../../styles/breakpoints';
 
 const { Content } = Layout;

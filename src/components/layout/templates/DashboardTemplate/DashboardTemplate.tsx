@@ -2,13 +2,13 @@ import React from 'react';
 import { Card } from 'antd';
 import styled from 'styled-components';
 import { MainLayout } from '../../MainLayout';
-import { PageHeader } from '../../PageHeader';
+import { PageHeader } from '../../../molecules/PageHeader';
 import { Container } from '../../Container';
 import { Grid, Col } from '../../Grid';
 import { Stack } from '../../Spacing';
-import { MetricCard } from '../../../cards/MetricCard';
-import type { PageHeaderProps } from '../../PageHeader';
-import type { MetricCardProps } from '../../../cards/MetricCard';
+import { MetricCard } from '../../../molecules/MetricCard';
+import type { PageHeaderProps } from '../../../molecules/PageHeader';
+import type { MetricCardProps } from '../../../molecules/MetricCard';
 import { mediaQueries } from '../../../../styles/breakpoints';
 
 export interface DashboardMetric extends Omit<MetricCardProps, 'onClick'> {

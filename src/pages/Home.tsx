@@ -1,6 +1,6 @@
 import React from 'react';
-import { Typography, Space } from 'antd';
-import { Button, Card } from '@components/atoms';
+import { Typography, Space, Card } from 'antd';
+import { Button } from '@components/atoms';
 import styled from 'styled-components';
 
 const { Title, Paragraph } = Typography;
@@ -54,27 +54,27 @@ export const Home: React.FC = () => {
       <Title level={2} style={{ marginBottom: 'var(--rescale-space-6)' }}>Features</Title>
       
       <CardsGrid>
-        <Card title="Component Library" variant="elevated">
+        <Card title="Component Library">
           Pre-built React components following atomic design principles. Easily customizable and composable.
         </Card>
         
-        <Card title="TypeScript Support" variant="elevated">
+        <Card title="TypeScript Support">
           Full TypeScript support with comprehensive type definitions for all components and utilities.
         </Card>
         
-        <Card title="Ant Design Integration" variant="elevated">
+        <Card title="Ant Design Integration">
           Built on top of Ant Design with custom theming and extended components for additional flexibility.
         </Card>
         
-        <Card title="Storybook Documentation" variant="elevated">
+        <Card title="Storybook Documentation">
           Interactive component documentation with live examples and controls for testing different states.
         </Card>
         
-        <Card title="Testing Ready" variant="elevated">
+        <Card title="Testing Ready">
           Configured with Jest and React Testing Library for unit and integration testing.
         </Card>
         
-        <Card title="Modern Build Tools" variant="elevated">
+        <Card title="Modern Build Tools">
           Fast development with Vite, hot module replacement, and optimized production builds.
         </Card>
       </CardsGrid>

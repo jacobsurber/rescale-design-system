@@ -3,10 +3,10 @@ import { Card, Button, Steps, Alert } from 'antd';
 import { ArrowLeftOutlined, SaveOutlined, CheckOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import { MainLayout } from '../../MainLayout';
-import { PageHeader } from '../../PageHeader';
+import { PageHeader } from '../../../molecules/PageHeader';
 import { Container } from '../../Container';
 import { Stack } from '../../Spacing';
-import type { PageHeaderProps } from '../../PageHeader';
+import type { PageHeaderProps } from '../../../molecules/PageHeader';
 import { mediaQueries } from '../../../../styles/breakpoints';
 
 export interface FormStep {

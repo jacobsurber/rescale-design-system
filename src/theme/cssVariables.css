@@ -1,107 +1,181 @@
 /**
  * Rescale Design System - CSS Variables
- * Custom CSS variables for use outside of Ant Design components
- * These variables can be used in styled-components, CSS modules, or plain CSS
+ * Comprehensive CSS custom properties generated from design tokens
+ * Updated: 2025-07-23 - Aligned with Figma extraction and component audit
  */
 
 :root {
-  /* Primary Colors (Updated from Figma) */
-  --rescale-color-brand-blue: #0066CC;
-  --rescale-color-dark-blue: #003D7A;
-  --rescale-color-light-blue: #E6F4FF;
-  --rescale-color-sky-blue: #40A9FF;
+  /* =================================================================== */
+  /* BRAND COLORS - Figma Extracted Values */
+  /* =================================================================== */
+  --rescale-color-brand-blue: #0272c3;     /* Figma 2.5 Flow [JS] */
+  --rescale-color-dark-blue: #455f87;      /* Figma 2.5 Flow [JS] */
+  --rescale-color-light-blue: #f3f7ff;     /* Figma 2.5 Flow [JS] */
+  --rescale-color-sky-blue: #40A9FF;       /* Legacy compatibility */
+  --rescale-color-light-blue-alt: #f0f5ff; /* Figma alternative */
   
-  /* Neutral Colors (Enhanced Figma Scale) */
-  --rescale-color-gray-50: #FAFAFA;
-  --rescale-color-gray-100: #F5F5F5;
-  --rescale-color-gray-200: #E8E8E8;
-  --rescale-color-gray-300: #D9D9D9;
-  --rescale-color-gray-400: #BFBFBF;
-  --rescale-color-gray-500: #8C8C8C;
-  --rescale-color-gray-600: #595959;
-  --rescale-color-gray-700: #434343;
-  --rescale-color-gray-800: #262626;
-  --rescale-color-gray-900: #1F1F1F;
+  /* =================================================================== */
+  /* NEUTRAL COLORS - Enhanced Figma Scale */
+  /* =================================================================== */
+  --rescale-color-gray-900: #1F1F1F;       /* Darkest text */
+  --rescale-color-gray-800: #262626;       /* Dark text */
+  --rescale-color-gray-700: #434343;       /* Secondary text */
+  --rescale-color-gray-600: #595959;       /* Muted text */
+  --rescale-color-gray-500: #8C8C8C;       /* Disabled text */
+  --rescale-color-gray-400: #BFBFBF;       /* Placeholder */
+  --rescale-color-gray-300: #D9D9D9;       /* Light borders */
+  --rescale-color-gray-200: #E8E8E8;       /* Subtle borders */
+  --rescale-color-gray-100: #f5f6f7;       /* Light backgrounds */
+  --rescale-color-gray-50: #FAFAFA;        /* Lightest backgrounds */
+  
   --rescale-color-white: #FFFFFF;
   --rescale-color-black: #000000;
   
-  /* Figma-Specific Backgrounds */
+  /* Border-specific colors from Figma */
+  --rescale-color-border: #dfdfdf;         /* Main border color */
+  --rescale-color-border-light: #dcdcdc;   /* Light border color */
+  
+  /* Background colors from Figma */
   --rescale-color-background-light: #CCCCCC;
   --rescale-color-background-dark: #555E69;
   
-  /* Status Colors */
-  --rescale-color-success: #52C41A;
+  /* =================================================================== */
+  /* STATUS COLORS */
+  /* =================================================================== */
+  --rescale-color-success: #50c878;        /* Figma updated green */
   --rescale-color-warning: #FA8C16;
   --rescale-color-error: #FF4D4F;
   --rescale-color-info: #1890FF;
   
-  /* Typography */
-  --rescale-font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Status color variants */
+  --rescale-color-success-light: #E8F5E8;
+  --rescale-color-success-dark: #2E7D32;
+  --rescale-color-warning-light: #FFF3E0;
+  --rescale-color-warning-dark: #F57C00;
+  --rescale-color-error-light: #FFEBEE;
+  --rescale-color-error-dark: #C62828;
+  --rescale-color-info-light: #E3F2FD;
+  --rescale-color-info-dark: #1565C0;
+  
+  /* =================================================================== */
+  /* ACCENT COLORS - Figma Extracted */
+  /* =================================================================== */
+  --rescale-color-accent-purple: #7d53b3;  /* Figma 2.5 Flow [JS] */
+  
+  /* =================================================================== */
+  /* INTERACTION COLORS - From Component Audit */
+  /* =================================================================== */
+  --rescale-color-focus: rgba(2, 114, 195, 0.1);      /* Consistent focus ring */
+  --rescale-color-focus-outline: #0272c3;             /* Focus outline */
+  --rescale-color-overlay: rgba(255, 255, 255, 0.8);  /* Light overlay */
+  --rescale-color-overlay-dark: rgba(0, 0, 0, 0.5);   /* Dark overlay */
+  --rescale-color-shimmer: rgba(255, 255, 255, 0.8);  /* Shimmer effect */
+  
+  /* =================================================================== */
+  /* TYPOGRAPHY - Figma Aligned */
+  /* =================================================================== */
+  --rescale-font-family-primary: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --rescale-font-family-display: Figtree, "Roboto", sans-serif;
+  --rescale-font-family-inter: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  
+  /* Font sizes - Figma extracted + existing */
   --rescale-font-size-xs: 12px;
-  --rescale-font-size-sm: 14px;
+  --rescale-font-size-sm: 14px;           /* ✅ Figma Roboto 14px */
+  --rescale-font-size-md: 17px;           /* ✅ Figma Roboto 17px */
   --rescale-font-size-base: 16px;
-  --rescale-font-size-lg: 18px;
+  --rescale-font-size-lg: 18px;           /* ✅ Figma Roboto 18px */
   --rescale-font-size-xl: 20px;
   --rescale-font-size-2xl: 24px;
+  --rescale-font-size-2-5xl: 28px;        /* ✅ Figma Roboto 28px */
   --rescale-font-size-3xl: 30px;
   --rescale-font-size-4xl: 38px;
+  --rescale-font-size-display: 100px;     /* ✅ Figma Figtree 100px */
   
+  /* Font weights */
   --rescale-font-weight-normal: 400;
   --rescale-font-weight-medium: 500;
   --rescale-font-weight-semibold: 600;
   --rescale-font-weight-bold: 700;
   
+  /* Line heights */
   --rescale-line-height-tight: 1.25;
   --rescale-line-height-normal: 1.5;
   --rescale-line-height-relaxed: 1.625;
   
-  /* Spacing */
+  /* =================================================================== */
+  /* SPACING - 4px Base System */
+  /* =================================================================== */
   --rescale-space-0: 0px;
-  --rescale-space-1: 4px;
-  --rescale-space-2: 8px;
+  --rescale-space-1: 4px;     /* xs */
+  --rescale-space-2: 8px;     /* sm */
   --rescale-space-3: 12px;
-  --rescale-space-4: 16px;
+  --rescale-space-4: 16px;    /* md */
   --rescale-space-5: 20px;
   --rescale-space-6: 24px;
   --rescale-space-7: 28px;
-  --rescale-space-8: 32px;
+  --rescale-space-8: 32px;    /* lg */
   --rescale-space-10: 40px;
-  --rescale-space-12: 48px;
+  --rescale-space-12: 48px;   /* xl */
   --rescale-space-16: 64px;
   --rescale-space-20: 80px;
   --rescale-space-24: 96px;
   --rescale-space-32: 128px;
   
-  /* Border Radius */
+  /* Spacing aliases for convenience */
+  --rescale-space-xs: var(--rescale-space-1);
+  --rescale-space-sm: var(--rescale-space-2);
+  --rescale-space-md: var(--rescale-space-4);
+  --rescale-space-lg: var(--rescale-space-8);
+  --rescale-space-xl: var(--rescale-space-12);
+  
+  /* =================================================================== */
+  /* DIMENSIONS - From Component Audit */
+  /* =================================================================== */
+  --rescale-button-height: 32px;
+  --rescale-input-height: 32px;
+  --rescale-nav-height: 56px;             /* Updated from TopBar audit */
+  --rescale-topbar-height: 56px;          /* Specific TopBar height */
+  --rescale-sidebar-width: 240px;
+  --rescale-search-width: 300px;          /* From TopBar audit */
+  --rescale-search-width-compact: 200px;  /* From TopBar audit */
+  --rescale-icon-size: 32px;              /* From TopBar audit */
+  
+  /* =================================================================== */
+  /* BORDER RADIUS */
+  /* =================================================================== */
   --rescale-radius-none: 0px;
   --rescale-radius-sm: 2px;
-  --rescale-radius-base: 4px;
-  --rescale-radius-md: 6px;
-  --rescale-radius-lg: 8px;
+  --rescale-radius-base: 4px;    /* Most common in components */
+  --rescale-radius-md: 6px;      /* From AnimatedFeedback audit */
+  --rescale-radius-lg: 8px;      /* From ErrorBoundary audit */
   --rescale-radius-xl: 12px;
   --rescale-radius-2xl: 16px;
   --rescale-radius-full: 9999px;
   
-  /* Component Dimensions */
-  --rescale-button-height: 32px;
-  --rescale-input-height: 32px;
-  --rescale-nav-height: 64px;
-  --rescale-sidebar-width: 240px;
-  
-  /* Shadows */
+  /* =================================================================== */
+  /* SHADOWS & ELEVATION */
+  /* =================================================================== */
   --rescale-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --rescale-shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   --rescale-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --rescale-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --rescale-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   
-  /* Z-Index */
+  /* Specific shadows from component audit */
+  --rescale-shadow-elevation: 0 2px 8px rgba(0, 0, 0, 0.15);    /* FigmaStyledButton */
+  --rescale-shadow-focus: 0 0 0 2px rgba(2, 114, 195, 0.1);     /* Consistent focus */
+  
+  /* =================================================================== */
+  /* Z-INDEX - Organized from Component Audit */
+  /* =================================================================== */
   --rescale-z-hide: -1;
   --rescale-z-auto: auto;
   --rescale-z-base: 0;
   --rescale-z-docked: 10;
-  --rescale-z-dropdown: 1000;
-  --rescale-z-sticky: 1100;
+  --rescale-z-loading: 100;      /* LoadingSpinner audit */
+  --rescale-z-layout: 999;       /* MainLayout audit */
+  --rescale-z-dropdown: 1000;    /* MainLayout audit */
+  --rescale-z-sticky: 1001;      /* MainLayout audit - updated */
   --rescale-z-banner: 1200;
   --rescale-z-overlay: 1300;
   --rescale-z-modal: 1400;
@@ -110,63 +184,208 @@
   --rescale-z-toast: 1700;
   --rescale-z-tooltip: 1800;
   
-  /* Animation & Transition */
+  /* =================================================================== */
+  /* ANIMATION & TRANSITIONS - From Component Audit */
+  /* =================================================================== */
   --rescale-duration-fast: 150ms;
-  --rescale-duration-normal: 200ms;
+  --rescale-duration-normal: 200ms;      /* Most common in components */
   --rescale-duration-slow: 300ms;
   --rescale-duration-slower: 500ms;
+  --rescale-duration-shimmer: 1.5s;      /* Skeleton audit */
+  --rescale-duration-feedback: 600ms;    /* AnimatedFeedback audit */
   
+  /* Easing functions */
   --rescale-easing-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
   --rescale-easing-ease-out: cubic-bezier(0, 0, 0.2, 1);
   --rescale-easing-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  
+  /* Common transition patterns */
+  --rescale-transition-standard: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --rescale-transition-background: background-color 200ms ease-in-out;
+  
+  /* =================================================================== */
+  /* BREAKPOINTS */
+  /* =================================================================== */
+  --rescale-breakpoint-mobile: 480px;
+  --rescale-breakpoint-tablet: 768px;
+  --rescale-breakpoint-desktop: 1024px;
+  --rescale-breakpoint-wide: 1280px;
+  
+  /* =================================================================== */
+  /* SEMANTIC COLOR ALIASES */
+  /* =================================================================== */
+  
+  /* Primary semantic colors */
+  --rescale-color-primary: var(--rescale-color-brand-blue);
+  --rescale-color-primary-dark: var(--rescale-color-dark-blue);
+  --rescale-color-primary-light: var(--rescale-color-light-blue);
+  
+  /* Text semantic colors */
+  --rescale-color-text-primary: var(--rescale-color-gray-900);
+  --rescale-color-text-secondary: var(--rescale-color-gray-700);
+  --rescale-color-text-muted: var(--rescale-color-gray-600);
+  --rescale-color-text-disabled: var(--rescale-color-gray-500);
+  --rescale-color-text-placeholder: var(--rescale-color-gray-400);
+  
+  /* Background semantic colors */
+  --rescale-color-bg-primary: var(--rescale-color-white);
+  --rescale-color-bg-secondary: var(--rescale-color-gray-50);
+  --rescale-color-bg-tertiary: var(--rescale-color-gray-100);
+  --rescale-color-bg-disabled: var(--rescale-color-gray-200);
+  --rescale-color-bg-hover: var(--rescale-color-gray-50);
+  
+  /* Border semantic colors */
+  --rescale-color-border-primary: var(--rescale-color-gray-300);
+  --rescale-color-border-secondary: var(--rescale-color-gray-200);
 }
 
-/* Utility classes for common patterns */
+/* =================================================================== */
+/* RESPONSIVE FONT SIZES */
+/* =================================================================== */
+
+@media (max-width: 768px) {
+  :root {
+    --rescale-font-size-4xl: 32px;       /* Scaled down for mobile */
+    --rescale-font-size-3xl: 26px;       /* Scaled down for mobile */
+    --rescale-font-size-2xl: 22px;       /* Scaled down for mobile */
+    --rescale-font-size-display: 60px;   /* Scaled down display size */
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --rescale-font-size-display: 48px;   /* Further scaled for small mobile */
+    --rescale-search-width: var(--rescale-search-width-compact);
+  }
+}
+
+/* =================================================================== */
+/* UTILITY CLASSES */
+/* =================================================================== */
+
+/* Text utilities */
 .rescale-text-primary {
-  color: var(--rescale-color-brand-blue);
+  color: var(--rescale-color-text-primary);
 }
 
 .rescale-text-secondary {
-  color: var(--rescale-color-gray-700);
+  color: var(--rescale-color-text-secondary);
 }
 
 .rescale-text-muted {
-  color: var(--rescale-color-gray-500);
+  color: var(--rescale-color-text-muted);
 }
 
+.rescale-text-brand {
+  color: var(--rescale-color-primary);
+}
+
+/* Background utilities */
 .rescale-bg-primary {
-  background-color: var(--rescale-color-brand-blue);
+  background-color: var(--rescale-color-primary);
 }
 
 .rescale-bg-light {
-  background-color: var(--rescale-color-light-blue);
+  background-color: var(--rescale-color-primary-light);
 }
 
-.rescale-bg-gray {
-  background-color: var(--rescale-color-gray-100);
+.rescale-bg-secondary {
+  background-color: var(--rescale-color-bg-secondary);
 }
 
+.rescale-bg-hover {
+  background-color: var(--rescale-color-bg-hover);
+}
+
+/* Shadow utilities */
 .rescale-shadow {
   box-shadow: var(--rescale-shadow-base);
+}
+
+.rescale-shadow-sm {
+  box-shadow: var(--rescale-shadow-sm);
 }
 
 .rescale-shadow-lg {
   box-shadow: var(--rescale-shadow-lg);
 }
 
+.rescale-shadow-elevation {
+  box-shadow: var(--rescale-shadow-elevation);
+}
+
+.rescale-shadow-focus {
+  box-shadow: var(--rescale-shadow-focus);
+}
+
+/* Border radius utilities */
 .rescale-rounded {
   border-radius: var(--rescale-radius-base);
+}
+
+.rescale-rounded-sm {
+  border-radius: var(--rescale-radius-sm);
+}
+
+.rescale-rounded-md {
+  border-radius: var(--rescale-radius-md);
 }
 
 .rescale-rounded-lg {
   border-radius: var(--rescale-radius-lg);
 }
 
-/* Responsive font sizes */
-@media (max-width: 768px) {
-  :root {
-    --rescale-font-size-4xl: 32px;
-    --rescale-font-size-3xl: 26px;
-    --rescale-font-size-2xl: 22px;
-  }
+.rescale-rounded-full {
+  border-radius: var(--rescale-radius-full);
 }
+
+/* Transition utilities */
+.rescale-transition {
+  transition: var(--rescale-transition-standard);
+}
+
+.rescale-transition-background {
+  transition: var(--rescale-transition-background);
+}
+
+/* Focus utilities */
+.rescale-focus-ring:focus {
+  outline: none;
+  box-shadow: var(--rescale-shadow-focus);
+}
+
+.rescale-focus-outline:focus {
+  outline: 2px solid var(--rescale-color-focus-outline);
+  outline-offset: 2px;
+}
+
+/* Layout utilities */
+.rescale-container {
+  max-width: var(--rescale-breakpoint-wide);
+  margin: 0 auto;
+  padding: 0 var(--rescale-space-md);
+}
+
+/* Spacing utilities - generate programmatically or manually as needed */
+.rescale-p-xs { padding: var(--rescale-space-xs); }
+.rescale-p-sm { padding: var(--rescale-space-sm); }
+.rescale-p-md { padding: var(--rescale-space-md); }
+.rescale-p-lg { padding: var(--rescale-space-lg); }
+.rescale-p-xl { padding: var(--rescale-space-xl); }
+
+.rescale-m-xs { margin: var(--rescale-space-xs); }
+.rescale-m-sm { margin: var(--rescale-space-sm); }
+.rescale-m-md { margin: var(--rescale-space-md); }
+.rescale-m-lg { margin: var(--rescale-space-lg); }
+.rescale-m-xl { margin: var(--rescale-space-xl); }
+
+/* Text alignment utilities */
+.rescale-text-left { text-align: left; }
+.rescale-text-center { text-align: center; }
+.rescale-text-right { text-align: right; }
+
+/* Font weight utilities */
+.rescale-font-normal { font-weight: var(--rescale-font-weight-normal); }
+.rescale-font-medium { font-weight: var(--rescale-font-weight-medium); }
+.rescale-font-semibold { font-weight: var(--rescale-font-weight-semibold); }
+.rescale-font-bold { font-weight: var(--rescale-font-weight-bold); }

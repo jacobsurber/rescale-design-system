@@ -1,0 +1,397 @@
+{
+  "file": {
+    "name": "Rescale Data+AI",
+    "lastModified": "2025-07-22T23:46:43Z",
+    "version": "2243752192301072692",
+    "pages": [
+      {
+        "id": "36:1885",
+        "name": "Study Entity MS1",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.800000011920929,
+          "g": 0.800000011920929,
+          "b": 0.800000011920929,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "1099:30077",
+        "name": "Study Entity MS2",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.800000011920929,
+          "g": 0.800000011920929,
+          "b": 0.800000011920929,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "2473:58167",
+        "name": "Study Entity MS3",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.800000011920929,
+          "g": 0.800000011920929,
+          "b": 0.800000011920929,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "2838:64331",
+        "name": "Study Entity MS4",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.800000011920929,
+          "g": 0.800000011920929,
+          "b": 0.800000011920929,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "5060:304347",
+        "name": "Studiy Entity MS5",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.800000011920929,
+          "g": 0.800000011920929,
+          "b": 0.800000011920929,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "6376:78236",
+        "name": "Studiy Entity MS6",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.800000011920929,
+          "g": 0.800000011920929,
+          "b": 0.800000011920929,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "4523:102978",
+        "name": "Admin",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.800000011920929,
+          "g": 0.800000011920929,
+          "b": 0.800000011920929,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "1318:9800",
+        "name": "Search & Rescale AI",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.800000011920929,
+          "g": 0.800000011920929,
+          "b": 0.800000011920929,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "11617:51394",
+        "name": "Integrations",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.3333333432674408,
+          "g": 0.3686274588108063,
+          "b": 0.4117647111415863,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "1236:36768",
+        "name": "Workflows",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.800000011920929,
+          "g": 0.800000011920929,
+          "b": 0.800000011920929,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "7889:69626",
+        "name": "Job Setup",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.8712277412414551,
+          "g": 0.895709216594696,
+          "b": 0.9244466423988342,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "10124:51910",
+        "name": "Job Status",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.8712277412414551,
+          "g": 0.895709216594696,
+          "b": 0.9244466423988342,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "1148:36314",
+        "name": "Rescale Data Components",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.800000011920929,
+          "g": 0.800000011920929,
+          "b": 0.800000011920929,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "720:16162",
+        "name": "illustrations, icons, and inspiration",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.3332744836807251,
+          "g": 0.36747854948043823,
+          "b": 0.4122070372104645,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "6100:80901",
+        "name": "Rescale 2.0 Flow",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.3333333432674408,
+          "g": 0.3686274588108063,
+          "b": 0.4117647111415863,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "13633:181938",
+        "name": "Rescale 2.5 Flow",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.3333333432674408,
+          "g": 0.3686274588108063,
+          "b": 0.4117647111415863,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      },
+      {
+        "id": "17724:173694",
+        "name": "Rescale 2.5 Flow [JS]",
+        "type": "CANVAS",
+        "scrollBehavior": "SCROLLS",
+        "children": [],
+        "backgroundColor": {
+          "r": 0.3333333432674408,
+          "g": 0.3686274588108063,
+          "b": 0.4117647111415863,
+          "a": 1
+        },
+        "prototypeStartNodeID": null,
+        "flowStartingPoints": [],
+        "prototypeDevice": {
+          "type": "NONE",
+          "rotation": "NONE"
+        }
+      }
+    ]
+  },
+  "styles": [],
+  "components": [
+    {
+      "key": "b874d666365665b5cdfd85961dc6996be8bcadb5",
+      "file_key": "B0H99zI9iTyU7vusGYP3rk",
+      "node_id": "22:290",
+      "thumbnail_url": "https://s3-alpha.figma.com/checkpoints/O6t/Hsb/LSkPKjIMV7CGEP1F/22_290.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQ4GOSFWC3X5W3ZQB%2F20250720%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250720T120000Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=babb0e3c5c4b52dabe000dccc8bd2bbe2787090bc97bea0b3ef25a2507d1c7e6",
+      "name": "Version=ToggleNav",
+      "description": "",
+      "description_rt": "",
+      "created_at": "2023-12-26T21:57:40.165Z",
+      "updated_at": "2023-12-26T21:57:40.165Z",
+      "containing_frame": {
+        "name": "Primary Nav",
+        "nodeId": "22:289",
+        "pageId": "14:92",
+        "pageName": "Components",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "containingStateGroup": {
+          "name": "Primary Nav",
+          "nodeId": "22:289"
+        },
+        "containingComponentSet": {
+          "name": "Primary Nav",
+          "nodeId": "22:289"
+        }
+      },
+      "user": {
+        "id": "1012833799527372039",
+        "handle": "Erik Rogne",
+        "img_url": "https://www.gravatar.com/avatar/b3bb56126c424404783cd080bf4f5712?size=240&default=https%3A%2F%2Fs3-alpha.figma.com%2Fstatic%2Fuser_e_v2.png"
+      }
+    },
+    {
+      "key": "82f5e0d0ed1d8291e55f414ec34777ab74824c16",
+      "file_key": "B0H99zI9iTyU7vusGYP3rk",
+      "node_id": "14:136",
+      "thumbnail_url": "https://s3-alpha.figma.com/checkpoints/OyV/eLH/NARb3k3l2ml9F0v1/14_136.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQ4GOSFWC3X5W3ZQB%2F20250720%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250720T120000Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=0d8850a88f4c3165463f31a667951fbf78c979b5631efdaf88c7199110de950e",
+      "name": "Version=Default",
+      "description": "",
+      "description_rt": "",
+      "created_at": "2023-12-26T19:51:32.713Z",
+      "updated_at": "2023-12-26T21:57:40.177Z",
+      "containing_frame": {
+        "name": "Primary Nav",
+        "nodeId": "22:289",
+        "pageId": "14:92",
+        "pageName": "Components",
+        "backgroundColor": "rgba(0, 0, 0, 0)",
+        "containingStateGroup": {
+          "name": "Primary Nav",
+          "nodeId": "22:289"
+        },
+        "containingComponentSet": {
+          "name": "Primary Nav",
+          "nodeId": "22:289"
+        }
+      },
+      "user": {
+        "id": "1012833799527372039",
+        "handle": "Erik Rogne",
+        "img_url": "https://www.gravatar.com/avatar/b3bb56126c424404783cd080bf4f5712?size=240&default=https%3A%2F%2Fs3-alpha.figma.com%2Fstatic%2Fuser_e_v2.png"
+      }
+    }
+  ]
+}
