@@ -12,7 +12,7 @@ export default defineConfig({
     dts({
       include: ['src'],
       exclude: ['src/**/*.stories.tsx', 'src/**/*.test.tsx'],
-      rollupTypes: true,
+      rollupTypes: false,
     }),
   ],
   build: {
