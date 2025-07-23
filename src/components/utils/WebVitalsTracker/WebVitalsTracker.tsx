@@ -22,7 +22,7 @@ export interface WebVitalsTrackerProps {
 }
 
 // Global Web Vitals store
-let webVitalsData: WebVitalsData = {};
+const webVitalsData: WebVitalsData = {};
 
 /**
  * Get current Web Vitals data

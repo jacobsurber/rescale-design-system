@@ -84,7 +84,7 @@ export const usePagination = ({
       // Calculate range around current page
       const halfMax = Math.floor(maxPages / 2);
       let startPage = Math.max(1, currentPage - halfMax);
-      let endPage = Math.min(totalPages, startPage + maxPages - 1);
+      const endPage = Math.min(totalPages, startPage + maxPages - 1);
       
       // Adjust if we're near the end
       if (endPage - startPage < maxPages - 1) {
