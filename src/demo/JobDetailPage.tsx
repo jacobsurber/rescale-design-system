@@ -16,7 +16,7 @@ import {
   Dropdown,
   MenuProps,
 } from 'antd';
-import { PauseCircleOutlined, StopOutlined, EllipsisOutlined, ExclamationCircleOutlined, SyncOutlined,  } from '@ant-design/icons';
+import { PauseCircleOutlined, StopOutlined, EllipsisOutlined, ExclamationCircleOutlined, SyncOutlined } from '@ant-design/icons';
 import {
   MainLayout,
   PageHeader,

@@ -3,7 +3,7 @@ import { DatePicker, Button, Dropdown, Tag } from 'antd';
 import type { RangePickerProps } from 'antd/es/date-picker';
 import type { Dayjs } from 'dayjs';
 import dayjs from 'dayjs';
-import { CalendarOutlined, DownOutlined, CloseOutlined,  } from '@ant-design/icons';
+import { CalendarOutlined, DownOutlined, CloseOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import { Icon } from '../../atoms/Icon';
 

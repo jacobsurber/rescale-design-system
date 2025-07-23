@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 const action = (name: string) => () => console.log(name);
-import { BankOutlined, BarChartOutlined, DeploymentUnitOutlined, MonitorOutlined, DashboardOutlined, FileTextOutlined, ApiOutlined,  } from '@ant-design/icons';
+import { BankOutlined, BarChartOutlined, DeploymentUnitOutlined, MonitorOutlined, DashboardOutlined, FileTextOutlined, ApiOutlined } from '@ant-design/icons';
 import { Sidebar } from './Sidebar';
 
 const meta: Meta<typeof Sidebar> = {

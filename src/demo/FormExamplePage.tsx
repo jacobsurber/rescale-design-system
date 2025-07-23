@@ -20,7 +20,7 @@ import {
   Typography,
   message,
 } from 'antd';
-import { InboxOutlined, EyeOutlined, CloudUploadOutlined,  } from '@ant-design/icons';
+import { InboxOutlined, EyeOutlined, CloudUploadOutlined } from '@ant-design/icons';
 import {
   MainLayout,
   PageHeader,

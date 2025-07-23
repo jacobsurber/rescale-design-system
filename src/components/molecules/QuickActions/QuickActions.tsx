@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button, Tooltip } from 'antd';
-import { DesktopOutlined, ApartmentOutlined,  } from '@ant-design/icons';
+import { DesktopOutlined, ApartmentOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import { Icon } from '../../atoms/Icon';
 

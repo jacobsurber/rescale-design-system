@@ -16,7 +16,7 @@ import {
   Form,
   message,
 } from 'antd';
-import { LinkOutlined, DisconnectOutlined, ApiOutlined, BugOutlined, ExclamationCircleOutlined, SyncOutlined,  } from '@ant-design/icons';
+import { LinkOutlined, DisconnectOutlined, ApiOutlined, BugOutlined, ExclamationCircleOutlined, SyncOutlined } from '@ant-design/icons';
 import {
   MainLayout,
   PageHeader,

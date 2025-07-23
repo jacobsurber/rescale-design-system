@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Avatar, Tag, Button, Tooltip } from 'antd';
-import { UserOutlined, CopyOutlined,  } from '@ant-design/icons';
+import { UserOutlined, CopyOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import { StatusTag } from '../../atoms/StatusTag';
 import { Icon } from '../../atoms/Icon';

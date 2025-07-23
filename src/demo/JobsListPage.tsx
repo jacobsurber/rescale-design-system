@@ -10,7 +10,7 @@ import {
   Dropdown,
   MenuProps,
 } from 'antd';
-import { FilterOutlined, EllipsisOutlined, PauseCircleOutlined, StopOutlined, EyeOutlined,  } from '@ant-design/icons';
+import { FilterOutlined, EllipsisOutlined, PauseCircleOutlined, StopOutlined, EyeOutlined } from '@ant-design/icons';
 import { 
   MainLayout, 
   PageHeader,

@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 const action = (name: string) => () => console.log(name);
-import { ExclamationCircleOutlined, LoadingOutlined, PauseCircleOutlined,  } from '@ant-design/icons';
+import { ExclamationCircleOutlined, LoadingOutlined, PauseCircleOutlined } from '@ant-design/icons';
 import { StatusTag } from './StatusTag';
 
 const meta: Meta<typeof StatusTag> = {

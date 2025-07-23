@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Progress, Tooltip, Card } from 'antd';
-import { ApiOutlined, CloudServerOutlined, ThunderboltOutlined,  } from '@ant-design/icons';
+import { ApiOutlined, CloudServerOutlined, ThunderboltOutlined } from '@ant-design/icons';
 import styled, { keyframes } from 'styled-components';
 import { Icon } from '../../atoms/Icon';
 

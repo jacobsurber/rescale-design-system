@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 const action = (name: string) => () => console.log(name);
-import { BugOutlined, RocketOutlined, BarChartOutlined,  } from '@ant-design/icons';
+import { BugOutlined, RocketOutlined, BarChartOutlined } from '@ant-design/icons';
 import { EnhancedSelect } from './EnhancedSelect';
 
 const meta: Meta<typeof EnhancedSelect> = {
