@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Row, Col, Space, Divider, Card as AntCard } from 'antd';
-import { UserOutlined, BarChartOutlined, TrophyOutlined,  } from '@ant-design/icons';
+import { UserOutlined, BarChartOutlined, TrophyOutlined } from '@ant-design/icons';
 
 // Import all components
 import { Button } from '../components/atoms/Button';
