@@ -11,7 +11,13 @@ export default defineConfig({
     libInjectCss(),
     dts({
       include: ['src'],
-      exclude: ['src/**/*.stories.tsx', 'src/**/*.test.tsx'],
+      exclude: [
+        'src/**/*.stories.tsx', 
+        'src/**/*.test.tsx',
+        'src/demo/**/*',
+        'src/stories/**/*',
+        'src/test-utils/**/*'
+      ],
       rollupTypes: false,
     }),
   ],

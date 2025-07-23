@@ -34,8 +34,8 @@ export * from './utils';
 // Hooks  
 export * from './hooks';
 
-// Styles and Breakpoints
-export * from './styles/breakpoints';
+// Styles and Breakpoints (exported via theme/tokens to avoid conflicts)
+// export * from './styles/breakpoints';
 
 // Types
 // export * from './types'; // TODO: Add types
