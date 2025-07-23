@@ -313,8 +313,56 @@ export const spacingAliases = {
 
 export const designTokens = {
   colors: {
+    // Legacy color scales for backward compatibility
+    primary: {
+      50: primaryColors.lightBlue,    // #f3f7ff
+      100: primaryColors.lightBlueAlt, // #f0f5ff
+      500: primaryColors.brandBlue,    // #0272c3
+      600: primaryColors.darkBlue,     // #455f87
+      700: '#2c4666',                 // Darker variant
+    },
+    neutral: {
+      50: neutralColors.gray50,       // #FAFAFA
+      100: neutralColors.gray100,     // #f5f6f7
+      200: neutralColors.gray200,     // #E8E8E8
+      300: neutralColors.gray300,     // #D9D9D9
+      400: neutralColors.gray400,     // #BFBFBF
+      500: neutralColors.gray500,     // #8C8C8C
+      600: neutralColors.gray600,     // #595959
+      700: neutralColors.gray700,     // #434343
+      800: neutralColors.gray800,     // #262626
+      900: neutralColors.gray900,     // #1F1F1F
+    },
+    success: {
+      50: '#E8F5E8',
+      100: '#D4EDD4',
+      500: statusColors.success,      // #50c878
+      600: '#2E7D32',
+      700: '#1B5E20',
+    },
+    warning: {
+      50: '#FFF3E0',
+      100: '#FFE0B2',
+      500: statusColors.warning,      // #FA8C16
+      600: '#F57C00',
+      700: '#E65100',
+    },
+    error: {
+      50: '#FFEBEE',
+      100: '#FFCDD2',
+      500: statusColors.error,        // #FF4D4F
+      600: '#C62828',
+      700: '#B71C1C',
+    },
+    info: {
+      50: '#E3F2FD',
+      100: '#BBDEFB',
+      500: statusColors.info,         // #1890FF
+      600: '#1565C0',
+      700: '#0D47A1',
+    },
+    // Modern semantic colors
     brand: primaryColors,
-    neutral: neutralColors,
     status: statusColors,
     accent: accentColors,
     interaction: interactionColors,
