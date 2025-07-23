@@ -6,13 +6,14 @@ import { PageHeader } from '../../../molecules/PageHeader';
 import { Container } from '../../Container';
 import { Grid, Col } from '../../Grid';
 import { Stack } from '../../Spacing';
-import { MetricCard } from '../../../molecules/MetricCard';
 import type { PageHeaderProps } from '../../../molecules/PageHeader';
-import type { MetricCardProps } from '../../../molecules/MetricCard';
 import { mediaQueries } from '../../../../styles/breakpoints';
 
-export interface DashboardMetric extends Omit<MetricCardProps, 'onClick'> {
+export interface DashboardMetric {
   key: string;
+  title: string;
+  value: string | number;
+  variant?: 'default' | 'success' | 'warning' | 'error';
   span?: number;
   order?: number;
 }
@@ -152,7 +153,11 @@ export const DashboardTemplate: React.FC<DashboardTemplateProps> = ({
               spanTablet={4}
               order={metric.order}
             >
-              <MetricCard {...metric} />
+              <Card title={metric.title}>
+                <div style={{ fontSize: '24px', fontWeight: 'bold', color: metric.variant === 'error' ? '#ff4d4f' : metric.variant === 'success' ? '#52c41a' : metric.variant === 'warning' ? '#faad14' : '#000' }}>
+                  {metric.value}
+                </div>
+              </Card>
             </Col>
           ))}
         </MetricsGrid>
