@@ -58,6 +58,7 @@
     "figma:colors": "node scripts/figma-colors.js",
     "figma:sync-storybook": "node scripts/figma-to-storybook.js",
     "figma:auto-sync": "node scripts/auto-sync-figma.js",
+    "ci:debug": "node scripts/ci-debug.js",
     "preview": "vite preview",
     "preview:all": "npm run build:all && vite preview",
     "storybook": "storybook dev -p 6006",
