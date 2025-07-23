@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button, Steps, Alert } from 'antd';
-import { ArrowLeftOutlined, SaveOutlined, CheckOutlined } from '@ant-design/icons';
+import { ArrowLeftOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import { MainLayout } from '../../MainLayout';
 import { PageHeader } from '../../../molecules/PageHeader';
@@ -8,6 +8,7 @@ import { Container } from '../../Container';
 import { Stack } from '../../Spacing';
 import type { PageHeaderProps } from '../../../molecules/PageHeader';
 import { mediaQueries } from '../../../../styles/breakpoints';
+import { Icon } from '../../../atoms/Icon';
 
 export interface FormStep {
   key: string;
@@ -259,7 +260,7 @@ export const FormPageTemplate: React.FC<FormPageTemplateProps> = ({
             {isLastStep ? (
               <Button
                 type="primary"
-                icon={<CheckOutlined />}
+                icon={<Icon name="CheckOutlined" />}
                 onClick={onSave}
                 loading={saveLoading}
               >
@@ -289,7 +290,7 @@ export const FormPageTemplate: React.FC<FormPageTemplateProps> = ({
         {onSave && (
           <Button
             type="primary"
-            icon={<SaveOutlined />}
+            icon={<Icon name="SaveOutlined" />}
             onClick={onSave}
             loading={saveLoading}
           >

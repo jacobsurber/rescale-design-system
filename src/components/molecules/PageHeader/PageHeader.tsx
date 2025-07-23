@@ -1,9 +1,10 @@
 import React from 'react';
 import { Breadcrumb, Tabs, Space, Button, Divider } from 'antd';
 import type { TabsProps } from 'antd';
-import { HomeOutlined } from '@ant-design/icons';
+
 import styled from 'styled-components';
 import { mediaQueries } from '../../../styles/breakpoints';
+import { Icon } from '../../atoms/Icon';
 
 export interface BreadcrumbItem {
   title: string;
@@ -188,7 +189,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
             {
               title: (
                 <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                  <HomeOutlined />
+                  <Icon name="HomeOutlined" />
                   <a href="/">Home</a>
                 </span>
               ),

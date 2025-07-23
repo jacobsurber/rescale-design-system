@@ -10,17 +10,7 @@ import {
   Dropdown,
   MenuProps,
 } from 'antd';
-import { 
-  SearchOutlined, 
-  FilterOutlined,
-  EllipsisOutlined,
-  PlayCircleOutlined,
-  PauseCircleOutlined,
-  StopOutlined,
-  DeleteOutlined,
-  EditOutlined,
-  EyeOutlined,
-} from '@ant-design/icons';
+import { FilterOutlined, EllipsisOutlined, PauseCircleOutlined, StopOutlined, EyeOutlined,  } from '@ant-design/icons';
 import { 
   MainLayout, 
   PageHeader,
@@ -31,6 +21,7 @@ import {
 } from '../index';
 import type { ResourceMetric, SoftwareItem } from '../index';
 import styled from 'styled-components';
+import { Icon } from '../components/atoms/Icon';
 
 const { RangePicker } = DatePicker;
 
@@ -150,7 +141,7 @@ export function JobsListPage() {
       {
         key: 'edit', 
         label: 'Edit Job',
-        icon: <EditOutlined />,
+        icon: <Icon name="EditOutlined" />,
       },
     ];
 
@@ -172,7 +163,7 @@ export function JobsListPage() {
         {
           key: 'start',
           label: 'Start Job',
-          icon: <PlayCircleOutlined />,
+          icon: <Icon name="PlayCircleOutlined" />,
         },
       ],
       completed: [],
@@ -180,7 +171,7 @@ export function JobsListPage() {
         {
           key: 'restart',
           label: 'Restart Job', 
-          icon: <PlayCircleOutlined />,
+          icon: <Icon name="PlayCircleOutlined" />,
         },
       ],
     };
@@ -194,7 +185,7 @@ export function JobsListPage() {
       {
         key: 'delete',
         label: 'Delete Job',
-        icon: <DeleteOutlined />,
+        icon: <Icon name="DeleteOutlined" />,
         danger: true,
       },
     ];
@@ -309,7 +300,7 @@ export function JobsListPage() {
       <FilterContainer>
         <Input
           placeholder="Search jobs..."
-          prefix={<SearchOutlined />}
+          prefix={<Icon name="SearchOutlined" />}
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
           style={{ width: 250 }}

@@ -41,6 +41,7 @@ export const neutralColors = {
   // Background colors from Figma
   backgroundLight: '#CCCCCC', // Figma page backgrounds
   backgroundDark: '#555E69',  // Figma dark backgrounds
+  backgroundJob: '#dee4ec',   // Figma Job Setup & Status pages
 } as const;
 
 // Status Colors (Updated from Figma)

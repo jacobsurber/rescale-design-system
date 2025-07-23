@@ -1,12 +1,9 @@
 import React, { useState, useMemo } from 'react';
 import { Select, Spin, Tag } from 'antd';
 import type { SelectProps } from 'antd';
-import {
-  SearchOutlined,
-  CheckOutlined,
-  LoadingOutlined,
-} from '@ant-design/icons';
+import { LoadingOutlined,  } from '@ant-design/icons';
 import styled from 'styled-components';
+import { Icon } from '../../atoms/Icon';
 
 interface SelectOption {
   value: string | number;
@@ -265,7 +262,7 @@ export const EnhancedSelect: React.FC<EnhancedSelectProps> = ({
         <div className="option-content">
           <div className="option-label">
             {highlightSearchText(label, searchValue)}
-            {isSelected && <div className="selected-indicator"><CheckOutlined /></div>}
+            {isSelected && <div className="selected-indicator"><Icon name="CheckOutlined" /></div>}
           </div>
           
           {showDescriptions && option.description && (
@@ -320,7 +317,7 @@ export const EnhancedSelect: React.FC<EnhancedSelectProps> = ({
           value: '__empty__',
           label: emptyText || (
             <EmptyState>
-              <SearchOutlined className="empty-icon" />
+              <Icon name="SearchOutlined" className />
               <div className="empty-text">
                 {searchValue ? `No results found for "${searchValue}"` : 'No options available'}
               </div>
@@ -365,7 +362,7 @@ export const EnhancedSelect: React.FC<EnhancedSelectProps> = ({
       options={getSelectOptions()}
       maxTagCount={maxTagCount}
       allowClear
-      suffixIcon={loading ? <LoadingOutlined /> : <SearchOutlined />}
+      suffixIcon={loading ? <LoadingOutlined /> : <Icon name="SearchOutlined" />}
       notFoundContent={null} // We handle empty state manually
     />
   );

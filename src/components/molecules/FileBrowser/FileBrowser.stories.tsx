@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { message } from 'antd';
 import { FileBrowser, type FileNode } from './FileBrowser';
-import { CodeOutlined, FileImageOutlined, VideoCameraOutlined, FileOutlined, DatabaseOutlined } from '@ant-design/icons';
+import { CodeOutlined, FileImageOutlined, FileOutlined } from '@ant-design/icons';
+import { Icon } from '../../atoms/Icon';
 
 const meta: Meta<typeof FileBrowser> = {
   title: 'Molecules/FileBrowser',
@@ -206,8 +207,8 @@ const customFileIcons = {
   py: <CodeOutlined style={{ color: '#3776ab' }} />,
   png: <FileImageOutlined style={{ color: '#ff6b6b' }} />,
   pdf: <FileOutlined style={{ color: '#dc3545' }} />,
-  vtk: <DatabaseOutlined style={{ color: '#6f42c1' }} />,
-  msh: <DatabaseOutlined style={{ color: '#20c997' }} />,
+  vtk: <Icon name="DatabaseOutlined" style />,
+  msh: <Icon name="DatabaseOutlined" style />,
 };
 
 export const Default: Story = {

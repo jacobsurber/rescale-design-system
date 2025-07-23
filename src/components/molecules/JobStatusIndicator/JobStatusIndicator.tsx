@@ -1,14 +1,8 @@
 import React from 'react';
-import { Progress, Tag, Tooltip } from 'antd';
-import {
-  PlayCircleOutlined,
-  CheckCircleOutlined,
-  CloseCircleOutlined,
-  ExclamationCircleOutlined,
-  ClockCircleOutlined,
-  LoadingOutlined,
-} from '@ant-design/icons';
+import { Progress, Tag } from 'antd';
+import { ExclamationCircleOutlined, LoadingOutlined } from '@ant-design/icons';
 import styled, { keyframes, css } from 'styled-components';
+import { Icon } from '../../atoms/Icon';
 
 export type JobStatus = 'running' | 'completed' | 'failed' | 'warning' | 'queued' | 'pending';
 
@@ -174,17 +168,17 @@ export const JobStatusIndicator: React.FC<JobStatusIndicatorProps> = ({
       case 'running':
         return <LoadingOutlined />;
       case 'completed':
-        return <CheckCircleOutlined />;
+        return <Icon name="CheckCircleOutlined" />;
       case 'failed':
-        return <CloseCircleOutlined />;
+        return <Icon name="CloseCircleOutlined" />;
       case 'warning':
         return <ExclamationCircleOutlined />;
       case 'queued':
-        return <ClockCircleOutlined />;
+        return <Icon name="ClockCircleOutlined" />;
       case 'pending':
-        return <PlayCircleOutlined />;
+        return <Icon name="PlayCircleOutlined" />;
       default:
-        return <ClockCircleOutlined />;
+        return <Icon name="ClockCircleOutlined" />;
     }
   };
 
@@ -241,7 +235,7 @@ export const JobStatusIndicator: React.FC<JobStatusIndicatorProps> = ({
         
         {duration && (
           <DurationText $size={size}>
-            <ClockCircleOutlined />
+            <Icon name="ClockCircleOutlined" />
             {duration}
           </DurationText>
         )}

@@ -1,15 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 const action = (name: string) => () => console.log(name);
-import {
-  CheckCircleOutlined,
-  ClockCircleOutlined,
-  ExclamationCircleOutlined,
-  LoadingOutlined,
-  PlayCircleOutlined,
-  PauseCircleOutlined,
-CloseCircleOutlined,
-} from '@ant-design/icons';
+import { ExclamationCircleOutlined, LoadingOutlined, PauseCircleOutlined,  } from '@ant-design/icons';
 import { StatusTag } from './StatusTag';
 
 const meta: Meta<typeof StatusTag> = {
@@ -42,6 +34,7 @@ A flexible status indicator component with multiple variants and sizes for displ
 ## Usage
 \`\`\`tsx
 import { StatusTag } from '@/components/display';
+import { Icon } from '../Icon';
 
 <StatusTag variant="success" showDot>
   Completed
@@ -49,7 +42,7 @@ import { StatusTag } from '@/components/display';
 
 <StatusTag 
   variant="running" 
-  icon={<PlayCircleOutlined />}
+  icon={<Icon name="PlayCircleOutlined" />}
   clickable
   onClick={handleClick}
 >
@@ -137,19 +130,19 @@ export const WithDots: Story = {
 export const WithIcons: Story = {
   render: () => (
     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', alignItems: 'center' }}>
-      <StatusTag variant="success" icon={<CheckCircleOutlined />}>
+      <StatusTag variant="success" icon={<Icon name="CheckCircleOutlined" />}>
         Completed
       </StatusTag>
-      <StatusTag variant="warning" icon={<ClockCircleOutlined />}>
+      <StatusTag variant="warning" icon={<Icon name="ClockCircleOutlined" />}>
         Queued
       </StatusTag>
-      <StatusTag variant="error" icon={<CloseCircleOutlined />}>
+      <StatusTag variant="error" icon={<Icon name="CloseCircleOutlined" />}>
         Failed
       </StatusTag>
       <StatusTag variant="processing" icon={<LoadingOutlined spin />}>
         Processing
       </StatusTag>
-      <StatusTag variant="running" icon={<PlayCircleOutlined />}>
+      <StatusTag variant="running" icon={<Icon name="PlayCircleOutlined" />}>
         Running
       </StatusTag>
       <StatusTag variant="pending" icon={<PauseCircleOutlined />}>
@@ -166,19 +159,19 @@ export const Sizes: Story = {
         <span style={{ width: '60px', fontSize: '12px', color: '#666' }}>Small:</span>
         <StatusTag variant="success" size="small">Completed</StatusTag>
         <StatusTag variant="warning" size="small" showDot>Queued</StatusTag>
-        <StatusTag variant="running" size="small" icon={<PlayCircleOutlined />}>Running</StatusTag>
+        <StatusTag variant="running" size="small" icon={<Icon name="PlayCircleOutlined" />}>Running</StatusTag>
       </div>
       <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
         <span style={{ width: '60px', fontSize: '12px', color: '#666' }}>Default:</span>
         <StatusTag variant="success" size="default">Completed</StatusTag>
         <StatusTag variant="warning" size="default" showDot>Queued</StatusTag>
-        <StatusTag variant="running" size="default" icon={<PlayCircleOutlined />}>Running</StatusTag>
+        <StatusTag variant="running" size="default" icon={<Icon name="PlayCircleOutlined" />}>Running</StatusTag>
       </div>
       <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
         <span style={{ width: '60px', fontSize: '12px', color: '#666' }}>Large:</span>
         <StatusTag variant="success" size="large">Completed</StatusTag>
         <StatusTag variant="warning" size="large" showDot>Queued</StatusTag>
-        <StatusTag variant="running" size="large" icon={<PlayCircleOutlined />}>Running</StatusTag>
+        <StatusTag variant="running" size="large" icon={<Icon name="PlayCircleOutlined" />}>Running</StatusTag>
       </div>
     </div>
   ),
@@ -197,7 +190,7 @@ export const Clickable: Story = {
       <StatusTag 
         variant="error" 
         clickable 
-        icon={<CloseCircleOutlined />}
+        icon={<Icon name="CloseCircleOutlined" />}
         onClick={action('error-clicked')}
       >
         Failed (Click me)
@@ -219,19 +212,19 @@ export const JobStatuses: Story = {
     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
       <h4>Common Job Statuses</h4>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-        <StatusTag variant="queued" icon={<ClockCircleOutlined />} showDot>
+        <StatusTag variant="queued" icon={<Icon name="ClockCircleOutlined" />} showDot>
           Queued
         </StatusTag>
-        <StatusTag variant="running" icon={<PlayCircleOutlined />} showDot>
+        <StatusTag variant="running" icon={<Icon name="PlayCircleOutlined" />} showDot>
           Running
         </StatusTag>
         <StatusTag variant="processing" icon={<LoadingOutlined spin />} showDot>
           Post-processing
         </StatusTag>
-        <StatusTag variant="completed" icon={<CheckCircleOutlined />} showDot>
+        <StatusTag variant="completed" icon={<Icon name="CheckCircleOutlined" />} showDot>
           Completed
         </StatusTag>
-        <StatusTag variant="failed" icon={<CloseCircleOutlined />} showDot>
+        <StatusTag variant="failed" icon={<Icon name="CloseCircleOutlined" />} showDot>
           Failed
         </StatusTag>
         <StatusTag variant="cancelled" icon={<ExclamationCircleOutlined />} showDot>
@@ -262,10 +255,10 @@ export const Interactive: Story = {
     const [selectedStatus, setSelectedStatus] = React.useState<string>('');
 
     const statuses = [
-      { variant: 'queued' as const, label: 'Queued', icon: <ClockCircleOutlined /> },
-      { variant: 'running' as const, label: 'Running', icon: <PlayCircleOutlined /> },
-      { variant: 'completed' as const, label: 'Completed', icon: <CheckCircleOutlined /> },
-      { variant: 'failed' as const, label: 'Failed', icon: <CloseCircleOutlined /> },
+      { variant: 'queued' as const, label: 'Queued', icon: <Icon name="ClockCircleOutlined" /> },
+      { variant: 'running' as const, label: 'Running', icon: <Icon name="PlayCircleOutlined" /> },
+      { variant: 'completed' as const, label: 'Completed', icon: <Icon name="CheckCircleOutlined" /> },
+      { variant: 'failed' as const, label: 'Failed', icon: <Icon name="CloseCircleOutlined" /> },
     ];
 
     return (

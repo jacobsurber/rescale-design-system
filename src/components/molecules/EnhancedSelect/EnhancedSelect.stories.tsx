@@ -1,16 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 const action = (name: string) => () => console.log(name);
-import {
-  DatabaseOutlined,
-  BugOutlined,
-  RocketOutlined,
-  StarOutlined,
-  BarChartOutlined,
-CloudOutlined,
-  TeamOutlined,
-  SettingOutlined,
-} from '@ant-design/icons';
+import { BugOutlined, RocketOutlined, BarChartOutlined,  } from '@ant-design/icons';
 import { EnhancedSelect } from './EnhancedSelect';
 
 const meta: Meta<typeof EnhancedSelect> = {
@@ -49,13 +40,14 @@ Each option can include:
 ## Usage
 \`\`\`tsx
 import { EnhancedSelect } from '@/components/forms';
+import { Icon } from '../../atoms/Icon';
 
 const options = [
   {
     value: 'aws',
     label: 'Amazon Web Services',
     description: 'Cloud computing platform',
-    icon: <CloudOutlined />,
+    icon: <Icon name="CloudOutlined" />,
     tags: ['Cloud', 'AWS'],
     group: 'Cloud Providers',
   },
@@ -117,7 +109,7 @@ const sampleOptions = [
     value: 'aws',
     label: 'Amazon Web Services',
     description: 'Comprehensive cloud computing platform with extensive services',
-    icon: <CloudOutlined />,
+    icon: <Icon name="CloudOutlined" />,
     tags: ['Cloud', 'AWS', 'Popular'],
     group: 'Cloud Providers',
   },
@@ -125,7 +117,7 @@ const sampleOptions = [
     value: 'gcp',
     label: 'Google Cloud Platform',
     description: 'Google\'s suite of cloud computing services',
-    icon: <CloudOutlined />,
+    icon: <Icon name="CloudOutlined" />,
     tags: ['Cloud', 'Google', 'AI/ML'],
     group: 'Cloud Providers',
   },
@@ -133,7 +125,7 @@ const sampleOptions = [
     value: 'azure',
     label: 'Microsoft Azure',
     description: 'Microsoft\'s cloud computing service',
-    icon: <CloudOutlined />,
+    icon: <Icon name="CloudOutlined" />,
     tags: ['Cloud', 'Microsoft', 'Enterprise'],
     group: 'Cloud Providers',
   },
@@ -141,7 +133,7 @@ const sampleOptions = [
     value: 's3',
     label: 'Amazon S3',
     description: 'Scalable object storage service',
-    icon: <DatabaseOutlined />,
+    icon: <Icon name="DatabaseOutlined" />,
     tags: ['Storage', 'AWS', 'Object'],
     group: 'Storage Services',
   },
@@ -149,7 +141,7 @@ const sampleOptions = [
     value: 'gcs',
     label: 'Google Cloud Storage',
     description: 'Unified object storage for developers and enterprises',
-    icon: <DatabaseOutlined />,
+    icon: <Icon name="DatabaseOutlined" />,
     tags: ['Storage', 'Google', 'Object'],
     group: 'Storage Services',
   },
@@ -157,7 +149,7 @@ const sampleOptions = [
     value: 'blob',
     label: 'Azure Blob Storage',
     description: 'Massively scalable object storage for unstructured data',
-    icon: <DatabaseOutlined />,
+    icon: <Icon name="DatabaseOutlined" />,
     tags: ['Storage', 'Azure', 'Object'],
     group: 'Storage Services',
   },
@@ -165,7 +157,7 @@ const sampleOptions = [
     value: 'slack',
     label: 'Slack',
     description: 'Team collaboration and communication platform',
-    icon: <TeamOutlined />,
+    icon: <Icon name="TeamOutlined" />,
     tags: ['Communication', 'Teams', 'Chat'],
     group: 'Collaboration Tools',
   },
@@ -173,7 +165,7 @@ const sampleOptions = [
     value: 'teams',
     label: 'Microsoft Teams',
     description: 'Unified communication and collaboration platform',
-    icon: <TeamOutlined />,
+    icon: <Icon name="TeamOutlined" />,
     tags: ['Communication', 'Microsoft', 'Video'],
     group: 'Collaboration Tools',
   },
@@ -302,7 +294,7 @@ export const SoftwareSelection: Story = {
         value: 'abaqus',
         label: 'Abaqus',
         description: 'Finite element analysis software',
-        icon: <SettingOutlined />,
+        icon: <Icon name="SettingOutlined" />,
         tags: ['FEA', 'Structural', 'Commercial'],
         group: 'Finite Element Analysis',
       },
@@ -310,7 +302,7 @@ export const SoftwareSelection: Story = {
         value: 'nastran',
         label: 'MSC Nastran',
         description: 'Multidisciplinary structural analysis solver',
-        icon: <SettingOutlined />,
+        icon: <Icon name="SettingOutlined" />,
         tags: ['FEA', 'Solver', 'Aerospace'],
         group: 'Finite Element Analysis',
       },
@@ -318,7 +310,7 @@ export const SoftwareSelection: Story = {
         value: 'matlab',
         label: 'MATLAB',
         description: 'Technical computing platform',
-        icon: <StarOutlined />,
+        icon: <Icon name="StarOutlined" />,
         tags: ['Computing', 'Data Analysis', 'Scripting'],
         group: 'General Purpose',
       },
@@ -349,7 +341,7 @@ export const UserSelection: Story = {
         value: 'admin',
         label: 'Administrator',
         description: 'Full system access and management capabilities',
-        icon: <SettingOutlined />,
+        icon: <Icon name="SettingOutlined" />,
         tags: ['Admin', 'Full Access'],
         group: 'System Roles',
       },
@@ -357,7 +349,7 @@ export const UserSelection: Story = {
         value: 'manager',
         label: 'Project Manager',
         description: 'Manage projects and team members',
-        icon: <TeamOutlined />,
+        icon: <Icon name="TeamOutlined" />,
         tags: ['Management', 'Projects'],
         group: 'Management Roles',
       },
@@ -381,7 +373,7 @@ export const UserSelection: Story = {
         value: 'viewer',
         label: 'Viewer',
         description: 'View-only access to projects and results',
-        icon: <StarOutlined />,
+        icon: <Icon name="StarOutlined" />,
         tags: ['Read Only', 'Limited'],
         group: 'Basic Roles',
       },

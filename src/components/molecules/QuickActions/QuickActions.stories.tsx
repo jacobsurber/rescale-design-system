@@ -1,11 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { QuickActions } from './QuickActions'
 import type { QuickAction } from './QuickActions';
+import { Icon } from '../../atoms/Icon';
 import { 
   RocketOutlined, 
   FileOutlined, 
-  SettingOutlined, 
-  TeamOutlined,
   CloudUploadOutlined,
   ExperimentOutlined,
 } from '@ant-design/icons';
@@ -98,14 +97,14 @@ const customActions: QuickAction[] = [
   {
     id: 'manage-team',
     label: 'Manage Team',
-    icon: <TeamOutlined />,
+    icon: <Icon name="TeamOutlined" />,
     description: 'Manage team members and permissions',
     type: 'secondary',
   },
   {
     id: 'settings',
     label: 'Settings',
-    icon: <SettingOutlined />,
+    icon: <Icon name="SettingOutlined" />,
     description: 'Configure workspace settings',
     type: 'secondary',
   },
@@ -241,7 +240,7 @@ export const ActionTypes: Story = {
       {
         id: 'danger',
         label: 'Danger Action',
-        icon: <SettingOutlined />,
+        icon: <Icon name="SettingOutlined" />,
         description: 'Destructive operation',
         type: 'danger',
       },
@@ -277,7 +276,7 @@ export const LoadingAndDisabled: Story = {
       {
         id: 'disabled',
         label: 'Disabled Action',
-        icon: <TeamOutlined />,
+        icon: <Icon name="TeamOutlined" />,
         description: 'Not available',
         type: 'secondary',
         disabled: true,

@@ -1,14 +1,9 @@
 import React from 'react';
 import { Card, Avatar, Tag, Button, Tooltip } from 'antd';
-import {
-  PlayCircleOutlined,
-  ClockCircleOutlined,
-  UserOutlined,
-  CopyOutlined,
-  EditOutlined,
-} from '@ant-design/icons';
+import { UserOutlined, CopyOutlined,  } from '@ant-design/icons';
 import styled from 'styled-components';
 import { StatusTag } from '../../atoms/StatusTag';
+import { Icon } from '../../atoms/Icon';
 
 type WorkflowStatus = 'draft' | 'validated' | 'running' | 'completed' | 'failed' | 'paused';
 
@@ -267,13 +262,13 @@ export const WorkflowCard: React.FC<WorkflowCardProps> = ({
   const getStepStatusIcon = (stepStatus: string) => {
     switch (stepStatus) {
       case 'running':
-        return <ClockCircleOutlined style={{ color: 'var(--rescale-color-brand-blue)' }} />;
+        return <Icon name="ClockCircleOutlined" style />;
       case 'completed':
-        return <PlayCircleOutlined style={{ color: 'var(--rescale-color-success)' }} />;
+        return <Icon name="PlayCircleOutlined" style />;
       case 'failed':
-        return <PlayCircleOutlined style={{ color: 'var(--rescale-color-error)' }} />;
+        return <Icon name="PlayCircleOutlined" style />;
       default:
-        return <ClockCircleOutlined style={{ color: 'var(--rescale-color-gray-500)' }} />;
+        return <Icon name="ClockCircleOutlined" style />;
     }
   };
 
@@ -325,7 +320,7 @@ export const WorkflowCard: React.FC<WorkflowCardProps> = ({
   const actions = [
     canRun && (
       <Tooltip title="Run workflow" key="run">
-        <RunButton icon={<PlayCircleOutlined />} onClick={handleRun}>
+        <RunButton icon={<Icon name="PlayCircleOutlined" />} onClick={handleRun}>
           Run
         </RunButton>
       </Tooltip>
@@ -336,7 +331,7 @@ export const WorkflowCard: React.FC<WorkflowCardProps> = ({
       </ActionButton>
     </Tooltip>,
     <Tooltip title="Edit workflow" key="edit">
-      <ActionButton icon={<EditOutlined />} onClick={handleEdit}>
+      <ActionButton icon={<Icon name="EditOutlined" />} onClick={handleEdit}>
         Edit
       </ActionButton>
     </Tooltip>,
@@ -403,7 +398,7 @@ export const WorkflowCard: React.FC<WorkflowCardProps> = ({
       <WorkflowMeta>
         <MetaInfo>
           <MetaItem>
-            <ClockCircleOutlined />
+            <Icon name="ClockCircleOutlined" />
             Created {formatDate(createdAt)}
           </MetaItem>
           {estimatedRuntime && (

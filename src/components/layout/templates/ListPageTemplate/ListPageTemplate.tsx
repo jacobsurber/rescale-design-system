@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Input, Button, Select } from 'antd';
-import { SearchOutlined, FilterOutlined, ReloadOutlined, PlusOutlined } from '@ant-design/icons';
+import { FilterOutlined, ReloadOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import { MainLayout } from '../../MainLayout';
 import { PageHeader } from '../../../molecules/PageHeader';
@@ -9,6 +9,7 @@ import { Grid, Col } from '../../Grid';
 import { Stack } from '../../Spacing';
 import type { PageHeaderProps } from '../../../molecules/PageHeader';
 import { mediaQueries } from '../../../../styles/breakpoints';
+import { Icon } from '../../../atoms/Icon';
 
 export interface FilterOption {
   key: string;
@@ -156,7 +157,7 @@ export const ListPageTemplate: React.FC<ListPageTemplateProps> = ({
                     placeholder={searchPlaceholder}
                     value={searchValue}
                     onChange={(e) => onSearchChange?.(e.target.value)}
-                    prefix={<SearchOutlined />}
+                    prefix={<Icon name="SearchOutlined" />}
                     allowClear
                     loading={searchLoading}
                   />
@@ -196,7 +197,7 @@ export const ListPageTemplate: React.FC<ListPageTemplateProps> = ({
                     {onCreate && (
                       <Button
                         type="primary"
-                        icon={<PlusOutlined />}
+                        icon={<Icon name="PlusOutlined" />}
                         onClick={onCreate}
                       >
                         {createButtonText}

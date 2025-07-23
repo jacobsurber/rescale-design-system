@@ -20,14 +20,7 @@ import {
   Typography,
   message,
 } from 'antd';
-import {
-  UploadOutlined,
-  InboxOutlined,
-  PlayCircleOutlined,
-  SaveOutlined,
-  EyeOutlined,
-  CloudUploadOutlined,
-} from '@ant-design/icons';
+import { InboxOutlined, EyeOutlined, CloudUploadOutlined,  } from '@ant-design/icons';
 import {
   MainLayout,
   PageHeader,
@@ -38,6 +31,7 @@ import {
 } from '../index';
 import type { SoftwareItem } from '../index';
 import styled from 'styled-components';
+import { Icon } from '../components/atoms/Icon';
 
 const { TextArea } = Input;
 const { Title, Text } = Typography;
@@ -619,7 +613,7 @@ export function FormExamplePage() {
               {
                 id: 'save-draft',
                 label: 'Save Draft',
-                icon: <SaveOutlined />,
+                icon: <Icon name="SaveOutlined" />,
                 type: 'secondary',
               },
               {
@@ -664,7 +658,7 @@ export function FormExamplePage() {
               <Button
                 type="primary"
                 size="large"
-                icon={<PlayCircleOutlined />}
+                icon={<Icon name="PlayCircleOutlined" />}
                 onClick={handleSubmit}
               >
                 Submit Job

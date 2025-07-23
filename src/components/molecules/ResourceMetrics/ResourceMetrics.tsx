@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Progress, Tooltip, Card } from 'antd';
-import { 
-  ApiOutlined, 
-  DatabaseOutlined, 
-  CloudServerOutlined,
-  ThunderboltOutlined,
-} from '@ant-design/icons';
+import { ApiOutlined, CloudServerOutlined, ThunderboltOutlined,  } from '@ant-design/icons';
 import styled, { keyframes } from 'styled-components';
+import { Icon } from '../../atoms/Icon';
 
 export interface ResourceMetric {
   /** Metric type */
@@ -253,7 +249,7 @@ export const ResourceMetrics: React.FC<ResourceMetricsProps> = ({
       case 'cpu':
         return <ApiOutlined />;
       case 'memory':
-        return <DatabaseOutlined />;
+        return <Icon name="DatabaseOutlined" />;
       case 'storage':
         return <CloudServerOutlined />;
       case 'network':

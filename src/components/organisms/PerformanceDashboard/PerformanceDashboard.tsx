@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Card, Row, Col, Statistic, Progress, Tabs, Table, Tag, Button, Space } from 'antd';
-import { ReloadOutlined, TrophyOutlined, ThunderboltOutlined, ClockCircleOutlined } from '@ant-design/icons';
+import { ReloadOutlined, TrophyOutlined, ThunderboltOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import { useWebVitals } from '../../utils/WebVitalsTracker';
 import { measureBundleSize } from '../../../utils/performance';
+import { Icon } from '../../atoms/Icon';
 
 const DashboardContainer = styled.div`
   padding: 24px;
@@ -238,7 +239,7 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
               title="Largest Contentful Paint (LCP)"
               value={vitals.LCP?.value.toFixed(0) || 'N/A'}
               suffix="ms"
-              prefix={<ClockCircleOutlined />}
+              prefix={<Icon name="ClockCircleOutlined" />}
             />
             {vitals.LCP && (
               <ScoreIndicator score={getScore('LCP')?.rating || 'needs-improvement'}>
@@ -285,7 +286,7 @@ export const PerformanceDashboard: React.FC<PerformanceDashboardProps> = ({
               title="First Contentful Paint (FCP)"
               value={vitals.FCP?.value.toFixed(0) || 'N/A'}
               suffix="ms"
-              prefix={<ClockCircleOutlined />}
+              prefix={<Icon name="ClockCircleOutlined" />}
             />
             {vitals.FCP && (
               <ScoreIndicator score={getScore('FCP')?.rating || 'needs-improvement'}>

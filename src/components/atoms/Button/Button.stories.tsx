@@ -3,18 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Button, type ButtonVariant, type ButtonSize } from './Button';
 import { buttonSizes } from './Button.constants';
 import { Space, Row, Col, Divider } from 'antd';
-import { 
-  PlusOutlined, 
-  DeleteOutlined, 
-  DownloadOutlined, 
-  EditOutlined,
-  SearchOutlined,
-  SaveOutlined,
-  UploadOutlined,
-  HeartOutlined,
-  StarOutlined,
-  ShareAltOutlined,
-} from '@ant-design/icons';
+import { Icon } from '../Icon';
 
 const meta: Meta<typeof Button> = {
   title: 'Atoms/Button',
@@ -149,32 +138,32 @@ export const IconButtons: Story = {
       <div>
         <h3 style={{ marginBottom: 16 }}>Icon-Only Buttons</h3>
         <Space wrap>
-          <Button iconOnly icon={<PlusOutlined />} />
-          <Button iconOnly icon={<EditOutlined />} variant="secondary" />
-          <Button iconOnly icon={<DeleteOutlined />} variant="danger" />
-          <Button iconOnly icon={<DownloadOutlined />} variant="ghost" />
-          <Button iconOnly icon={<SearchOutlined />} variant="text" />
+          <Button iconOnly icon={<Icon name="PlusOutlined" />} />
+          <Button iconOnly icon={<Icon name="EditOutlined" />} variant="secondary" />
+          <Button iconOnly icon={<Icon name="DeleteOutlined" />} variant="danger" />
+          <Button iconOnly icon={<Icon name="DownloadOutlined" />} variant="ghost" />
+          <Button iconOnly icon={<Icon name="SearchOutlined" />} variant="text" />
         </Space>
       </div>
       
       <div>
         <h3 style={{ marginBottom: 16 }}>Icon-Only Sizes</h3>
         <Space align="center" wrap>
-          <Button iconOnly icon={<HeartOutlined />} size="xs" />
-          <Button iconOnly icon={<HeartOutlined />} size="sm" />
-          <Button iconOnly icon={<HeartOutlined />} size="md" />
-          <Button iconOnly icon={<HeartOutlined />} size="lg" />
-          <Button iconOnly icon={<HeartOutlined />} size="xl" />
+          <Button iconOnly icon={<Icon name="HeartOutlined" />} size="xs" />
+          <Button iconOnly icon={<Icon name="HeartOutlined" />} size="sm" />
+          <Button iconOnly icon={<Icon name="HeartOutlined" />} size="md" />
+          <Button iconOnly icon={<Icon name="HeartOutlined" />} size="lg" />
+          <Button iconOnly icon={<Icon name="HeartOutlined" />} size="xl" />
         </Space>
       </div>
       
       <div>
         <h3 style={{ marginBottom: 16 }}>Buttons with Icons</h3>
         <Space wrap>
-          <Button icon={<PlusOutlined />}>Add Item</Button>
-          <Button icon={<SaveOutlined />} variant="secondary">Save</Button>
-          <Button icon={<UploadOutlined />} variant="ghost">Upload</Button>
-          <Button icon={<ShareAltOutlined />} variant="text">Share</Button>
+          <Button icon={<Icon name="PlusOutlined" />}>Add Item</Button>
+          <Button icon={<Icon name="SaveOutlined" />} variant="secondary">Save</Button>
+          <Button icon={<Icon name="UploadOutlined" />} variant="ghost">Upload</Button>
+          <Button icon={<Icon name="ShareAltOutlined" />} variant="text">Share</Button>
         </Space>
       </div>
     </Space>
@@ -297,18 +286,18 @@ export const ButtonShapes: Story = {
         <Space wrap>
           <Button shape="default">Default Shape</Button>
           <Button shape="round">Round Shape</Button>
-          <Button shape="circle" icon={<StarOutlined />} />
+          <Button shape="circle" icon={<Icon name="StarOutlined" />} />
         </Space>
       </div>
       
       <div>
         <h3 style={{ marginBottom: 16 }}>Circle Buttons (All Sizes)</h3>
         <Space align="center" wrap>
-          <Button shape="circle" icon={<PlusOutlined />} size="xs" />
-          <Button shape="circle" icon={<PlusOutlined />} size="sm" />
-          <Button shape="circle" icon={<PlusOutlined />} size="md" />
-          <Button shape="circle" icon={<PlusOutlined />} size="lg" />
-          <Button shape="circle" icon={<PlusOutlined />} size="xl" />
+          <Button shape="circle" icon={<Icon name="PlusOutlined" />} size="xs" />
+          <Button shape="circle" icon={<Icon name="PlusOutlined" />} size="sm" />
+          <Button shape="circle" icon={<Icon name="PlusOutlined" />} size="md" />
+          <Button shape="circle" icon={<Icon name="PlusOutlined" />} size="lg" />
+          <Button shape="circle" icon={<Icon name="PlusOutlined" />} size="xl" />
         </Space>
       </div>
     </Space>
@@ -346,11 +335,11 @@ export const ButtonGroups: Story = {
       <div>
         <h3 style={{ marginBottom: 16 }}>Action Toolbar</h3>
         <Space>
-          <Button iconOnly icon={<EditOutlined />} variant="ghost" />
-          <Button iconOnly icon={<DeleteOutlined />} variant="ghost" />
-          <Button iconOnly icon={<DownloadOutlined />} variant="ghost" />
+          <Button iconOnly icon={<Icon name="EditOutlined" />} variant="ghost" />
+          <Button iconOnly icon={<Icon name="DeleteOutlined" />} variant="ghost" />
+          <Button iconOnly icon={<Icon name="DownloadOutlined" />} variant="ghost" />
           <Divider type="vertical" />
-          <Button icon={<PlusOutlined />} size="sm">Add New</Button>
+          <Button icon={<Icon name="PlusOutlined" />} size="sm">Add New</Button>
         </Space>
       </div>
     </Space>
@@ -419,10 +408,10 @@ export const AccessibilityDemo: Story = {
           <Button variant="secondary" onClick={() => alert('Secondary clicked!')}>
             Secondary Action
           </Button>
-          <Button variant="ghost" icon={<DeleteOutlined />} onClick={() => alert('Delete clicked!')}>
+          <Button variant="ghost" icon={<Icon name="DeleteOutlined" />} onClick={() => alert('Delete clicked!')}>
             Delete
           </Button>
-          <Button iconOnly icon={<EditOutlined />} onClick={() => alert('Edit clicked!')} />
+          <Button iconOnly icon={<Icon name="EditOutlined" />} onClick={() => alert('Edit clicked!')} />
         </Space>
       </div>
     </Space>
@@ -445,7 +434,7 @@ export const UsageExamples: Story = {
         <div style={{ marginBottom: 24 }}>
           <h4>Form Actions</h4>
           <Space>
-            <Button variant="primary" icon={<SaveOutlined />}>Save Changes</Button>
+            <Button variant="primary" icon={<Icon name="SaveOutlined" />}>Save Changes</Button>
             <Button variant="secondary">Cancel</Button>
             <Button variant="text">Reset Form</Button>
           </Space>
@@ -454,28 +443,28 @@ export const UsageExamples: Story = {
         <div style={{ marginBottom: 24 }}>
           <h4>Data Actions</h4>
           <Space>
-            <Button variant="primary" icon={<PlusOutlined />} size="sm">Add Item</Button>
-            <Button variant="ghost" icon={<EditOutlined />} size="sm">Edit</Button>
-            <Button variant="danger" icon={<DeleteOutlined />} size="sm">Delete</Button>
+            <Button variant="primary" icon={<Icon name="PlusOutlined" />} size="sm">Add Item</Button>
+            <Button variant="ghost" icon={<Icon name="EditOutlined" />} size="sm">Edit</Button>
+            <Button variant="danger" icon={<Icon name="DeleteOutlined" />} size="sm">Delete</Button>
           </Space>
         </div>
         
         <div style={{ marginBottom: 24 }}>
           <h4>Status Actions</h4>
           <Space>
-            <Button variant="success" icon={<SaveOutlined />}>Complete</Button>
-            <Button variant="warning" icon={<EditOutlined />}>Review</Button>
-            <Button variant="danger" icon={<DeleteOutlined />}>Reject</Button>
+            <Button variant="success" icon={<Icon name="SaveOutlined" />}>Complete</Button>
+            <Button variant="warning" icon={<Icon name="EditOutlined" />}>Review</Button>
+            <Button variant="danger" icon={<Icon name="DeleteOutlined" />}>Reject</Button>
           </Space>
         </div>
         
         <div>
           <h4>Compact Toolbar</h4>
           <Space>
-            <Button iconOnly icon={<EditOutlined />} size="xs" variant="ghost" />
-            <Button iconOnly icon={<DeleteOutlined />} size="xs" variant="ghost" />
-            <Button iconOnly icon={<DownloadOutlined />} size="xs" variant="ghost" />
-            <Button iconOnly icon={<ShareAltOutlined />} size="xs" variant="ghost" />
+            <Button iconOnly icon={<Icon name="EditOutlined" />} size="xs" variant="ghost" />
+            <Button iconOnly icon={<Icon name="DeleteOutlined" />} size="xs" variant="ghost" />
+            <Button iconOnly icon={<Icon name="DownloadOutlined" />} size="xs" variant="ghost" />
+            <Button iconOnly icon={<Icon name="ShareAltOutlined" />} size="xs" variant="ghost" />
           </Space>
         </div>
       </div>

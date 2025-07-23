@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { WorkspaceSelector } from './WorkspaceSelector'
 import type { Workspace } from './WorkspaceSelector';
-import { TeamOutlined, UserOutlined } from '@ant-design/icons';
+import { UserOutlined } from '@ant-design/icons';
+import { Icon } from '../../atoms/Icon';
 
 /**
  * The WorkspaceSelector component provides a dropdown interface for selecting workspaces
@@ -93,7 +94,7 @@ const sampleWorkspaces: Workspace[] = [
     lastAccessed: new Date(Date.now() - 24 * 60 * 60 * 1000), // 1 day ago
     memberCount: 12,
     owner: 'Sarah Johnson',
-    icon: <TeamOutlined />,
+    icon: <Icon name="TeamOutlined" />,
   },
   {
     id: 'team-cfd',
@@ -105,7 +106,7 @@ const sampleWorkspaces: Workspace[] = [
     lastAccessed: new Date(Date.now() - 3 * 60 * 60 * 1000), // 3 hours ago
     memberCount: 8,
     owner: 'Michael Chen',
-    icon: <TeamOutlined />,
+    icon: <Icon name="TeamOutlined" />,
   },
   {
     id: 'org-main',
@@ -117,7 +118,7 @@ const sampleWorkspaces: Workspace[] = [
     lastAccessed: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000), // 1 week ago
     memberCount: 156,
     owner: 'Admin Team',
-    icon: <TeamOutlined />,
+    icon: <Icon name="TeamOutlined" />,
   },
   {
     id: 'personal-2',
@@ -140,7 +141,7 @@ const sampleWorkspaces: Workspace[] = [
     lastAccessed: new Date(Date.now() - 10 * 24 * 60 * 60 * 1000), // 10 days ago
     memberCount: 24,
     owner: 'Lisa Wang',
-    icon: <TeamOutlined />,
+    icon: <Icon name="TeamOutlined" />,
   },
   {
     id: 'team-materials',
@@ -152,7 +153,7 @@ const sampleWorkspaces: Workspace[] = [
     lastAccessed: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000), // 15 days ago
     memberCount: 6,
     owner: 'Dr. Robert Kim',
-    icon: <TeamOutlined />,
+    icon: <Icon name="TeamOutlined" />,
   },
 ];
 

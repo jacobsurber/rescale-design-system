@@ -1,20 +1,13 @@
 import React, { useState, useMemo } from 'react';
 import { Table, Space, Button, Dropdown, Checkbox, Input, Tag, Avatar, Tooltip } from 'antd';
 import type { TableProps, ColumnsType } from 'antd/es/table';
-import {
-  MoreOutlined,
-  PlayCircleOutlined,
-  PauseCircleOutlined,
-  StopOutlined,
-  DeleteOutlined,
-  EyeOutlined,
-  SearchOutlined,
-} from '@ant-design/icons';
+import { MoreOutlined, PauseCircleOutlined, StopOutlined, EyeOutlined,  } from '@ant-design/icons';
 import styled from 'styled-components';
 import { JobStatusIndicator } from '../../molecules/JobStatusIndicator';
 import { ResourceMetrics } from '../../molecules/ResourceMetrics';
 import { SoftwareLogoGrid } from '../SoftwareLogoGrid';
 import { designTokens } from '../../../theme/tokens';
+import { Icon } from '../../atoms/Icon';
 
 const StyledTable = styled(Table)`
   .ant-table-thead > tr > th {
@@ -225,7 +218,7 @@ export const JobsTable: React.FC<JobsTableProps> = ({
     {
       key: 'start',
       label: 'Start',
-      icon: <PlayCircleOutlined />,
+      icon: <Icon name="PlayCircleOutlined" />,
       disabled: job.status === 'running',
       onClick: () => handleJobAction('start', job.id),
     },
@@ -249,7 +242,7 @@ export const JobsTable: React.FC<JobsTableProps> = ({
     {
       key: 'delete',
       label: 'Delete',
-      icon: <DeleteOutlined />,
+      icon: <Icon name="DeleteOutlined" />,
       danger: true,
       onClick: () => handleJobAction('delete', job.id),
     },
@@ -260,7 +253,7 @@ export const JobsTable: React.FC<JobsTableProps> = ({
     {
       key: 'start',
       label: 'Start Selected',
-      icon: <PlayCircleOutlined />,
+      icon: <Icon name="PlayCircleOutlined" />,
       onClick: () => handleBulkAction('start'),
     },
     {
@@ -281,7 +274,7 @@ export const JobsTable: React.FC<JobsTableProps> = ({
     {
       key: 'delete',
       label: 'Delete Selected',
-      icon: <DeleteOutlined />,
+      icon: <Icon name="DeleteOutlined" />,
       danger: true,
       onClick: () => handleBulkAction('delete'),
     },
@@ -458,7 +451,7 @@ export const JobsTable: React.FC<JobsTableProps> = ({
               onChange={(e) => handleSearch(e.target.value)}
               onSearch={handleSearch}
               style={{ maxWidth: 400 }}
-              prefix={<SearchOutlined />}
+              prefix={<Icon name="SearchOutlined" />}
             />
           )}
           

@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { message, Button } from 'antd';
 import { JobsTable, type Job } from './JobsTable';
-import { EyeOutlined, DownloadOutlined } from '@ant-design/icons';
+import { EyeOutlined } from '@ant-design/icons';
+import { Icon } from '../../atoms/Icon';
 
 const meta: Meta<typeof JobsTable> = {
   title: 'Organisms/JobsTable',
@@ -278,7 +279,7 @@ export const WithExtraColumns: Story = {
         render: (_, job) => (
           <Button
             size="small"
-            icon={<DownloadOutlined />}
+            icon={<Icon name="DownloadOutlined" />}
             onClick={() => message.info(`Download results for ${job.name}`)}
           />
         ),

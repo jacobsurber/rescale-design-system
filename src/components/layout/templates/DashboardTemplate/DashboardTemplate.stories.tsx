@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { DashboardTemplate } from './DashboardTemplate';
 import { Progress, List, Statistic } from 'antd';
-import { DollarOutlined, UserOutlined, DatabaseOutlined, ClockCircleOutlined } from '@ant-design/icons';
+import { DollarOutlined, UserOutlined } from '@ant-design/icons';
+import { Icon } from '../../../atoms/Icon';
 
 const meta: Meta<typeof DashboardTemplate> = {
   title: 'Layout/Templates/DashboardTemplate',
@@ -26,7 +27,7 @@ const sampleMetrics = [
     value: '24',
     unit: 'running',
     trend: 'up' as const,
-    icon: <DatabaseOutlined />,
+    icon: <Icon name="DatabaseOutlined" />,
   },
   {
     key: 'compute-hours',
@@ -34,7 +35,7 @@ const sampleMetrics = [
     value: '1,247',
     unit: 'hours',
     trend: 'up' as const,
-    icon: <ClockCircleOutlined />,
+    icon: <Icon name="ClockCircleOutlined" />,
   },
   {
     key: 'monthly-cost',
@@ -194,7 +195,7 @@ export const ExecutiveDashboard: Story = {
         title: 'Active Projects',
         value: '42',
         trend: 'up' as const,
-        icon: <DatabaseOutlined />,
+        icon: <Icon name="DatabaseOutlined" />,
       },
       {
         key: 'total-users',
@@ -209,7 +210,7 @@ export const ExecutiveDashboard: Story = {
         value: '2.4h',
         trend: 'down' as const,
         variant: 'success',
-        icon: <ClockCircleOutlined />,
+        icon: <Icon name="ClockCircleOutlined" />,
       },
     ],
     widgets: [

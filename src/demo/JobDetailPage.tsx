@@ -16,18 +16,7 @@ import {
   Dropdown,
   MenuProps,
 } from 'antd';
-import {
-  PlayCircleOutlined,
-  PauseCircleOutlined,
-  StopOutlined,
-  DownloadOutlined,
-  ShareAltOutlined,
-  EllipsisOutlined,
-  ClockCircleOutlined,
-  CheckCircleOutlined,
-  ExclamationCircleOutlined,
-  SyncOutlined,
-} from '@ant-design/icons';
+import { PauseCircleOutlined, StopOutlined, EllipsisOutlined, ExclamationCircleOutlined, SyncOutlined,  } from '@ant-design/icons';
 import {
   MainLayout,
   PageHeader,
@@ -38,6 +27,7 @@ import {
 } from '../index';
 import type { ResourceMetric, SoftwareItem } from '../index';
 import styled from 'styled-components';
+import { Icon } from '../components/atoms/Icon';
 
 const { Text } = Typography;
 const { TabPane } = Tabs;
@@ -91,35 +81,35 @@ const mockJob = {
       title: 'Job Submitted',
       description: 'Job submitted by Sarah Chen',
       status: 'completed',
-      icon: <CheckCircleOutlined />,
+      icon: <Icon name="CheckCircleOutlined" />,
     },
     {
       time: '3h 10m ago', 
       title: 'Validation Passed',
       description: 'Input files validated successfully',
       status: 'completed',
-      icon: <CheckCircleOutlined />,
+      icon: <Icon name="CheckCircleOutlined" />,
     },
     {
       time: '3h 5m ago',
       title: 'Resources Allocated',
       description: '16 cores, 32 GB RAM allocated',
       status: 'completed',
-      icon: <CheckCircleOutlined />,
+      icon: <Icon name="CheckCircleOutlined" />,
     },
     {
       time: '3h ago',
       title: 'Simulation Started', 
       description: 'CFD solver initialized',
       status: 'completed',
-      icon: <CheckCircleOutlined />,
+      icon: <Icon name="CheckCircleOutlined" />,
     },
     {
       time: '1h ago',
       title: 'Mesh Generation Complete',
       description: '2M cells generated successfully',
       status: 'completed',
-      icon: <CheckCircleOutlined />,
+      icon: <Icon name="CheckCircleOutlined" />,
     },
     {
       time: 'Now',
@@ -175,12 +165,12 @@ export function JobDetailPage() {
     {
       key: 'clone',
       label: 'Clone Job',
-      icon: <ShareAltOutlined />,
+      icon: <Icon name="ShareAltOutlined" />,
     },
     {
       key: 'download-inputs',
       label: 'Download Inputs',
-      icon: <DownloadOutlined />,
+      icon: <Icon name="DownloadOutlined" />,
     },
   ];
 
@@ -212,7 +202,7 @@ export function JobDetailPage() {
           <Card title="Duration" size="small">
             <Statistic 
               value={mockJob.duration}
-              prefix={<ClockCircleOutlined />}
+              prefix={<Icon name="ClockCircleOutlined" />}
               formatter={(value) => value as string}
             />
           </Card>
@@ -359,10 +349,10 @@ export function JobDetailPage() {
           />
         }
         extra={[
-          <Button key="download" icon={<DownloadOutlined />}>
+          <Button key="download" icon={<Icon name="DownloadOutlined" />}>
             Download Results
           </Button>,
-          <Button key="share" icon={<ShareAltOutlined />}>
+          <Button key="share" icon={<Icon name="ShareAltOutlined" />}>
             Share
           </Button>,
           <Dropdown key="more" menu={{ items: getJobActions() }}>

@@ -1,17 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 const action = (name: string) => () => console.log(name);
-import {
-  BankOutlined,
-  BarChartOutlined,
-  DeploymentUnitOutlined,
-  MonitorOutlined,
-  CloudOutlined,
-  DashboardOutlined,
-  FileTextOutlined,
-  ApiOutlined,
-  SettingOutlined,
-} from '@ant-design/icons';
+import { BankOutlined, BarChartOutlined, DeploymentUnitOutlined, MonitorOutlined, DashboardOutlined, FileTextOutlined, ApiOutlined,  } from '@ant-design/icons';
 import { Sidebar } from './Sidebar';
 
 const meta: Meta<typeof Sidebar> = {
@@ -45,10 +35,11 @@ A comprehensive navigation sidebar component for the Rescale platform with suppo
 ## Usage
 \`\`\`tsx
 import { Sidebar } from '@/components/navigation';
+import { Icon } from '../../atoms/Icon';
 
 const menuItems = [
   { key: 'dashboard', icon: <DashboardOutlined />, label: 'Dashboard' },
-  { key: 'jobs', icon: <CloudOutlined />, label: 'Jobs' },
+  { key: 'jobs', icon: <Icon name="CloudOutlined" />, label: 'Jobs' },
 ];
 
 <Sidebar 
@@ -88,7 +79,7 @@ const defaultMenuItems = [
   },
   {
     key: 'jobs',
-    icon: <CloudOutlined />,
+    icon: <Icon name="CloudOutlined" />,
     label: 'Jobs',
     children: [
       { key: 'all-jobs', label: 'All Jobs' },
@@ -138,7 +129,7 @@ const defaultMenuItems = [
   },
   {
     key: 'settings',
-    icon: <SettingOutlined />,
+    icon: <Icon name="SettingOutlined" />,
     label: 'Settings',
   },
 ];
@@ -198,12 +189,12 @@ export const MinimalMenu: Story = {
       },
       {
         key: 'jobs',
-        icon: <CloudOutlined />,
+        icon: <Icon name="CloudOutlined" />,
         label: 'Jobs',
       },
       {
         key: 'settings',
-        icon: <SettingOutlined />,
+        icon: <Icon name="SettingOutlined" />,
         label: 'Settings',
       },
     ],
@@ -231,7 +222,7 @@ export const WithDisabledItems: Story = {
       },
       {
         key: 'jobs',
-        icon: <CloudOutlined />,
+        icon: <Icon name="CloudOutlined" />,
         label: 'Jobs',
       },
       {
@@ -242,7 +233,7 @@ export const WithDisabledItems: Story = {
       },
       {
         key: 'settings',
-        icon: <SettingOutlined />,
+        icon: <Icon name="SettingOutlined" />,
         label: 'Settings',
         disabled: true,
       },

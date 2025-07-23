@@ -1,13 +1,8 @@
 import React from 'react';
 import { Breadcrumb, Input, Avatar, Button, Tooltip, Badge } from 'antd';
-import {
-  SearchOutlined,
-  BellOutlined,
-  QuestionCircleOutlined,
-  RobotOutlined,
-  UserOutlined,
-} from '@ant-design/icons';
+import { BellOutlined, QuestionCircleOutlined, RobotOutlined, UserOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
+import { Icon } from '../../atoms/Icon';
 
 const { Search } = Input;
 
@@ -236,14 +231,14 @@ export const TopBar: React.FC<TopBarProps> = ({
           value={searchValue}
           onChange={handleSearchChange}
           onSearch={handleSearch}
-          enterButton={<SearchOutlined />}
+          enterButton={<Icon name="SearchOutlined" />}
           allowClear
         />
       </SearchSection>
 
       <ActionsSection>
         <MobileSearchButton
-          icon={<SearchOutlined />}
+          icon={<Icon name="SearchOutlined" />}
           onClick={() => {/* Handle mobile search modal */}}
           aria-label="Search"
         />

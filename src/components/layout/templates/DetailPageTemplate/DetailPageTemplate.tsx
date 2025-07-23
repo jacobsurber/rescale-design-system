@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'antd';
-import { ArrowLeftOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
+import { ArrowLeftOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import { MainLayout } from '../../MainLayout';
 import { PageHeader } from '../../../molecules/PageHeader';
@@ -9,6 +9,7 @@ import { Grid, Col } from '../../Grid';
 import { Stack } from '../../Spacing';
 import type { PageHeaderProps, PageAction } from '../../../molecules/PageHeader';
 import { mediaQueries } from '../../../../styles/breakpoints';
+import { Icon } from '../../../atoms/Icon';
 
 export interface DetailSection {
   key: string;
@@ -135,7 +136,7 @@ export const DetailPageTemplate: React.FC<DetailPageTemplateProps> = ({
       allActions.push({
         key: 'edit',
         label: 'Edit',
-        icon: <EditOutlined />,
+        icon: <Icon name="EditOutlined" />,
         onClick: onEdit,
         loading: editLoading,
       });
@@ -145,7 +146,7 @@ export const DetailPageTemplate: React.FC<DetailPageTemplateProps> = ({
       allActions.push({
         key: 'delete',
         label: 'Delete',
-        icon: <DeleteOutlined />,
+        icon: <Icon name="DeleteOutlined" />,
         onClick: onDelete,
         loading: deleteLoading,
         danger: true,

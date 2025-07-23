@@ -1,0 +1,1823 @@
+{
+  "summary": {
+    "totalIcons": 494,
+    "uniqueIcons": 79,
+    "filesWithIcons": 41,
+    "consistencyScore": 0
+  },
+  "iconUsage": [
+    {
+      "name": "PlayCircleOutlined",
+      "count": 26
+    },
+    {
+      "name": "CloudOutlined",
+      "count": 24
+    },
+    {
+      "name": "TeamOutlined",
+      "count": 23
+    },
+    {
+      "name": "DeleteOutlined",
+      "count": 21
+    },
+    {
+      "name": "PlusOutlined",
+      "count": 20
+    },
+    {
+      "name": "SettingOutlined",
+      "count": 20
+    },
+    {
+      "name": "ClockCircleOutlined",
+      "count": 19
+    },
+    {
+      "name": "DatabaseOutlined",
+      "count": 19
+    },
+    {
+      "name": "EditOutlined",
+      "count": 18
+    },
+    {
+      "name": "CheckCircleOutlined",
+      "count": 17
+    },
+    {
+      "name": "UserOutlined",
+      "count": 16
+    },
+    {
+      "name": "DownloadOutlined",
+      "count": 13
+    },
+    {
+      "name": "SearchOutlined",
+      "count": 12
+    },
+    {
+      "name": "RocketOutlined",
+      "count": 12
+    },
+    {
+      "name": "PauseCircleOutlined",
+      "count": 11
+    },
+    {
+      "name": "BarChartOutlined",
+      "count": 11
+    },
+    {
+      "name": "StopOutlined",
+      "count": 10
+    },
+    {
+      "name": "CloseCircleOutlined",
+      "count": 9
+    },
+    {
+      "name": "ApiOutlined",
+      "count": 9
+    },
+    {
+      "name": "HeartOutlined",
+      "count": 8
+    },
+    {
+      "name": "StarOutlined",
+      "count": 8
+    },
+    {
+      "name": "ShareAltOutlined",
+      "count": 8
+    },
+    {
+      "name": "DashboardOutlined",
+      "count": 8
+    },
+    {
+      "name": "CloudUploadOutlined",
+      "count": 7
+    },
+    {
+      "name": "EyeOutlined",
+      "count": 7
+    },
+    {
+      "name": "SaveOutlined",
+      "count": 6
+    },
+    {
+      "name": "HomeOutlined",
+      "count": 6
+    },
+    {
+      "name": "LoadingOutlined",
+      "count": 6
+    },
+    {
+      "name": "FileOutlined",
+      "count": 6
+    },
+    {
+      "name": "ExperimentOutlined",
+      "count": 6
+    },
+    {
+      "name": "SyncOutlined",
+      "count": 5
+    },
+    {
+      "name": "ReloadOutlined",
+      "count": 5
+    },
+    {
+      "name": "ArrowUpOutlined",
+      "count": 5
+    },
+    {
+      "name": "ExclamationCircleOutlined",
+      "count": 5
+    },
+    {
+      "name": "BugOutlined",
+      "count": 5
+    },
+    {
+      "name": "DollarOutlined",
+      "count": 4
+    },
+    {
+      "name": "RobotOutlined",
+      "count": 4
+    },
+    {
+      "name": "TrophyOutlined",
+      "count": 4
+    },
+    {
+      "name": "CheckOutlined",
+      "count": 3
+    },
+    {
+      "name": "UploadOutlined",
+      "count": 3
+    },
+    {
+      "name": "ThunderboltOutlined",
+      "count": 3
+    },
+    {
+      "name": "ArrowLeftOutlined",
+      "count": 3
+    },
+    {
+      "name": "FolderOutlined",
+      "count": 3
+    },
+    {
+      "name": "FileTextOutlined",
+      "count": 3
+    },
+    {
+      "name": "QuestionCircleOutlined",
+      "count": 3
+    },
+    {
+      "name": "MoreOutlined",
+      "count": 2
+    },
+    {
+      "name": "MessageOutlined",
+      "count": 2
+    },
+    {
+      "name": "${iconName}",
+      "count": 2
+    },
+    {
+      "name": "BellOutlined",
+      "count": 2
+    },
+    {
+      "name": "FilterOutlined",
+      "count": 2
+    },
+    {
+      "name": "CloseOutlined",
+      "count": 2
+    },
+    {
+      "name": "CodeOutlined",
+      "count": 2
+    },
+    {
+      "name": "DesktopOutlined",
+      "count": 2
+    },
+    {
+      "name": "ApartmentOutlined",
+      "count": 2
+    },
+    {
+      "name": "LockOutlined",
+      "count": 2
+    },
+    {
+      "name": "BankOutlined",
+      "count": 2
+    },
+    {
+      "name": "DeploymentUnitOutlined",
+      "count": 2
+    },
+    {
+      "name": "MonitorOutlined",
+      "count": 2
+    },
+    {
+      "name": "LogoutOutlined",
+      "count": 2
+    },
+    {
+      "name": "DisconnectOutlined",
+      "count": 2
+    },
+    {
+      "name": "EllipsisOutlined",
+      "count": 2
+    },
+    {
+      "name": "CrownOutlined",
+      "count": 1
+    },
+    {
+      "name": "ArrowRightOutlined",
+      "count": 1
+    },
+    {
+      "name": "MenuOutlined",
+      "count": 1
+    },
+    {
+      "name": "CalendarOutlined",
+      "count": 1
+    },
+    {
+      "name": "DownOutlined",
+      "count": 1
+    },
+    {
+      "name": "FileImageOutlined",
+      "count": 1
+    },
+    {
+      "name": "VideoCameraOutlined",
+      "count": 1
+    },
+    {
+      "name": "FolderOpenOutlined",
+      "count": 1
+    },
+    {
+      "name": "EyeInvisibleOutlined",
+      "count": 1
+    },
+    {
+      "name": "EyeTwoTone",
+      "count": 1
+    },
+    {
+      "name": "CloudServerOutlined",
+      "count": 1
+    },
+    {
+      "name": "CopyOutlined",
+      "count": 1
+    },
+    {
+      "name": "SendOutlined",
+      "count": 1
+    },
+    {
+      "name": "ClearOutlined",
+      "count": 1
+    },
+    {
+      "name": "MenuFoldOutlined",
+      "count": 1
+    },
+    {
+      "name": "MenuUnfoldOutlined",
+      "count": 1
+    },
+    {
+      "name": "LinkOutlined",
+      "count": 1
+    },
+    {
+      "name": "InboxOutlined",
+      "count": 1
+    }
+  ],
+  "usagePatterns": {
+    "CheckOutlined": [
+      "Direct Ant Design"
+    ],
+    "CloseCircleOutlined": [
+      "Direct Ant Design",
+      "Icon component",
+      "Icon prop"
+    ],
+    "PlusOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "DeleteOutlined": [
+      "Direct Ant Design",
+      "Icon component",
+      "Icon prop"
+    ],
+    "DownloadOutlined": [
+      "Direct Ant Design",
+      "Icon component",
+      "Icon prop"
+    ],
+    "EditOutlined": [
+      "Direct Ant Design",
+      "Icon component",
+      "Icon prop"
+    ],
+    "SearchOutlined": [
+      "Direct Ant Design",
+      "Icon component"
+    ],
+    "SaveOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "UploadOutlined": [
+      "Direct Ant Design",
+      "Direct Ant Design (imported)"
+    ],
+    "HeartOutlined": [
+      "Direct Ant Design",
+      "Icon component"
+    ],
+    "StarOutlined": [
+      "Direct Ant Design",
+      "Icon component",
+      "Icon prop"
+    ],
+    "ShareAltOutlined": [
+      "Direct Ant Design",
+      "Icon component",
+      "Icon prop"
+    ],
+    "HomeOutlined": [
+      "Icon component",
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "ThunderboltOutlined": [
+      "Icon component",
+      "Direct Ant Design"
+    ],
+    "CrownOutlined": [
+      "Icon component"
+    ],
+    "LoadingOutlined": [
+      "Icon component",
+      "Direct Ant Design"
+    ],
+    "SyncOutlined": [
+      "Icon component",
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "ReloadOutlined": [
+      "Icon component",
+      "Direct Ant Design"
+    ],
+    "ArrowUpOutlined": [
+      "Icon component"
+    ],
+    "MoreOutlined": [
+      "Icon component",
+      "Direct Ant Design"
+    ],
+    "MessageOutlined": [
+      "Icon component",
+      "Direct Ant Design"
+    ],
+    "ArrowLeftOutlined": [
+      "Icon component",
+      "Direct Ant Design"
+    ],
+    "ArrowRightOutlined": [
+      "Icon component"
+    ],
+    "${iconName}": [
+      "Icon component"
+    ],
+    "UserOutlined": [
+      "Icon component",
+      "Direct Ant Design",
+      "Icon prop",
+      "Direct Ant Design (imported)"
+    ],
+    "BellOutlined": [
+      "Icon component",
+      "Direct Ant Design"
+    ],
+    "SettingOutlined": [
+      "Icon component",
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "PlayCircleOutlined": [
+      "Icon component",
+      "Direct Ant Design",
+      "Icon prop",
+      "Direct Ant Design (imported)"
+    ],
+    "PauseCircleOutlined": [
+      "Icon component",
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "StopOutlined": [
+      "Icon component",
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "CheckCircleOutlined": [
+      "Icon component",
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "ExclamationCircleOutlined": [
+      "Icon component",
+      "Direct Ant Design",
+      "Direct Ant Design (imported)"
+    ],
+    "ClockCircleOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "MenuOutlined": [
+      "Direct Ant Design"
+    ],
+    "DollarOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "DatabaseOutlined": [
+      "Direct Ant Design",
+      "Icon prop",
+      "Direct Ant Design (imported)"
+    ],
+    "FilterOutlined": [
+      "Direct Ant Design"
+    ],
+    "CalendarOutlined": [
+      "Direct Ant Design"
+    ],
+    "DownOutlined": [
+      "Direct Ant Design"
+    ],
+    "CloseOutlined": [
+      "Direct Ant Design",
+      "Direct Ant Design (imported)"
+    ],
+    "BugOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "RocketOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "BarChartOutlined": [
+      "Direct Ant Design",
+      "Icon prop",
+      "Icon component"
+    ],
+    "CloudOutlined": [
+      "Direct Ant Design",
+      "Icon prop",
+      "Direct Ant Design (imported)",
+      "Icon component"
+    ],
+    "TeamOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "CodeOutlined": [
+      "Direct Ant Design",
+      "Direct Ant Design (imported)"
+    ],
+    "FileImageOutlined": [
+      "Direct Ant Design"
+    ],
+    "VideoCameraOutlined": [
+      "Direct Ant Design (imported)"
+    ],
+    "FileOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "FolderOutlined": [
+      "Direct Ant Design"
+    ],
+    "FolderOpenOutlined": [
+      "Direct Ant Design"
+    ],
+    "FileTextOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "EyeInvisibleOutlined": [
+      "Direct Ant Design"
+    ],
+    "EyeTwoTone": [
+      "Direct Ant Design"
+    ],
+    "CloudUploadOutlined": [
+      "Direct Ant Design",
+      "Icon prop",
+      "Direct Ant Design (imported)"
+    ],
+    "ExperimentOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "DesktopOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "ApartmentOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "ApiOutlined": [
+      "Direct Ant Design",
+      "Icon prop",
+      "Direct Ant Design (imported)"
+    ],
+    "CloudServerOutlined": [
+      "Direct Ant Design"
+    ],
+    "CopyOutlined": [
+      "Direct Ant Design"
+    ],
+    "LockOutlined": [
+      "Direct Ant Design"
+    ],
+    "RobotOutlined": [
+      "Direct Ant Design"
+    ],
+    "SendOutlined": [
+      "Direct Ant Design"
+    ],
+    "ClearOutlined": [
+      "Direct Ant Design"
+    ],
+    "EyeOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "TrophyOutlined": [
+      "Direct Ant Design",
+      "Icon component",
+      "Direct Ant Design (imported)"
+    ],
+    "BankOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "DeploymentUnitOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "MonitorOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "DashboardOutlined": [
+      "Direct Ant Design",
+      "Icon prop"
+    ],
+    "MenuFoldOutlined": [
+      "Direct Ant Design"
+    ],
+    "MenuUnfoldOutlined": [
+      "Direct Ant Design"
+    ],
+    "LogoutOutlined": [
+      "Direct Ant Design"
+    ],
+    "QuestionCircleOutlined": [
+      "Direct Ant Design"
+    ],
+    "LinkOutlined": [
+      "Direct Ant Design"
+    ],
+    "DisconnectOutlined": [
+      "Direct Ant Design"
+    ],
+    "InboxOutlined": [
+      "Direct Ant Design"
+    ],
+    "EllipsisOutlined": [
+      "Direct Ant Design"
+    ]
+  },
+  "fileUsage": {
+    "CheckOutlined": [
+      "src/components/atoms/AnimatedFeedback/AnimatedFeedback.tsx",
+      "src/components/layout/templates/FormPageTemplate/FormPageTemplate.tsx",
+      "src/components/molecules/EnhancedSelect/EnhancedSelect.tsx"
+    ],
+    "CloseCircleOutlined": [
+      "src/components/atoms/AnimatedFeedback/AnimatedFeedback.tsx",
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/atoms/StatusTag/StatusTag.stories.tsx",
+      "src/components/molecules/JobStatusIndicator/JobStatusIndicator.tsx",
+      "src/demo/ConnectorsPage.tsx"
+    ],
+    "PlusOutlined": [
+      "src/components/atoms/Button/Button.stories.tsx",
+      "src/components/layout/templates/ListPageTemplate/ListPageTemplate.tsx",
+      "src/components/molecules/FileBrowser/FileBrowser.tsx",
+      "src/components/molecules/PageHeader/PageHeader.stories.tsx",
+      "src/components/molecules/QuickActions/QuickActions.tsx",
+      "src/components/organisms/SoftwareLogoGrid/SoftwareLogoGrid.tsx",
+      "src/demo/ConnectorsPage.tsx",
+      "src/stories/KitchenSink.stories.tsx"
+    ],
+    "DeleteOutlined": [
+      "src/components/atoms/Button/Button.stories.tsx",
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/layout/templates/DetailPageTemplate/DetailPageTemplate.tsx",
+      "src/components/molecules/PageHeader/PageHeader.stories.tsx",
+      "src/components/organisms/JobsTable/JobsTable.tsx",
+      "src/demo/JobsListPage.tsx",
+      "src/stories/KitchenSink.stories.tsx"
+    ],
+    "DownloadOutlined": [
+      "src/components/atoms/Button/Button.stories.tsx",
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/organisms/JobsTable/JobsTable.stories.tsx",
+      "src/demo/JobDetailPage.tsx",
+      "src/stories/KitchenSink.stories.tsx"
+    ],
+    "EditOutlined": [
+      "src/components/atoms/Button/Button.stories.tsx",
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/layout/templates/DetailPageTemplate/DetailPageTemplate.tsx",
+      "src/components/molecules/PageHeader/PageHeader.stories.tsx",
+      "src/components/molecules/WorkflowCard/WorkflowCard.tsx",
+      "src/demo/JobsListPage.tsx",
+      "src/stories/KitchenSink.stories.tsx"
+    ],
+    "SearchOutlined": [
+      "src/components/atoms/Button/Button.stories.tsx",
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/layout/templates/ListPageTemplate/ListPageTemplate.tsx",
+      "src/components/molecules/EnhancedSelect/EnhancedSelect.tsx",
+      "src/components/molecules/FileBrowser/FileBrowser.tsx",
+      "src/components/molecules/WorkspaceSelector/WorkspaceSelector.tsx",
+      "src/components/organisms/JobsTable/JobsTable.tsx",
+      "src/components/organisms/TopBar/TopBar.tsx",
+      "src/demo/ConnectorsPage.tsx",
+      "src/demo/JobsListPage.tsx"
+    ],
+    "SaveOutlined": [
+      "src/components/atoms/Button/Button.stories.tsx",
+      "src/components/layout/templates/FormPageTemplate/FormPageTemplate.tsx",
+      "src/demo/FormExamplePage.tsx"
+    ],
+    "UploadOutlined": [
+      "src/components/atoms/Button/Button.stories.tsx",
+      "src/components/molecules/FileBrowser/FileBrowser.tsx",
+      "src/demo/FormExamplePage.tsx"
+    ],
+    "HeartOutlined": [
+      "src/components/atoms/Button/Button.stories.tsx",
+      "src/components/atoms/Icon/Icon.stories.tsx"
+    ],
+    "StarOutlined": [
+      "src/components/atoms/Button/Button.stories.tsx",
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/molecules/EnhancedSelect/EnhancedSelect.stories.tsx",
+      "src/components/molecules/WorkspaceSelector/WorkspaceSelector.tsx"
+    ],
+    "ShareAltOutlined": [
+      "src/components/atoms/Button/Button.stories.tsx",
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/demo/JobDetailPage.tsx"
+    ],
+    "HomeOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/molecules/PageHeader/PageHeader.tsx",
+      "src/stories/KitchenSink.stories.tsx"
+    ],
+    "ThunderboltOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/molecules/ResourceMetrics/ResourceMetrics.tsx",
+      "src/components/organisms/PerformanceDashboard/PerformanceDashboard.tsx"
+    ],
+    "CrownOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx"
+    ],
+    "LoadingOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/atoms/StatusTag/StatusTag.stories.tsx",
+      "src/components/molecules/EnhancedSelect/EnhancedSelect.tsx",
+      "src/components/molecules/JobStatusIndicator/JobStatusIndicator.tsx"
+    ],
+    "SyncOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/demo/ConnectorsPage.tsx",
+      "src/demo/JobDetailPage.tsx"
+    ],
+    "ReloadOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/layout/templates/ListPageTemplate/ListPageTemplate.tsx",
+      "src/components/molecules/FileBrowser/FileBrowser.tsx",
+      "src/components/organisms/PerformanceDashboard/PerformanceDashboard.tsx",
+      "src/components/utils/ErrorBoundary/ErrorBoundary.tsx"
+    ],
+    "ArrowUpOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx"
+    ],
+    "MoreOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/organisms/JobsTable/JobsTable.tsx"
+    ],
+    "MessageOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/organisms/AssistantChat/AssistantChat.tsx"
+    ],
+    "ArrowLeftOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/layout/templates/DetailPageTemplate/DetailPageTemplate.tsx",
+      "src/components/layout/templates/FormPageTemplate/FormPageTemplate.tsx"
+    ],
+    "ArrowRightOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx"
+    ],
+    "${iconName}": [
+      "src/components/atoms/Icon/Icon.stories.tsx"
+    ],
+    "UserOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/layout/templates/DashboardTemplate/DashboardTemplate.stories.tsx",
+      "src/components/molecules/WorkflowCard/WorkflowCard.tsx",
+      "src/components/molecules/WorkspaceSelector/WorkspaceSelector.stories.tsx",
+      "src/components/organisms/AssistantChat/AssistantChat.stories.tsx",
+      "src/components/organisms/AssistantChat/AssistantChat.tsx",
+      "src/components/organisms/Sidebar/Sidebar.tsx",
+      "src/components/organisms/TopBar/TopBar.tsx",
+      "src/stories/KitchenSink.stories.tsx"
+    ],
+    "BellOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/organisms/TopBar/TopBar.tsx"
+    ],
+    "SettingOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/molecules/EnhancedSelect/EnhancedSelect.stories.tsx",
+      "src/components/molecules/QuickActions/QuickActions.stories.tsx",
+      "src/components/organisms/Sidebar/Sidebar.stories.tsx",
+      "src/demo/ConnectorsPage.tsx"
+    ],
+    "PlayCircleOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/atoms/StatusTag/StatusTag.stories.tsx",
+      "src/components/layout/templates/ListPageTemplate/ListPageTemplate.stories.tsx",
+      "src/components/molecules/JobStatusIndicator/JobStatusIndicator.tsx",
+      "src/components/molecules/QuickActions/QuickActions.tsx",
+      "src/components/molecules/WorkflowCard/WorkflowCard.tsx",
+      "src/components/organisms/JobsTable/JobsTable.tsx",
+      "src/demo/FormExamplePage.tsx",
+      "src/demo/JobDetailPage.tsx",
+      "src/demo/JobsListPage.tsx"
+    ],
+    "PauseCircleOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/atoms/StatusTag/StatusTag.stories.tsx",
+      "src/components/layout/templates/ListPageTemplate/ListPageTemplate.stories.tsx",
+      "src/components/organisms/JobsTable/JobsTable.tsx",
+      "src/demo/JobDetailPage.tsx",
+      "src/demo/JobsListPage.tsx"
+    ],
+    "StopOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/layout/templates/ListPageTemplate/ListPageTemplate.stories.tsx",
+      "src/components/organisms/JobsTable/JobsTable.tsx",
+      "src/demo/JobDetailPage.tsx",
+      "src/demo/JobsListPage.tsx"
+    ],
+    "CheckCircleOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/atoms/StatusTag/StatusTag.stories.tsx",
+      "src/components/molecules/JobStatusIndicator/JobStatusIndicator.tsx",
+      "src/demo/ConnectorsPage.tsx",
+      "src/demo/JobDetailPage.tsx"
+    ],
+    "ExclamationCircleOutlined": [
+      "src/components/atoms/Icon/Icon.stories.tsx",
+      "src/components/atoms/StatusTag/StatusTag.stories.tsx",
+      "src/components/molecules/JobStatusIndicator/JobStatusIndicator.tsx",
+      "src/demo/ConnectorsPage.tsx",
+      "src/demo/JobDetailPage.tsx"
+    ],
+    "ClockCircleOutlined": [
+      "src/components/atoms/StatusTag/StatusTag.stories.tsx",
+      "src/components/layout/templates/DashboardTemplate/DashboardTemplate.stories.tsx",
+      "src/components/molecules/DateRangePicker/DateRangePicker.tsx",
+      "src/components/molecules/JobStatusIndicator/JobStatusIndicator.tsx",
+      "src/components/molecules/WorkflowCard/WorkflowCard.tsx",
+      "src/components/molecules/WorkspaceSelector/WorkspaceSelector.tsx",
+      "src/components/organisms/PerformanceDashboard/PerformanceDashboard.tsx",
+      "src/demo/JobDetailPage.tsx"
+    ],
+    "MenuOutlined": [
+      "src/components/layout/MainLayout/MainLayout.tsx"
+    ],
+    "DollarOutlined": [
+      "src/components/layout/templates/DashboardTemplate/DashboardTemplate.stories.tsx"
+    ],
+    "DatabaseOutlined": [
+      "src/components/layout/templates/DashboardTemplate/DashboardTemplate.stories.tsx",
+      "src/components/molecules/EnhancedSelect/EnhancedSelect.stories.tsx",
+      "src/components/molecules/FileBrowser/FileBrowser.stories.tsx",
+      "src/components/molecules/FileBrowser/FileBrowser.tsx",
+      "src/components/molecules/ResourceMetrics/ResourceMetrics.tsx",
+      "src/components/organisms/SoftwareLogoGrid/SoftwareLogoGrid.stories.tsx",
+      "src/demo/ConnectorsPage.tsx"
+    ],
+    "FilterOutlined": [
+      "src/components/layout/templates/ListPageTemplate/ListPageTemplate.tsx",
+      "src/demo/JobsListPage.tsx"
+    ],
+    "CalendarOutlined": [
+      "src/components/molecules/DateRangePicker/DateRangePicker.tsx"
+    ],
+    "DownOutlined": [
+      "src/components/molecules/DateRangePicker/DateRangePicker.tsx"
+    ],
+    "CloseOutlined": [
+      "src/components/molecules/DateRangePicker/DateRangePicker.tsx",
+      "src/components/organisms/AssistantChat/AssistantChat.tsx"
+    ],
+    "BugOutlined": [
+      "src/components/molecules/EnhancedSelect/EnhancedSelect.stories.tsx",
+      "src/components/utils/ErrorBoundary/ErrorBoundary.tsx",
+      "src/demo/ConnectorsPage.tsx"
+    ],
+    "RocketOutlined": [
+      "src/components/molecules/EnhancedSelect/EnhancedSelect.stories.tsx",
+      "src/components/molecules/QuickActions/QuickActions.stories.tsx"
+    ],
+    "BarChartOutlined": [
+      "src/components/molecules/EnhancedSelect/EnhancedSelect.stories.tsx",
+      "src/components/organisms/Sidebar/Sidebar.stories.tsx",
+      "src/stories/KitchenSink.stories.tsx"
+    ],
+    "CloudOutlined": [
+      "src/components/molecules/EnhancedSelect/EnhancedSelect.stories.tsx",
+      "src/components/organisms/Sidebar/Sidebar.stories.tsx",
+      "src/components/organisms/SoftwareLogoGrid/SoftwareLogoGrid.stories.tsx",
+      "src/demo/ConnectorsPage.tsx",
+      "src/stories/KitchenSink.stories.tsx"
+    ],
+    "TeamOutlined": [
+      "src/components/molecules/EnhancedSelect/EnhancedSelect.stories.tsx",
+      "src/components/molecules/QuickActions/QuickActions.stories.tsx",
+      "src/components/molecules/WorkspaceSelector/WorkspaceSelector.stories.tsx",
+      "src/components/molecules/WorkspaceSelector/WorkspaceSelector.tsx"
+    ],
+    "CodeOutlined": [
+      "src/components/molecules/FileBrowser/FileBrowser.stories.tsx",
+      "src/components/organisms/SoftwareLogoGrid/SoftwareLogoGrid.stories.tsx"
+    ],
+    "FileImageOutlined": [
+      "src/components/molecules/FileBrowser/FileBrowser.stories.tsx"
+    ],
+    "VideoCameraOutlined": [
+      "src/components/molecules/FileBrowser/FileBrowser.stories.tsx"
+    ],
+    "FileOutlined": [
+      "src/components/molecules/FileBrowser/FileBrowser.stories.tsx",
+      "src/components/molecules/FileBrowser/FileBrowser.tsx",
+      "src/components/molecules/QuickActions/QuickActions.stories.tsx"
+    ],
+    "FolderOutlined": [
+      "src/components/molecules/FileBrowser/FileBrowser.tsx",
+      "src/components/molecules/WorkspaceSelector/WorkspaceSelector.tsx"
+    ],
+    "FolderOpenOutlined": [
+      "src/components/molecules/FileBrowser/FileBrowser.tsx"
+    ],
+    "FileTextOutlined": [
+      "src/components/molecules/FileBrowser/FileBrowser.tsx",
+      "src/components/organisms/Sidebar/Sidebar.stories.tsx"
+    ],
+    "EyeInvisibleOutlined": [
+      "src/components/molecules/FormInput/FormInput.tsx"
+    ],
+    "EyeTwoTone": [
+      "src/components/molecules/FormInput/FormInput.tsx"
+    ],
+    "CloudUploadOutlined": [
+      "src/components/molecules/QuickActions/QuickActions.stories.tsx",
+      "src/demo/FormExamplePage.tsx"
+    ],
+    "ExperimentOutlined": [
+      "src/components/molecules/QuickActions/QuickActions.stories.tsx"
+    ],
+    "DesktopOutlined": [
+      "src/components/molecules/QuickActions/QuickActions.tsx"
+    ],
+    "ApartmentOutlined": [
+      "src/components/molecules/QuickActions/QuickActions.tsx"
+    ],
+    "ApiOutlined": [
+      "src/components/molecules/ResourceMetrics/ResourceMetrics.tsx",
+      "src/components/organisms/Sidebar/Sidebar.stories.tsx",
+      "src/components/organisms/SoftwareLogoGrid/SoftwareLogoGrid.stories.tsx",
+      "src/demo/ConnectorsPage.tsx"
+    ],
+    "CloudServerOutlined": [
+      "src/components/molecules/ResourceMetrics/ResourceMetrics.tsx"
+    ],
+    "CopyOutlined": [
+      "src/components/molecules/WorkflowCard/WorkflowCard.tsx"
+    ],
+    "LockOutlined": [
+      "src/components/molecules/WorkspaceSelector/WorkspaceSelector.tsx"
+    ],
+    "RobotOutlined": [
+      "src/components/organisms/AssistantChat/AssistantChat.stories.tsx",
+      "src/components/organisms/AssistantChat/AssistantChat.tsx",
+      "src/components/organisms/TopBar/TopBar.tsx"
+    ],
+    "SendOutlined": [
+      "src/components/organisms/AssistantChat/AssistantChat.tsx"
+    ],
+    "ClearOutlined": [
+      "src/components/organisms/AssistantChat/AssistantChat.tsx"
+    ],
+    "EyeOutlined": [
+      "src/components/organisms/JobsTable/JobsTable.stories.tsx",
+      "src/components/organisms/JobsTable/JobsTable.tsx",
+      "src/demo/FormExamplePage.tsx",
+      "src/demo/JobsListPage.tsx"
+    ],
+    "TrophyOutlined": [
+      "src/components/organisms/PerformanceDashboard/PerformanceDashboard.tsx",
+      "src/stories/KitchenSink.stories.tsx"
+    ],
+    "BankOutlined": [
+      "src/components/organisms/Sidebar/Sidebar.stories.tsx"
+    ],
+    "DeploymentUnitOutlined": [
+      "src/components/organisms/Sidebar/Sidebar.stories.tsx"
+    ],
+    "MonitorOutlined": [
+      "src/components/organisms/Sidebar/Sidebar.stories.tsx"
+    ],
+    "DashboardOutlined": [
+      "src/components/organisms/Sidebar/Sidebar.stories.tsx"
+    ],
+    "MenuFoldOutlined": [
+      "src/components/organisms/Sidebar/Sidebar.tsx"
+    ],
+    "MenuUnfoldOutlined": [
+      "src/components/organisms/Sidebar/Sidebar.tsx"
+    ],
+    "LogoutOutlined": [
+      "src/components/organisms/Sidebar/Sidebar.tsx"
+    ],
+    "QuestionCircleOutlined": [
+      "src/components/organisms/Sidebar/Sidebar.tsx",
+      "src/components/organisms/TopBar/TopBar.tsx"
+    ],
+    "LinkOutlined": [
+      "src/demo/ConnectorsPage.tsx"
+    ],
+    "DisconnectOutlined": [
+      "src/demo/ConnectorsPage.tsx"
+    ],
+    "InboxOutlined": [
+      "src/demo/FormExamplePage.tsx"
+    ],
+    "EllipsisOutlined": [
+      "src/demo/JobDetailPage.tsx",
+      "src/demo/JobsListPage.tsx"
+    ]
+  },
+  "issues": [
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "CloseCircleOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon component, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "PlusOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "DeleteOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon component, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "DownloadOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon component, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "EditOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon component, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "SearchOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon component",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "SaveOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "UploadOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Direct Ant Design (imported)",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "HeartOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon component",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "StarOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon component, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "ShareAltOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon component, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "HomeOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "ThunderboltOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "LoadingOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "SyncOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "ReloadOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "MoreOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "MessageOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "ArrowLeftOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "UserOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design, Icon prop, Direct Ant Design (imported)",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "BellOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "SettingOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "PlayCircleOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design, Icon prop, Direct Ant Design (imported)",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "PauseCircleOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "StopOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "CheckCircleOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "ExclamationCircleOutlined",
+      "description": "Used with different patterns: Icon component, Direct Ant Design, Direct Ant Design (imported)",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "ClockCircleOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "DollarOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "DatabaseOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop, Direct Ant Design (imported)",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "CloseOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Direct Ant Design (imported)",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "BugOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "RocketOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "BarChartOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop, Icon component",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "CloudOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop, Direct Ant Design (imported), Icon component",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "TeamOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "CodeOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Direct Ant Design (imported)",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "FileOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "FileTextOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "CloudUploadOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop, Direct Ant Design (imported)",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "ExperimentOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "DesktopOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "ApartmentOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "ApiOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop, Direct Ant Design (imported)",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "EyeOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "TrophyOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon component, Direct Ant Design (imported)",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "BankOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "DeploymentUnitOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "MonitorOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Mixed Usage Pattern",
+      "icon": "DashboardOutlined",
+      "description": "Used with different patterns: Direct Ant Design, Icon prop",
+      "severity": "medium"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "CrownOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "ArrowRightOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "MenuOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "CalendarOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "DownOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "FileImageOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "VideoCameraOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "FolderOpenOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "EyeInvisibleOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "EyeTwoTone",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "CloudServerOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "CopyOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "SendOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "ClearOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "MenuFoldOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "MenuUnfoldOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "LinkOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Single Use Icon",
+      "icon": "InboxOutlined",
+      "description": "Only used once - consider if it's needed",
+      "severity": "low"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "CheckOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "PlusOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "SaveOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "UploadOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "ClockCircleOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "MenuOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "DollarOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "DatabaseOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "FilterOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "CalendarOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "DownOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "CloseOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "BugOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "RocketOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "TeamOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "CodeOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "FileImageOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "FileOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "FolderOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "FolderOpenOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "FileTextOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "EyeInvisibleOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "EyeTwoTone",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "CloudUploadOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "ExperimentOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "DesktopOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "ApartmentOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "ApiOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "CloudServerOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "CopyOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "LockOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "RobotOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "SendOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "ClearOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "EyeOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "BankOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "DeploymentUnitOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "MonitorOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "DashboardOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "MenuFoldOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "MenuUnfoldOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "LogoutOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "QuestionCircleOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "LinkOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "DisconnectOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "InboxOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    },
+    {
+      "type": "Inconsistent Pattern",
+      "icon": "EllipsisOutlined",
+      "description": "Used directly instead of through Icon component",
+      "severity": "high"
+    }
+  ],
+  "patternStats": {
+    "Direct Ant Design": 310,
+    "Icon component": 53,
+    "Icon prop": 119,
+    "Direct Ant Design (imported)": 12
+  },
+  "recommendations": {
+    "convertToIconComponent": [
+      "CheckOutlined",
+      "CloseCircleOutlined",
+      "PlusOutlined",
+      "DeleteOutlined",
+      "DownloadOutlined",
+      "EditOutlined",
+      "SearchOutlined",
+      "SaveOutlined",
+      "UploadOutlined",
+      "HeartOutlined",
+      "StarOutlined",
+      "ShareAltOutlined",
+      "HomeOutlined",
+      "ThunderboltOutlined",
+      "LoadingOutlined",
+      "SyncOutlined",
+      "ReloadOutlined",
+      "MoreOutlined",
+      "MessageOutlined",
+      "ArrowLeftOutlined",
+      "UserOutlined",
+      "BellOutlined",
+      "SettingOutlined",
+      "PlayCircleOutlined",
+      "PauseCircleOutlined",
+      "StopOutlined",
+      "CheckCircleOutlined",
+      "ExclamationCircleOutlined",
+      "ClockCircleOutlined",
+      "MenuOutlined",
+      "DollarOutlined",
+      "DatabaseOutlined",
+      "FilterOutlined",
+      "CalendarOutlined",
+      "DownOutlined",
+      "CloseOutlined",
+      "BugOutlined",
+      "RocketOutlined",
+      "BarChartOutlined",
+      "CloudOutlined",
+      "TeamOutlined",
+      "CodeOutlined",
+      "FileImageOutlined",
+      "FileOutlined",
+      "FolderOutlined",
+      "FolderOpenOutlined",
+      "FileTextOutlined",
+      "EyeInvisibleOutlined",
+      "EyeTwoTone",
+      "CloudUploadOutlined",
+      "ExperimentOutlined",
+      "DesktopOutlined",
+      "ApartmentOutlined",
+      "ApiOutlined",
+      "CloudServerOutlined",
+      "CopyOutlined",
+      "LockOutlined",
+      "RobotOutlined",
+      "SendOutlined",
+      "ClearOutlined",
+      "EyeOutlined",
+      "TrophyOutlined",
+      "BankOutlined",
+      "DeploymentUnitOutlined",
+      "MonitorOutlined",
+      "DashboardOutlined",
+      "MenuFoldOutlined",
+      "MenuUnfoldOutlined",
+      "LogoutOutlined",
+      "QuestionCircleOutlined",
+      "LinkOutlined",
+      "DisconnectOutlined",
+      "InboxOutlined",
+      "EllipsisOutlined"
+    ],
+    "reviewSingleUse": [
+      "CrownOutlined",
+      "ArrowRightOutlined",
+      "MenuOutlined",
+      "CalendarOutlined",
+      "DownOutlined",
+      "FileImageOutlined",
+      "VideoCameraOutlined",
+      "FolderOpenOutlined",
+      "EyeInvisibleOutlined",
+      "EyeTwoTone",
+      "CloudServerOutlined",
+      "CopyOutlined",
+      "SendOutlined",
+      "ClearOutlined",
+      "MenuFoldOutlined",
+      "MenuUnfoldOutlined",
+      "LinkOutlined",
+      "InboxOutlined"
+    ]
+  },
+  "timestamp": "2025-07-23T20:18:02.192Z"
+}

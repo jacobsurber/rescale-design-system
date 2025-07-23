@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { PageHeader } from './PageHeader';
-import { PlusOutlined, EditOutlined, DeleteOutlined } from '@ant-design/icons';
+
+import { Icon } from '../../atoms/Icon';
 
 const meta: Meta<typeof PageHeader> = {
   title: 'Layout/PageHeader',
@@ -52,13 +53,13 @@ export const WithActions: Story = {
       {
         key: 'edit',
         label: 'Edit',
-        icon: <EditOutlined />,
+        icon: <Icon name="EditOutlined" />,
         onClick: () => console.log('Edit clicked'),
       },
       {
         key: 'delete',
         label: 'Delete',
-        icon: <DeleteOutlined />,
+        icon: <Icon name="DeleteOutlined" />,
         danger: true,
         onClick: () => console.log('Delete clicked'),
       },
@@ -66,7 +67,7 @@ export const WithActions: Story = {
         key: 'create',
         label: 'Create New',
         type: 'primary',
-        icon: <PlusOutlined />,
+        icon: <Icon name="PlusOutlined" />,
         onClick: () => console.log('Create clicked'),
       },
     ],

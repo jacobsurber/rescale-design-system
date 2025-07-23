@@ -1,0 +1,475 @@
+{
+  "summary": {
+    "totalFiles": 181,
+    "modifiedFiles": 33,
+    "totalConversions": 126,
+    "validationIssues": 1
+  },
+  "iconsCovered": [
+    "PlayCircleOutlined",
+    "CloudOutlined",
+    "TeamOutlined",
+    "DeleteOutlined",
+    "PlusOutlined",
+    "SettingOutlined",
+    "ClockCircleOutlined",
+    "DatabaseOutlined",
+    "EditOutlined",
+    "CheckCircleOutlined",
+    "CheckOutlined",
+    "CloseCircleOutlined",
+    "DownloadOutlined",
+    "SearchOutlined",
+    "SaveOutlined",
+    "UploadOutlined",
+    "HeartOutlined",
+    "StarOutlined",
+    "ShareAltOutlined",
+    "HomeOutlined"
+  ],
+  "results": [
+    {
+      "file": "src/components/atoms/AnimatedFeedback/AnimatedFeedback.tsx",
+      "conversions": [
+        "CheckOutlined (1 self-closing)",
+        "CloseCircleOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: CheckOutlined",
+        "Removed entire import: CloseCircleOutlined"
+      ]
+    },
+    {
+      "file": "src/components/atoms/Button/Button.stories.tsx",
+      "conversions": [
+        "DeleteOutlined (6 self-closing)",
+        "PlusOutlined (9 self-closing)",
+        "EditOutlined (6 self-closing)",
+        "DownloadOutlined (3 self-closing)",
+        "SearchOutlined (1 self-closing)",
+        "SaveOutlined (3 self-closing)",
+        "UploadOutlined (1 self-closing)",
+        "HeartOutlined (5 self-closing)",
+        "StarOutlined (1 self-closing)",
+        "ShareAltOutlined (2 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": []
+    },
+    {
+      "file": "src/components/atoms/StatusTag/StatusTag.stories.tsx",
+      "conversions": [
+        "PlayCircleOutlined (7 self-closing)",
+        "ClockCircleOutlined (3 self-closing)",
+        "CheckCircleOutlined (3 self-closing)",
+        "CloseCircleOutlined (4 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: PlayCircleOutlined",
+        "Removed from import: ClockCircleOutlined",
+        "Removed from import: CheckCircleOutlined",
+        "Removed from import: CloseCircleOutlined"
+      ]
+    },
+    {
+      "file": "src/components/layout/templates/DashboardTemplate/DashboardTemplate.stories.tsx",
+      "conversions": [
+        "ClockCircleOutlined (2 self-closing)",
+        "DatabaseOutlined (2 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: ClockCircleOutlined",
+        "Removed from import: DatabaseOutlined"
+      ]
+    },
+    {
+      "file": "src/components/layout/templates/DetailPageTemplate/DetailPageTemplate.tsx",
+      "conversions": [
+        "DeleteOutlined (1 self-closing)",
+        "EditOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: DeleteOutlined",
+        "Removed from import: EditOutlined"
+      ]
+    },
+    {
+      "file": "src/components/layout/templates/FormPageTemplate/FormPageTemplate.tsx",
+      "conversions": [
+        "CheckOutlined (1 self-closing)",
+        "SaveOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: CheckOutlined",
+        "Removed from import: SaveOutlined"
+      ]
+    },
+    {
+      "file": "src/components/layout/templates/ListPageTemplate/ListPageTemplate.stories.tsx",
+      "conversions": [
+        "PlayCircleOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: PlayCircleOutlined"
+      ]
+    },
+    {
+      "file": "src/components/layout/templates/ListPageTemplate/ListPageTemplate.tsx",
+      "conversions": [
+        "PlusOutlined (1 self-closing)",
+        "SearchOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: PlusOutlined",
+        "Removed from import: SearchOutlined"
+      ]
+    },
+    {
+      "file": "src/components/molecules/DateRangePicker/DateRangePicker.tsx",
+      "conversions": [
+        "ClockCircleOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: ClockCircleOutlined"
+      ]
+    },
+    {
+      "file": "src/components/molecules/EnhancedSelect/EnhancedSelect.stories.tsx",
+      "conversions": [
+        "CloudOutlined (4 self-closing)",
+        "TeamOutlined (3 self-closing)",
+        "SettingOutlined (3 self-closing)",
+        "DatabaseOutlined (3 self-closing)",
+        "StarOutlined (2 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: CloudOutlined",
+        "Removed from import: TeamOutlined",
+        "Removed from import: SettingOutlined",
+        "Removed from import: DatabaseOutlined",
+        "Removed from import: StarOutlined"
+      ]
+    },
+    {
+      "file": "src/components/molecules/EnhancedSelect/EnhancedSelect.tsx",
+      "conversions": [
+        "CheckOutlined (1 self-closing)",
+        "SearchOutlined (1 self-closing)",
+        "SearchOutlined (1 with props)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: CheckOutlined",
+        "Removed from import: SearchOutlined"
+      ]
+    },
+    {
+      "file": "src/components/molecules/FileBrowser/FileBrowser.stories.tsx",
+      "conversions": [
+        "DatabaseOutlined (2 with props)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: DatabaseOutlined"
+      ]
+    },
+    {
+      "file": "src/components/molecules/FileBrowser/FileBrowser.tsx",
+      "conversions": [
+        "PlusOutlined (1 self-closing)",
+        "DatabaseOutlined (1 with props)",
+        "SearchOutlined (1 self-closing)",
+        "UploadOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: PlusOutlined",
+        "Removed from import: DatabaseOutlined",
+        "Removed from import: SearchOutlined",
+        "Removed from import: UploadOutlined"
+      ]
+    },
+    {
+      "file": "src/components/molecules/JobStatusIndicator/JobStatusIndicator.tsx",
+      "conversions": [
+        "PlayCircleOutlined (1 self-closing)",
+        "ClockCircleOutlined (3 self-closing)",
+        "CheckCircleOutlined (1 self-closing)",
+        "CloseCircleOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: PlayCircleOutlined",
+        "Removed from import: ClockCircleOutlined",
+        "Removed from import: CheckCircleOutlined",
+        "Removed from import: CloseCircleOutlined"
+      ]
+    },
+    {
+      "file": "src/components/molecules/PageHeader/PageHeader.stories.tsx",
+      "conversions": [
+        "DeleteOutlined (1 self-closing)",
+        "PlusOutlined (1 self-closing)",
+        "EditOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: DeleteOutlined",
+        "Removed from import: PlusOutlined",
+        "Removed entire import: EditOutlined"
+      ]
+    },
+    {
+      "file": "src/components/molecules/PageHeader/PageHeader.tsx",
+      "conversions": [
+        "HomeOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed entire import: HomeOutlined"
+      ]
+    },
+    {
+      "file": "src/components/molecules/QuickActions/QuickActions.stories.tsx",
+      "conversions": [
+        "TeamOutlined (2 self-closing)",
+        "SettingOutlined (2 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": []
+    },
+    {
+      "file": "src/components/molecules/QuickActions/QuickActions.tsx",
+      "conversions": [
+        "PlayCircleOutlined (1 self-closing)",
+        "PlusOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: PlayCircleOutlined",
+        "Removed from import: PlusOutlined"
+      ]
+    },
+    {
+      "file": "src/components/molecules/ResourceMetrics/ResourceMetrics.tsx",
+      "conversions": [
+        "DatabaseOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: DatabaseOutlined"
+      ]
+    },
+    {
+      "file": "src/components/molecules/WorkflowCard/WorkflowCard.tsx",
+      "conversions": [
+        "PlayCircleOutlined (1 self-closing)",
+        "PlayCircleOutlined (2 with props)",
+        "ClockCircleOutlined (1 self-closing)",
+        "ClockCircleOutlined (2 with props)",
+        "EditOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: PlayCircleOutlined",
+        "Removed from import: ClockCircleOutlined",
+        "Removed from import: EditOutlined"
+      ]
+    },
+    {
+      "file": "src/components/molecules/WorkspaceSelector/WorkspaceSelector.stories.tsx",
+      "conversions": [
+        "TeamOutlined (5 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: TeamOutlined"
+      ]
+    },
+    {
+      "file": "src/components/molecules/WorkspaceSelector/WorkspaceSelector.tsx",
+      "conversions": [
+        "TeamOutlined (3 self-closing)",
+        "ClockCircleOutlined (1 self-closing)",
+        "SearchOutlined (1 self-closing)",
+        "StarOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: TeamOutlined",
+        "Removed from import: ClockCircleOutlined",
+        "Removed from import: SearchOutlined",
+        "Removed from import: StarOutlined"
+      ]
+    },
+    {
+      "file": "src/components/organisms/JobsTable/JobsTable.stories.tsx",
+      "conversions": [
+        "DownloadOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: DownloadOutlined"
+      ]
+    },
+    {
+      "file": "src/components/organisms/JobsTable/JobsTable.tsx",
+      "conversions": [
+        "PlayCircleOutlined (2 self-closing)",
+        "DeleteOutlined (2 self-closing)",
+        "SearchOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: PlayCircleOutlined",
+        "Removed from import: DeleteOutlined",
+        "Removed from import: SearchOutlined"
+      ]
+    },
+    {
+      "file": "src/components/organisms/PerformanceDashboard/PerformanceDashboard.tsx",
+      "conversions": [
+        "ClockCircleOutlined (2 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: ClockCircleOutlined"
+      ]
+    },
+    {
+      "file": "src/components/organisms/Sidebar/Sidebar.stories.tsx",
+      "conversions": [
+        "CloudOutlined (4 self-closing)",
+        "SettingOutlined (3 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: CloudOutlined",
+        "Removed from import: SettingOutlined"
+      ]
+    },
+    {
+      "file": "src/components/organisms/SoftwareLogoGrid/SoftwareLogoGrid.tsx",
+      "conversions": [
+        "PlusOutlined (2 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed entire import: PlusOutlined"
+      ]
+    },
+    {
+      "file": "src/components/organisms/TopBar/TopBar.tsx",
+      "conversions": [
+        "SearchOutlined (2 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: SearchOutlined"
+      ]
+    },
+    {
+      "file": "src/demo/ConnectorsPage.tsx",
+      "conversions": [
+        "CloudOutlined (1 with props)",
+        "PlusOutlined (1 self-closing)",
+        "SettingOutlined (3 self-closing)",
+        "DatabaseOutlined (2 with props)",
+        "CheckCircleOutlined (1 with props)",
+        "CloseCircleOutlined (1 with props)",
+        "SearchOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: CloudOutlined",
+        "Removed from import: PlusOutlined",
+        "Removed from import: SettingOutlined",
+        "Removed from import: DatabaseOutlined",
+        "Removed from import: CheckCircleOutlined",
+        "Removed from import: CloseCircleOutlined",
+        "Removed from import: SearchOutlined"
+      ]
+    },
+    {
+      "file": "src/demo/FormExamplePage.tsx",
+      "conversions": [
+        "PlayCircleOutlined (1 self-closing)",
+        "SaveOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: PlayCircleOutlined",
+        "Removed from import: SaveOutlined",
+        "Removed from import: UploadOutlined"
+      ]
+    },
+    {
+      "file": "src/demo/JobDetailPage.tsx",
+      "conversions": [
+        "ClockCircleOutlined (1 self-closing)",
+        "CheckCircleOutlined (5 self-closing)",
+        "DownloadOutlined (2 self-closing)",
+        "ShareAltOutlined (2 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: PlayCircleOutlined",
+        "Removed from import: ClockCircleOutlined",
+        "Removed from import: CheckCircleOutlined",
+        "Removed from import: DownloadOutlined",
+        "Removed from import: ShareAltOutlined"
+      ]
+    },
+    {
+      "file": "src/demo/JobsListPage.tsx",
+      "conversions": [
+        "PlayCircleOutlined (2 self-closing)",
+        "DeleteOutlined (1 self-closing)",
+        "EditOutlined (1 self-closing)",
+        "SearchOutlined (1 self-closing)",
+        "Added Icon import"
+      ],
+      "removedImports": [
+        "Removed from import: PlayCircleOutlined",
+        "Removed from import: DeleteOutlined",
+        "Removed from import: EditOutlined",
+        "Removed from import: SearchOutlined"
+      ]
+    },
+    {
+      "file": "src/stories/KitchenSink.stories.tsx",
+      "conversions": [
+        "CloudOutlined (1 self-closing)",
+        "DeleteOutlined (2 self-closing)",
+        "PlusOutlined (2 self-closing)",
+        "EditOutlined (2 self-closing)",
+        "DownloadOutlined (3 self-closing)",
+        "HomeOutlined (1 self-closing)"
+      ],
+      "removedImports": [
+        "Removed from import: CloudOutlined",
+        "Removed from import: DeleteOutlined",
+        "Removed from import: PlusOutlined",
+        "Removed from import: EditOutlined",
+        "Removed from import: DownloadOutlined",
+        "Removed from import: HomeOutlined"
+      ]
+    }
+  ],
+  "validationIssues": [
+    {
+      "file": "src/components/atoms/Icon/Icon.stories.tsx",
+      "issue": "Icon component used but not imported"
+    }
+  ],
+  "timestamp": "2025-07-23T20:26:14.208Z"
+}

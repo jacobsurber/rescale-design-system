@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ListPageTemplate } from './ListPageTemplate';
 import { Table, Tag, Avatar, Button } from 'antd';
-import { PlayCircleOutlined, PauseCircleOutlined, StopOutlined } from '@ant-design/icons';
+import { PauseCircleOutlined, StopOutlined } from '@ant-design/icons';
+import { Icon } from '../../../atoms/Icon';
 
 const meta: Meta<typeof ListPageTemplate> = {
   title: 'Layout/Templates/ListPageTemplate',
@@ -112,7 +113,7 @@ const jobColumns = [
     width: 150,
     render: () => (
       <div style={{ display: 'flex', gap: '8px' }}>
-        <Button size="small" icon={<PlayCircleOutlined />} />
+        <Button size="small" icon={<Icon name="PlayCircleOutlined" />} />
         <Button size="small" icon={<PauseCircleOutlined />} />
         <Button size="small" icon={<StopOutlined />} danger />
       </div>

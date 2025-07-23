@@ -16,27 +16,14 @@ import {
   Form,
   message,
 } from 'antd';
-import {
-  SearchOutlined,
-  PlusOutlined,
-  SettingOutlined,
-  LinkOutlined,
-  DisconnectOutlined,
-  CloudOutlined,
-  DatabaseOutlined,
-  ApiOutlined,
-  BugOutlined,
-  CheckCircleOutlined,
-  ExclamationCircleOutlined,
-  CloseCircleOutlined,
-  SyncOutlined,
-} from '@ant-design/icons';
+import { LinkOutlined, DisconnectOutlined, ApiOutlined, BugOutlined, ExclamationCircleOutlined, SyncOutlined,  } from '@ant-design/icons';
 import {
   MainLayout,
   PageHeader,
   QuickActions,
 } from '../index';
 import styled from 'styled-components';
+import { Icon } from '../components/atoms/Icon';
 
 const { Text, Title } = Typography;
 const { Meta } = Card;
@@ -50,7 +37,7 @@ const mockConnectors = [
     provider: 'AWS',
     category: 'Storage',
     status: 'connected',
-    icon: <CloudOutlined style={{ fontSize: '24px', color: '#ff9900' }} />,
+    icon: <Icon name="CloudOutlined" style />,
     connectedAt: '2024-01-15',
     lastSync: '2 hours ago',
     dataTransfer: '2.4 TB',
@@ -68,7 +55,7 @@ const mockConnectors = [
     provider: 'MongoDB',
     category: 'Database',
     status: 'connected',
-    icon: <DatabaseOutlined style={{ fontSize: '24px', color: '#4db33d' }} />,
+    icon: <Icon name="DatabaseOutlined" style />,
     connectedAt: '2024-01-20',
     lastSync: '30 minutes ago',
     dataTransfer: '145 GB',
@@ -119,7 +106,7 @@ const mockConnectors = [
     provider: 'Microsoft',
     category: 'Analytics',
     status: 'configuring',
-    icon: <DatabaseOutlined style={{ fontSize: '24px', color: '#f2c811' }} />,
+    icon: <Icon name="DatabaseOutlined" style />,
     connectedAt: '2024-01-25',
     lastSync: 'Configuring...',
     dataTransfer: '0 GB',
@@ -236,9 +223,9 @@ export function ConnectorsPage() {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'connected':
-        return <CheckCircleOutlined className="status-icon" />;
+        return <Icon name="CheckCircleOutlined" className />;
       case 'error':
-        return <CloseCircleOutlined className="status-icon" />;
+        return <Icon name="CloseCircleOutlined" className />;
       case 'configuring':
         return <SyncOutlined spin className="status-icon" />;
       case 'disconnected':
@@ -297,7 +284,7 @@ export function ConnectorsPage() {
     switch (connector.status) {
       case 'connected':
         return [
-          <Button key="configure" icon={<SettingOutlined />} size="small">
+          <Button key="configure" icon={<Icon name="SettingOutlined" />} size="small">
             Configure
           </Button>,
           <Button 
@@ -335,7 +322,7 @@ export function ConnectorsPage() {
           </Button>,
           <Button 
             key="configure" 
-            icon={<SettingOutlined />} 
+            icon={<Icon name="SettingOutlined" />} 
             size="small"
             onClick={() => handleConfigure(connector)}
           >
@@ -344,7 +331,7 @@ export function ConnectorsPage() {
         ];
       case 'configuring':
         return [
-          <Button key="configure" icon={<SettingOutlined />} size="small" loading>
+          <Button key="configure" icon={<Icon name="SettingOutlined" />} size="small" loading>
             Configuring...
           </Button>,
         ];
@@ -415,7 +402,7 @@ export function ConnectorsPage() {
         title="Connectors & Integrations"
         subTitle={`${filteredConnectors.length} connectors available`}
         extra={
-          <Button type="primary" icon={<PlusOutlined />}>
+          <Button type="primary" icon={<Icon name="PlusOutlined" />}>
             Add Custom Connector
           </Button>
         }
@@ -424,7 +411,7 @@ export function ConnectorsPage() {
       <FilterContainer>
         <Input
           placeholder="Search connectors..."
-          prefix={<SearchOutlined />}
+          prefix={<Icon name="SearchOutlined" />}
           value={searchText}
           onChange={(e) => setSearchText(e.target.value)}
           style={{ width: 250 }}

@@ -1,19 +1,10 @@
 import React, { useState, useMemo } from 'react';
 import { Tree, Input, Button, Space, Typography, Tooltip, Spin } from 'antd';
 import type { TreeProps, TreeDataNode } from 'antd';
-import {
-  FolderOutlined,
-  FolderOpenOutlined,
-  FileOutlined,
-  FileTextOutlined,
-  DatabaseOutlined,
-  SearchOutlined,
-  ReloadOutlined,
-  UploadOutlined,
-  PlusOutlined,
-} from '@ant-design/icons';
+import { FolderOutlined, FolderOpenOutlined, FileOutlined, FileTextOutlined, ReloadOutlined,  } from '@ant-design/icons';
 import styled from 'styled-components';
 import { designTokens } from '../../../theme/tokens';
+import { Icon } from '../../atoms/Icon';
 
 const { Search } = Input;
 const { Text } = Typography;
@@ -153,7 +144,7 @@ const getFileIcon = (node: FileNode, customIcons?: Record<string, React.ReactNod
     case 'csv':
     case 'xml':
     case 'sql':
-      return <DatabaseOutlined style={{ color: designTokens.colors.status.info }} />;
+      return <Icon name="DatabaseOutlined" style />;
     default:
       return <FileOutlined style={{ color: designTokens.colors.semantic.text.muted }} />;
   }
@@ -276,7 +267,7 @@ export const FileBrowser: React.FC<FileBrowserProps> = ({
               <Search
                 placeholder={searchPlaceholder}
                 allowClear
-                prefix={<SearchOutlined />}
+                prefix={<Icon name="SearchOutlined" />}
                 onChange={(e) => handleSearch(e.target.value)}
                 style={{ maxWidth: 300 }}
               />
@@ -298,7 +289,7 @@ export const FileBrowser: React.FC<FileBrowserProps> = ({
               {onCreateFolder && (
                 <Tooltip title="Create Folder">
                   <Button 
-                    icon={<PlusOutlined />} 
+                    icon={<Icon name="PlusOutlined" />} 
                     size="small"
                     onClick={onCreateFolder}
                   />
@@ -307,7 +298,7 @@ export const FileBrowser: React.FC<FileBrowserProps> = ({
               {onUpload && (
                 <Tooltip title="Upload Files">
                   <Button 
-                    icon={<UploadOutlined />} 
+                    icon={<Icon name="UploadOutlined" />} 
                     size="small"
                     type="primary"
                     onClick={onUpload}

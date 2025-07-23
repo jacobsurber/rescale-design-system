@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import { Select, Avatar, Input, Divider, Empty, Typography } from 'antd';
-import { 
-  SearchOutlined, 
-  FolderOutlined, 
-  StarOutlined, 
-  ClockCircleOutlined,
-  TeamOutlined,
-  LockOutlined,
-} from '@ant-design/icons';
+import { FolderOutlined, LockOutlined,  } from '@ant-design/icons';
 import styled from 'styled-components';
+import { Icon } from '../../atoms/Icon';
 
 export interface Workspace {
   /** Unique identifier */
@@ -265,7 +259,7 @@ export const WorkspaceSelector: React.FC<WorkspaceSelectorProps> = ({
       
       {workspace.starred && (
         <IconBadge $type="star">
-          <StarOutlined />
+          <Icon name="StarOutlined" />
         </IconBadge>
       )}
       
@@ -277,7 +271,7 @@ export const WorkspaceSelector: React.FC<WorkspaceSelectorProps> = ({
       
       {workspace.type === 'team' && !workspace.private && (
         <IconBadge $type="team">
-          <TeamOutlined />
+          <Icon name="TeamOutlined" />
         </IconBadge>
       )}
     </WorkspaceIcon>
@@ -290,7 +284,7 @@ export const WorkspaceSelector: React.FC<WorkspaceSelectorProps> = ({
       <WorkspaceInfo>
         <WorkspaceName>
           {workspace.name}
-          {workspace.type === 'team' && <TeamOutlined />}
+          {workspace.type === 'team' && <Icon name="TeamOutlined" />}
           {workspace.private && <LockOutlined />}
         </WorkspaceName>
         
@@ -301,14 +295,14 @@ export const WorkspaceSelector: React.FC<WorkspaceSelectorProps> = ({
         <WorkspaceMeta>
           {workspace.lastAccessed && (
             <MetaItem>
-              <ClockCircleOutlined />
+              <Icon name="ClockCircleOutlined" />
               {formatLastAccessed(workspace.lastAccessed)}
             </MetaItem>
           )}
           
           {workspace.memberCount && workspace.memberCount > 1 && (
             <MetaItem>
-              <TeamOutlined />
+              <Icon name="TeamOutlined" />
               {workspace.memberCount} members
             </MetaItem>
           )}
@@ -329,7 +323,7 @@ export const WorkspaceSelector: React.FC<WorkspaceSelectorProps> = ({
         <SearchContainer>
           <Input
             placeholder="Search workspaces..."
-            prefix={<SearchOutlined />}
+            prefix={<Icon name="SearchOutlined" />}
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
             bordered={false}

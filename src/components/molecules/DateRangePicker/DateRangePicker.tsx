@@ -3,13 +3,9 @@ import { DatePicker, Button, Dropdown, Tag } from 'antd';
 import type { RangePickerProps } from 'antd/es/date-picker';
 import type { Dayjs } from 'dayjs';
 import dayjs from 'dayjs';
-import {
-  CalendarOutlined,
-  ClockCircleOutlined,
-  DownOutlined,
-  CloseOutlined,
-} from '@ant-design/icons';
+import { CalendarOutlined, DownOutlined, CloseOutlined,  } from '@ant-design/icons';
 import styled from 'styled-components';
+import { Icon } from '../../atoms/Icon';
 
 const { RangePicker } = DatePicker;
 
@@ -375,7 +371,7 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({
         >
           <Button 
             size={size}
-            icon={<ClockCircleOutlined />}
+            icon={<Icon name="ClockCircleOutlined" />}
             type="text"
           >
             Presets <DownOutlined />

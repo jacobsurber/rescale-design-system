@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
-import { CheckOutlined, CloseCircleOutlined } from '@ant-design/icons';
+
 import { 
   scaleVariants, 
   shakeVariants
 } from '../../../utils/animations';
 import { useAnimationVariants } from '../../../providers/MotionProvider';
+import { Icon } from '../Icon';
 
 export interface AnimatedFeedbackProps {
   /** Type of feedback */
@@ -222,7 +223,7 @@ export const AnimatedFeedback: React.FC<AnimatedFeedbackProps> = ({
             initial="hidden"
             animate="visible"
           >
-            <CheckOutlined />
+            <Icon name="CheckOutlined" />
           </IconContainer>
         );
       case 'error':
@@ -231,7 +232,7 @@ export const AnimatedFeedback: React.FC<AnimatedFeedbackProps> = ({
             variants={shakeAnimation}
             animate="shake"
           >
-            <CloseCircleOutlined />
+            <Icon name="CloseCircleOutlined" />
           </IconContainer>
         );
       case 'loading':

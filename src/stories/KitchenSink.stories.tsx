@@ -1,17 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Row, Col, Space, Divider, Card as AntCard } from 'antd';
-import { 
-  HomeOutlined, 
-  UserOutlined, 
-  CloudOutlined,
-  EditOutlined,
-  DeleteOutlined,
-  PlusOutlined,
-  DownloadOutlined,
-  BarChartOutlined,
-  TrophyOutlined,
-} from '@ant-design/icons';
+import { UserOutlined, BarChartOutlined, TrophyOutlined,  } from '@ant-design/icons';
 
 // Import all components
 import { Button } from '../components/atoms/Button';
@@ -113,8 +103,8 @@ const sampleSoftware = [
 ];
 
 const sampleMenuItems = [
-  { key: 'dashboard', icon: <HomeOutlined />, label: 'Dashboard' },
-  { key: 'jobs', icon: <CloudOutlined />, label: 'Jobs' },
+  { key: 'dashboard', icon: <Icon name="HomeOutlined" />, label: 'Dashboard' },
+  { key: 'jobs', icon: <Icon name="CloudOutlined" />, label: 'Jobs' },
   { key: 'analytics', icon: <BarChartOutlined />, label: 'Analytics' },
 ];
 
@@ -139,14 +129,14 @@ export const AllComponents: Story = {
           {
             key: 'export',
             label: 'Export',
-            icon: <DownloadOutlined />,
+            icon: <Icon name="DownloadOutlined" />,
             onClick: () => alert('Export clicked'),
           },
           {
             key: 'new',
             label: 'Create New',
             type: 'primary',
-            icon: <PlusOutlined />,
+            icon: <Icon name="PlusOutlined" />,
             onClick: () => alert('Create clicked'),
           },
         ]}
@@ -188,10 +178,10 @@ export const AllComponents: Story = {
                   <div>
                     <h4 style={{ marginBottom: '12px' }}>With Icons</h4>
                     <Space wrap>
-                      <Button icon={<EditOutlined />}>Edit</Button>
-                      <Button icon={<DeleteOutlined />} variant="danger">Delete</Button>
-                      <Button icon={<PlusOutlined />} variant="primary">Add New</Button>
-                      <Button icon={<DownloadOutlined />} variant="ghost">Download</Button>
+                      <Button icon={<Icon name="EditOutlined" />}>Edit</Button>
+                      <Button icon={<Icon name="DeleteOutlined" />} variant="danger">Delete</Button>
+                      <Button icon={<Icon name="PlusOutlined" />} variant="primary">Add New</Button>
+                      <Button icon={<Icon name="DownloadOutlined" />} variant="ghost">Download</Button>
                     </Space>
                   </div>
                 </Space>
@@ -480,7 +470,7 @@ export const AllComponents: Story = {
                   </Button>
                   <Button 
                     variant="secondary" 
-                    icon={<EditOutlined />}
+                    icon={<Icon name="EditOutlined" />}
                     style={{ width: '100%' }}
                     onClick={() => alert('Secondary action!')}
                   >
@@ -488,7 +478,7 @@ export const AllComponents: Story = {
                   </Button>
                   <Button 
                     variant="ghost" 
-                    icon={<DownloadOutlined />}
+                    icon={<Icon name="DownloadOutlined" />}
                     style={{ width: '100%' }}
                     onClick={() => alert('Ghost action!')}
                   >
@@ -496,7 +486,7 @@ export const AllComponents: Story = {
                   </Button>
                   <Button 
                     variant="danger" 
-                    icon={<DeleteOutlined />}
+                    icon={<Icon name="DeleteOutlined" />}
                     style={{ width: '100%' }}
                     onClick={() => confirm('Are you sure?') && alert('Deleted!')}
                   >

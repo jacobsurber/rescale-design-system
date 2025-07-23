@@ -1,12 +1,8 @@
 import React from 'react';
 import { Button, Tooltip } from 'antd';
-import { 
-  PlayCircleOutlined, 
-  DesktopOutlined, 
-  ApartmentOutlined,
-  PlusOutlined,
-} from '@ant-design/icons';
+import { DesktopOutlined, ApartmentOutlined,  } from '@ant-design/icons';
 import styled from 'styled-components';
+import { Icon } from '../../atoms/Icon';
 
 export interface QuickAction {
   /** Unique identifier */
@@ -167,7 +163,7 @@ const defaultActions: QuickAction[] = [
   {
     id: 'new-job',
     label: 'New Job',
-    icon: <PlayCircleOutlined />,
+    icon: <Icon name="PlayCircleOutlined" />,
     description: 'Submit a new simulation job',
     type: 'primary',
   },
@@ -280,7 +276,7 @@ export const QuickActions: React.FC<QuickActionsProps> = ({
       >
         <Button
           type="dashed"
-          icon={<PlusOutlined />}
+          icon={<Icon name="PlusOutlined" />}
           disabled
         >
           No actions available

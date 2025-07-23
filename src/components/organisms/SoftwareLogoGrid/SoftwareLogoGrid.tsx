@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Tooltip, Button, Popover } from 'antd';
-import { PlusOutlined } from '@ant-design/icons';
+
 import styled from 'styled-components';
 import { Logo } from '../../atoms/Logo';
 import type { LogoSize } from '../../atoms/Logo';
+import { Icon } from '../../atoms/Icon';
 
 export interface SoftwareItem {
   /** Unique identifier */
@@ -376,7 +377,7 @@ export const SoftwareLogoGrid: React.FC<SoftwareLogoGridProps> = ({
               onClick={handleMoreClick}
             >
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                <PlusOutlined />
+                <Icon name="PlusOutlined" />
                 <MoreCount $size={size}>{remainingItems.length}</MoreCount>
               </div>
             </MoreButton>
@@ -395,7 +396,7 @@ export const SoftwareLogoGrid: React.FC<SoftwareLogoGridProps> = ({
                 onClick={handleMoreClick}
               >
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  <PlusOutlined />
+                  <Icon name="PlusOutlined" />
                   <MoreCount $size={size}>{remainingItems.length}</MoreCount>
                 </div>
               </MoreButton>
