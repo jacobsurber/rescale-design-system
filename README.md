@@ -212,65 +212,96 @@ The design system includes powerful Figma integration tools:
 export FIGMA_API_TOKEN="your-token-here"
 ```
 
-### Available Scripts
+### Available Tools
 
-#### Extract Design Tokens
-
-```bash
-npm run figma:extract-tokens
-
-# Extracts colors, typography, and spacing from Figma
-# Outputs: figma-data/design-tokens.json
-```
-
-#### Sync Colors
+#### 🎨 Design Token Extractor
 
 ```bash
-npm run figma:sync-colors
+npm run figma:extract
 
-# Syncs color palette with Figma file
-# Generates: colors.css, colors.js, colors.json
+# Interactive CLI tool that extracts:
+# - Colors and color styles
+# - Typography and text styles
+# - Spacing tokens from frames
+# - Component specifications
+# - Effects and animations
 ```
 
-#### Generate Component Specs
+#### 🎯 Colors-Only Extractor
 
 ```bash
-npm run figma:generate-specs
+npm run figma:colors
 
-# Creates component specifications from Figma
-# Outputs: figma-data/component-specs/
+# Focused color extraction with:
+# - Organized color categories
+# - Multiple export formats (CSS, JS, SCSS, JSON)
+# - TypeScript definitions
+# - Faster extraction for color workflows
 ```
 
-#### Prepare Figma File
+#### 🚀 Figma-to-Storybook Sync
 
 ```bash
-npm run figma:prepare
+npm run figma:sync-storybook
 
-# Comprehensive file preparation:
-# - Analyzes file structure
-# - Organizes colors and typography
-# - Creates design token pages
-# - Generates documentation
+# Complete design system sync:
+# - Generates Storybook stories for design tokens
+# - Creates organized color, typography, and spacing displays
+# - Updates design token files
+# - Auto-categorizes design elements
 ```
 
-### Figma API Client
+#### 🤖 Automated Sync (CI/CD Ready)
 
-Use the built-in Figma API client for custom integrations:
+```bash
+# Set environment variables first:
+export FIGMA_API_TOKEN="figd_your_token"
+export FIGMA_FILE_ID="your_file_id"
+
+npm run figma:auto-sync
+
+# Automated sync with smart features:
+# - Only syncs when Figma file changes
+# - Tracks sync history and metadata
+# - Optional auto-commit to git
+# - CI/CD pipeline integration
+```
+
+#### 🌐 Browser Interface
+
+For non-technical users, open the browser-based extractor:
+
+```bash
+open scripts/figma-extractor.html
+
+# User-friendly web interface:
+# - No command line knowledge required
+# - Visual feedback and progress tracking
+# - Direct file downloads
+# - Error handling with clear messages
+```
+
+### Integration Documentation
+
+For detailed usage instructions and advanced configuration:
+
+- **[Figma Extractor Usage Guide](docs/figma-extractor-usage.md)** - Complete guide for all extraction tools
+- **[Figma-to-Storybook Sync](docs/figma-storybook-sync.md)** - Automated design system synchronization
+- **[Component Documentation](docs/)** - Individual component guides and examples
+
+### Example Output
+
+The Figma tools generate structured design tokens that integrate seamlessly with your components:
 
 ```tsx
-import { FigmaApiClient } from 'rescale-design-system/lib/figma-api-client';
+// Generated tokens are immediately usable
+import { colors, typography, spacing } from './src/tokens';
 
-const client = new FigmaApiClient(process.env.FIGMA_API_TOKEN);
-const fileId = 'your-figma-file-id';
-
-// Extract colors
-const colors = await client.getAllColors();
-
-// Extract components
-const components = await client.getAllComponents();
-
-// Extract text styles
-const textStyles = await client.getAllTextStyles();
+const StyledButton = styled.button`
+  background-color: ${colors['primary-500']};
+  font-family: ${typography['button-medium'].fontFamily};
+  padding: ${spacing['spacing-12']} ${spacing['spacing-24']};
+`;
 ```
 
 ## 🛠️ Development
@@ -317,13 +348,13 @@ npm run test:coverage    # Generate coverage report
 npm run lint             # Run ESLint
 npm run lint:fix         # Fix linting issues
 npm run format           # Format code with Prettier
-npm run typecheck        # Check TypeScript types
 
 # Figma Integration
-npm run figma:extract-tokens     # Extract design tokens
-npm run figma:sync-colors        # Sync color system
-npm run figma:generate-specs     # Generate component specs
-npm run figma:prepare            # Full file preparation
+npm run figma:extract        # Interactive design token extraction
+npm run figma:colors         # Extract colors only
+npm run figma:sync-storybook # Sync with Storybook
+npm run figma:auto-sync      # Automated CI/CD sync
+npm run typecheck        # Check TypeScript types
 ```
 
 ## 🧪 Testing
