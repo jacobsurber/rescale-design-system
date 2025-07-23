@@ -37,7 +37,7 @@ const mockConnectors = [
     provider: 'AWS',
     category: 'Storage',
     status: 'connected',
-    icon: <Icon name="CloudOutlined" style />,
+    icon: <Icon name="CloudOutlined" />,
     connectedAt: '2024-01-15',
     lastSync: '2 hours ago',
     dataTransfer: '2.4 TB',
@@ -55,7 +55,7 @@ const mockConnectors = [
     provider: 'MongoDB',
     category: 'Database',
     status: 'connected',
-    icon: <Icon name="DatabaseOutlined" style />,
+    icon: <Icon name="DatabaseOutlined" />,
     connectedAt: '2024-01-20',
     lastSync: '30 minutes ago',
     dataTransfer: '145 GB',
@@ -106,7 +106,7 @@ const mockConnectors = [
     provider: 'Microsoft',
     category: 'Analytics',
     status: 'configuring',
-    icon: <Icon name="DatabaseOutlined" style />,
+    icon: <Icon name="DatabaseOutlined" />,
     connectedAt: '2024-01-25',
     lastSync: 'Configuring...',
     dataTransfer: '0 GB',
@@ -223,9 +223,9 @@ export function ConnectorsPage() {
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'connected':
-        return <Icon name="CheckCircleOutlined" className />;
+        return <Icon name="CheckCircleOutlined" />;
       case 'error':
-        return <Icon name="CloseCircleOutlined" className />;
+        return <Icon name="CloseCircleOutlined" />;
       case 'configuring':
         return <SyncOutlined spin className="status-icon" />;
       case 'disconnected':

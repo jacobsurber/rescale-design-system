@@ -317,7 +317,7 @@ export const EnhancedSelect: React.FC<EnhancedSelectProps> = ({
           value: '__empty__',
           label: emptyText || (
             <EmptyState>
-              <Icon name="SearchOutlined" className />
+              <Icon name="SearchOutlined" />
               <div className="empty-text">
                 {searchValue ? `No results found for "${searchValue}"` : 'No options available'}
               </div>
