@@ -1,11 +1,15 @@
 {
-  "timestamp": "2025-07-23T14:26:35.004Z",
+  "timestamp": "2025-07-23T19:36:10.119Z",
   "summary": {
     "typecheck": true,
     "build": true,
     "lint": false
   },
+  "errors": [],
+  "warnings": [
+    "Linting issues found"
+  ],
   "recommendations": [
-    "Run: npm run lint:fix"
+    "Fix linting issues before merging to main"
   ]
 }
