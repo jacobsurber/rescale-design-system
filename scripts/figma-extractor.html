@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Design Token Extractor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        .form-container {
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #374151;
+            font-size: 0.95rem;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .help-text {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 5px;
+        }
+
+        .help-text a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .help-text a:hover {
+            text-decoration: underline;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        button {
+            flex: 1;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+            border: 2px solid #d1d5db;
+        }
+
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
+
+        .btn-primary:disabled, .btn-secondary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .progress {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .progress.show {
+            display: block;
+        }
+
+        .progress h3 {
+            color: #1f2937;
+            margin-bottom: 15px;
+        }
+
+        .log {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.85rem;
+            max-height: 200px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+
+        .results {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #ecfdf5;
+            border-radius: 8px;
+            border-left: 4px solid #10b981;
+        }
+
+        .results.show {
+            display: block;
+        }
+
+        .results h3 {
+            color: #065f46;
+            margin-bottom: 15px;
+        }
+
+        .file-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .file-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #d1fae5;
+            color: #047857;
+        }
+
+        .file-list li:last-child {
+            border-bottom: none;
+        }
+
+        .error {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: #fef2f2;
+            border-radius: 8px;
+            border-left: 4px solid #ef4444;
+        }
+
+        .error.show {
+            display: block;
+        }
+
+        .error h3 {
+            color: #dc2626;
+            margin-bottom: 10px;
+        }
+
+        .error p {
+            color: #7f1d1d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 Figma Design Token Extractor</h1>
+            <p>Extract colors, typography, and components from your Figma files</p>
+        </div>
+
+        <div class="form-container">
+            <form id="extractorForm">
+                <div class="form-group">
+                    <label for="apiToken">Figma API Token</label>
+                    <input type="password" id="apiToken" name="apiToken" required 
+                           placeholder="figd_...your_figma_token_here">
+                    <div class="help-text">
+                        Get your token from <a href="https://www.figma.com/settings" target="_blank">Figma Settings</a> → Personal Access Tokens
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="fileId">Figma File ID</label>
+                    <input type="text" id="fileId" name="fileId" required 
+                           placeholder="abc123def456...">
+                    <div class="help-text">
+                        Find this in your Figma URL: figma.com/file/<strong>FILE_ID</strong>/file-name
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="extractType">What to Extract</label>
+                    <select id="extractType" name="extractType" required>
+                        <option value="all">Everything (Colors, Typography, Components)</option>
+                        <option value="colors">Colors Only</option>
+                        <option value="tokens">Design Tokens Only</option>
+                        <option value="components">Components Only</option>
+                    </select>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" class="btn-secondary" onclick="clearForm()">Clear</button>
+                    <button type="submit" class="btn-primary">Extract Design Tokens</button>
+                </div>
+            </form>
+
+            <div id="progress" class="progress">
+                <h3>🚀 Extracting...</h3>
+                <div id="log" class="log">Starting extraction...\n</div>
+            </div>
+
+            <div id="results" class="results">
+                <h3>✅ Extraction Complete!</h3>
+                <p>The following files have been generated and downloaded:</p>
+                <ul id="fileList" class="file-list"></ul>
+            </div>
+
+            <div id="error" class="error">
+                <h3>❌ Error</h3>
+                <p id="errorMessage">Something went wrong.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let log = '';
+
+        function addLog(message) {
+            log += message + '\n';
+            const logElement = document.getElementById('log');
+            if (logElement) {
+                logElement.textContent = log;
+                logElement.scrollTop = logElement.scrollHeight;
+            }
+        }
+
+        function showProgress() {
+            document.getElementById('progress').classList.add('show');
+            document.getElementById('results').classList.remove('show');
+            document.getElementById('error').classList.remove('show');
+        }
+
+        function showResults(files) {
+            document.getElementById('progress').classList.remove('show');
+            document.getElementById('results').classList.add('show');
+            document.getElementById('error').classList.remove('show');
+            
+            const fileList = document.getElementById('fileList');
+            fileList.innerHTML = '';
+            files.forEach(file => {
+                const li = document.createElement('li');
+                li.textContent = file;
+                fileList.appendChild(li);
+            });
+        }
+
+        function showError(message) {
+            document.getElementById('progress').classList.remove('show');
+            document.getElementById('results').classList.remove('show');
+            document.getElementById('error').classList.add('show');
+            document.getElementById('errorMessage').textContent = message;
+        }
+
+        function clearForm() {
+            document.getElementById('extractorForm').reset();
+            document.getElementById('progress').classList.remove('show');
+            document.getElementById('results').classList.remove('show');
+            document.getElementById('error').classList.remove('show');
+            log = '';
+        }
+
+        async function figmaRequest(apiKey, endpoint) {
+            const response = await fetch(`https://api.figma.com/v1/${endpoint}`, {
+                headers: {
+                    'X-Figma-Token': apiKey
+                }
+            });
+            
+            if (!response.ok) {
+                throw new Error(`Figma API error: ${response.status} ${response.statusText}`);
+            }
+            
+            return response.json();
+        }
+
+        function rgbToHex(r, g, b) {
+            return `#${Math.round(r * 255).toString(16).padStart(2, '0')}${Math.round(g * 255).toString(16).padStart(2, '0')}${Math.round(b * 255).toString(16).padStart(2, '0')}`;
+        }
+
+        function downloadFile(filename, content) {
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+        }
+
+        async function extractColors(apiKey, fileId) {
+            addLog('🎨 Extracting colors...');
+            
+            const fileData = await figmaRequest(apiKey, `files/${fileId}`);
+            const colors = {};
+            
+            function extractColorsFromNode(node) {
+                if (node.fills && Array.isArray(node.fills)) {
+                    node.fills.forEach((fill, index) => {
+                        if (fill.type === 'SOLID' && fill.color) {
+                            const hex = rgbToHex(fill.color.r, fill.color.g, fill.color.b);
+                            const name = node.name ? 
+                                `${node.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}-${index}` : 
+                                `color-${Object.keys(colors).length}`;
+                            colors[name] = hex;
+                        }
+                    });
+                }
+                
+                if (node.children) {
+                    node.children.forEach(extractColorsFromNode);
+                }
+            }
+            
+            if (fileData.document) {
+                extractColorsFromNode(fileData.document);
+            }
+
+            // Also get published color styles
+            try {
+                const stylesData = await figmaRequest(apiKey, `files/${fileId}/styles`);
+                
+                if (stylesData.meta && stylesData.meta.styles) {
+                    for (const style of stylesData.meta.styles) {
+                        if (style.style_type === 'FILL') {
+                            try {
+                                const styleDetails = await figmaRequest(apiKey, `styles/${style.key}`);
+                                if (styleDetails.style && styleDetails.style.fills && styleDetails.style.fills[0]) {
+                                    const fill = styleDetails.style.fills[0];
+                                    if (fill.color) {
+                                        const hex = rgbToHex(fill.color.r, fill.color.g, fill.color.b);
+                                        const name = style.name.toLowerCase().replace(/[^a-z0-9]/g, '-');
+                                        colors[name] = hex;
+                                    }
+                                }
+                            } catch (styleError) {
+                                addLog(`⚠️ Could not fetch style ${style.name}`);
+                            }
+                        }
+                    }
+                }
+            } catch (stylesError) {
+                addLog('⚠️ Could not fetch color styles, using colors from nodes only');
+            }
+            
+            addLog(`✅ Found ${Object.keys(colors).length} colors`);
+            return colors;
+        }
+
+        async function extractComponents(apiKey, fileId) {
+            addLog('🧩 Extracting components...');
+            
+            const fileData = await figmaRequest(apiKey, `files/${fileId}`);
+            const components = {};
+            
+            function findComponents(node) {
+                if (node.type === 'COMPONENT' || node.type === 'COMPONENT_SET') {
+                    components[node.name] = {
+                        id: node.id,
+                        type: node.type,
+                        description: node.description || ''
+                    };
+                }
+                
+                if (node.children) {
+                    node.children.forEach(findComponents);
+                }
+            }
+            
+            if (fileData.document) {
+                findComponents(fileData.document);
+            }
+            
+            addLog(`✅ Found ${Object.keys(components).length} components`);
+            return components;
+        }
+
+        document.getElementById('extractorForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const apiToken = formData.get('apiToken');
+            const fileId = formData.get('fileId');
+            const extractType = formData.get('extractType');
+            
+            if (!apiToken || !fileId) {
+                showError('Please fill in all required fields');
+                return;
+            }
+            
+            showProgress();
+            log = '';
+            addLog('🚀 Starting extraction...');
+            
+            try {
+                const files = [];
+                
+                if (extractType === 'all' || extractType === 'colors') {
+                    const colors = await extractColors(apiToken, fileId);
+                    
+                    // Generate CSS
+                    const cssContent = `:root {\n${Object.entries(colors).map(([name, hex]) => `  --color-${name}: ${hex};`).join('\n')}\n}`;
+                    downloadFile('colors.css', cssContent);
+                    files.push('colors.css');
+                    
+                    // Generate JavaScript
+                    const jsContent = `export const colors = ${JSON.stringify(colors, null, 2)};`;
+                    downloadFile('colors.js', jsContent);
+                    files.push('colors.js');
+                    
+                    // Generate JSON
+                    downloadFile('colors.json', JSON.stringify(colors, null, 2));
+                    files.push('colors.json');
+                }
+                
+                if (extractType === 'all' || extractType === 'components') {
+                    const components = await extractComponents(apiToken, fileId);
+                    downloadFile('components.json', JSON.stringify(components, null, 2));
+                    files.push('components.json');
+                }
+                
+                addLog('✅ All files generated and downloaded!');
+                showResults(files);
+                
+            } catch (error) {
+                addLog(`❌ Error: ${error.message}`);
+                showError(error.message);
+            }
+        });
+    </script>
+</body>
+</html>

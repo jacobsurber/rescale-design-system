@@ -54,6 +54,8 @@
     "typecheck": "tsc --noEmit",
     "fix-types": "node scripts/fix-type-imports.js",
     "validate-build": "node scripts/validate-build.js",
+    "figma:extract": "node scripts/figma-extractor.js",
+    "figma:colors": "node scripts/figma-colors.js",
     "preview": "vite preview",
     "preview:all": "npm run build:all && vite preview",
     "storybook": "storybook dev -p 6006",
