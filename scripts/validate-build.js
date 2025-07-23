@@ -201,7 +201,13 @@ async function main() {
 }
 
 // Run validation if this file is executed directly
-if (import.meta.url === `file://${process.argv[1]}`) {
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+if (process.argv[1] === __filename) {
   main().catch(error => {
     console.error(colorize('💥 Validation script failed:', 'red'), error);
     process.exit(1);

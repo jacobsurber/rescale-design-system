@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-07-23T14:09:46.262Z",
+  "summary": {
+    "typecheck": true,
+    "build": true,
+    "lint": false
+  },
+  "recommendations": [
+    "Run: npm run lint:fix"
+  ]
+}
