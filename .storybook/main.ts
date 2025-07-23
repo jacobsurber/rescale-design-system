@@ -35,4 +35,4 @@ const config: StorybookConfig = {
     return config;
   },
 };
-export default config;<!-- Test deployment -->
+export default config;
