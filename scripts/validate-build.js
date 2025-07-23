@@ -44,6 +44,15 @@ function runCommand(command, description, options = {}) {
 }
 
 function analyzeTypeScriptErrors(output) {
+  if (!output) {
+    return {
+      typeImports: [],
+      themeProperties: [],
+      unusedVariables: [],
+      missingTypes: [],
+      other: []
+    };
+  }
   const errors = output.split('\n').filter(line => line.includes('error TS'));
   const categories = {
     typeImports: [],
@@ -71,6 +80,10 @@ function analyzeTypeScriptErrors(output) {
 }
 
 function printErrorAnalysis(categories) {
+  if (!categories) {
+    console.log('No error analysis available');
+    return;
+  }
   console.log(`\n${colorize('📊 Build Error Analysis', 'cyan')}`);
   console.log('=' .repeat(50));
 
@@ -78,7 +91,7 @@ function printErrorAnalysis(categories) {
     console.log(`\n${colorize('🔧 Type Import Issues', 'yellow')} (${categories.typeImports.length})`);
     console.log('   Fix with: npm run fix-types');
     categories.typeImports.slice(0, 3).forEach(error => {
-      console.log(`   • ${error.slice(0, 80)}...`);
+      if (error) console.log(`   • ${error.slice(0, 80)}...`);
     });
   }
 
@@ -86,7 +99,7 @@ function printErrorAnalysis(categories) {
     console.log(`\n${colorize('🎨 Theme Property Issues', 'yellow')} (${categories.themeProperties.length})`);
     console.log('   Update: src/theme/tokens.ts and src/theme/styled.d.ts');
     categories.themeProperties.slice(0, 3).forEach(error => {
-      console.log(`   • ${error.slice(0, 80)}...`);
+      if (error) console.log(`   • ${error.slice(0, 80)}...`);
     });
   }
 
@@ -94,7 +107,7 @@ function printErrorAnalysis(categories) {
     console.log(`\n${colorize('🧹 Unused Variable Issues', 'yellow')} (${categories.unusedVariables.length})`);
     console.log('   Prefix with underscore or remove unused code');
     categories.unusedVariables.slice(0, 3).forEach(error => {
-      console.log(`   • ${error.slice(0, 80)}...`);
+      if (error) console.log(`   • ${error.slice(0, 80)}...`);
     });
   }
 
@@ -102,14 +115,14 @@ function printErrorAnalysis(categories) {
     console.log(`\n${colorize('❓ Missing Type Issues', 'red')} (${categories.missingTypes.length})`);
     console.log('   Add missing imports or type definitions');
     categories.missingTypes.slice(0, 3).forEach(error => {
-      console.log(`   • ${error.slice(0, 80)}...`);
+      if (error) console.log(`   • ${error.slice(0, 80)}...`);
     });
   }
 
   if (categories.other.length > 0) {
     console.log(`\n${colorize('❗ Other Issues', 'red')} (${categories.other.length})`);
     categories.other.slice(0, 3).forEach(error => {
-      console.log(`   • ${error.slice(0, 80)}...`);
+      if (error) console.log(`   • ${error.slice(0, 80)}...`);
     });
   }
 }
