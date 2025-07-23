@@ -31,11 +31,11 @@ npm install rescale-design-system @ant-design/icons styled-components
 
 ```jsx
 // Before: Ant Design
-import { Button, Table, Card } from 'antd';
+import { Button, Table } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 
 // After: Rescale Design System  
-import { Button, Table, Card } from 'rescale-design-system';
+import { Button, Table } from 'rescale-design-system';
 import { UserOutlined } from '@ant-design/icons'; // Icons stay the same
 ```
 

@@ -254,11 +254,11 @@ Use tree-shaking friendly imports:
 
 ```jsx
 // ✅ Good: Specific imports for tree-shaking
-import { Button, Card, Table } from 'rescale-design-system';
+import { Button, WorkflowCard, Table } from 'rescale-design-system';
 
 // ❌ Bad: Importing entire library
 import * as RDS from 'rescale-design-system';
-const { Button, Card, Table } = RDS;
+const { Button, WorkflowCard, Table } = RDS;
 ```
 
 ### 2. Optimize Theme Configuration

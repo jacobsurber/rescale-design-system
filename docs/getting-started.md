@@ -130,7 +130,7 @@ import { StatusTag } from 'rescale-design-system';
 Specialized card components for different content types.
 
 ```jsx
-import { MetricCard, ConnectorCard, WorkflowCard } from 'rescale-design-system';
+import { WorkflowCard } from 'rescale-design-system';
 ```
 
 ### Rescale Components

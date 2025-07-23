@@ -34,7 +34,6 @@ import {
 import {
   MainLayout,
   PageHeader,
-  ConnectorCard,
   QuickActions,
 } from '../index';
 import styled from 'styled-components';
