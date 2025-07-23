@@ -1,6 +1,6 @@
 import React from 'react';
 import { Breadcrumb, Input, Avatar, Button, Tooltip, Badge } from 'antd';
-import { BellOutlined, QuestionCircleOutlined, RobotOutlined, UserOutlined } from '@ant-design/icons';
+
 import styled from 'styled-components';
 import { Icon } from '../../atoms/Icon';
 
@@ -246,7 +246,7 @@ export const TopBar: React.FC<TopBarProps> = ({
         <Tooltip title="Notifications">
           <Badge count={notificationCount} size="small">
             <ActionButton
-              icon={<BellOutlined />}
+              icon={<Icon name="BellOutlined" />}
               onClick={onNotificationsClick}
               aria-label={`Notifications${notificationCount > 0 ? ` (${notificationCount})` : ''}`}
             />
@@ -255,7 +255,7 @@ export const TopBar: React.FC<TopBarProps> = ({
 
         <Tooltip title="Help & Documentation">
           <ActionButton
-            icon={<QuestionCircleOutlined />}
+            icon={<Icon name="QuestionCircleOutlined" />}
             onClick={onHelpClick}
             aria-label="Help"
           />
@@ -264,7 +264,7 @@ export const TopBar: React.FC<TopBarProps> = ({
         {showAssistant && (
           <Tooltip title="AI Assistant">
             <AssistantButton
-              icon={<RobotOutlined />}
+              icon={<Icon name="RobotOutlined" />}
               onClick={onAssistantClick}
               aria-label="AI Assistant"
             />
@@ -275,7 +275,7 @@ export const TopBar: React.FC<TopBarProps> = ({
           <UserAvatar
             size={32}
             src={userAvatar}
-            icon={!userAvatar && <UserOutlined />}
+            icon={!userAvatar && <Icon name="UserOutlined" />}
             onClick={onUserClick}
             alt={userName}
           />

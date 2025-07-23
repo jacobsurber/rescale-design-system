@@ -1,0 +1,12 @@
+
+> rescale-design-system@1.0.0 storybook
+> storybook dev -p 6006
+
+@storybook/core v8.6.14
+
+(node:63007) [DEP0190] DeprecationWarning: Passing args to a child process with shell option true can lead to security vulnerabilities, as the arguments are not escaped, only concatenated.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+info => Starting manager..
+WARN No story files found for the specified pattern: src/**/*.mdx
+info => Starting preview..
+info Using tsconfig paths for react-docgen

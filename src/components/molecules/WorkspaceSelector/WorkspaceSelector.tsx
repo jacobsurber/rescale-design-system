@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Select, Avatar, Input, Divider, Empty, Typography } from 'antd';
-import { FolderOutlined, LockOutlined,  } from '@ant-design/icons';
+
 import styled from 'styled-components';
 import { Icon } from '../../atoms/Icon';
 
@@ -265,7 +265,7 @@ export const WorkspaceSelector: React.FC<WorkspaceSelectorProps> = ({
       
       {workspace.private && (
         <IconBadge $type="private">
-          <LockOutlined />
+          <Icon name="LockOutlined" />
         </IconBadge>
       )}
       
@@ -285,7 +285,7 @@ export const WorkspaceSelector: React.FC<WorkspaceSelectorProps> = ({
         <WorkspaceName>
           {workspace.name}
           {workspace.type === 'team' && <Icon name="TeamOutlined" />}
-          {workspace.private && <LockOutlined />}
+          {workspace.private && <Icon name="LockOutlined" />}
         </WorkspaceName>
         
         {workspace.description && (
@@ -372,7 +372,7 @@ export const WorkspaceSelector: React.FC<WorkspaceSelectorProps> = ({
       onDropdownVisibleChange={setDropdownOpen}
       dropdownRender={() => dropdownRender()}
       showSearch={false}
-      suffixIcon={<FolderOutlined />}
+      suffixIcon={<Icon name="FolderOutlined" />}
     >
       {selectedWorkspace && (
         <Select.Option key={selectedWorkspace.id} value={selectedWorkspace.id}>

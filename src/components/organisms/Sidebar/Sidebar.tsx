@@ -1,13 +1,7 @@
 import React from 'react';
 import { Menu, Avatar, Typography, Tooltip } from 'antd';
-import {
-  UserOutlined,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  LogoutOutlined,
-  QuestionCircleOutlined,
-} from '@ant-design/icons';
 import styled from 'styled-components';
+import { Icon } from '../../atoms/Icon';
 
 const { Text } = Typography;
 
@@ -268,13 +262,13 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </Logo>
         {!collapsed && (
           <CollapseButton onClick={handleCollapseToggle} aria-label="Collapse sidebar">
-            <MenuFoldOutlined />
+            <Icon name="MenuFoldOutlined" />
           </CollapseButton>
         )}
         {collapsed && (
           <Tooltip title="Expand sidebar" placement="right">
             <CollapseButton onClick={handleCollapseToggle} aria-label="Expand sidebar">
-              <MenuUnfoldOutlined />
+              <Icon name="MenuUnfoldOutlined" />
             </CollapseButton>
           </Tooltip>
         )}
@@ -294,7 +288,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             <Avatar 
               size={32} 
               src={userProfile.avatar} 
-              icon={!userProfile.avatar && <UserOutlined />}
+              icon={!userProfile.avatar && <Icon name="UserOutlined" />}
             />
             <div className="user-info">
               <Text className="user-name">{userProfile.name}</Text>
@@ -307,22 +301,22 @@ export const Sidebar: React.FC<SidebarProps> = ({
               <>
                 <Tooltip title="Help" placement="right">
                   <ActionButton onClick={onHelpClick} aria-label="Help">
-                    <QuestionCircleOutlined />
+                    <Icon name="QuestionCircleOutlined" />
                   </ActionButton>
                 </Tooltip>
                 <Tooltip title="Logout" placement="right">
                   <ActionButton onClick={onLogoutClick} aria-label="Logout">
-                    <LogoutOutlined />
+                    <Icon name="LogoutOutlined" />
                   </ActionButton>
                 </Tooltip>
               </>
             ) : (
               <>
                 <ActionButton onClick={onHelpClick} aria-label="Help">
-                  <QuestionCircleOutlined />
+                  <Icon name="QuestionCircleOutlined" />
                 </ActionButton>
                 <ActionButton onClick={onLogoutClick} aria-label="Logout">
-                  <LogoutOutlined />
+                  <Icon name="LogoutOutlined" />
                 </ActionButton>
               </>
             )}

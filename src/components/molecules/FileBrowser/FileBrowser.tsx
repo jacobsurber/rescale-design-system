@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Tree, Input, Button, Space, Typography, Tooltip, Spin } from 'antd';
 import type { TreeProps, TreeDataNode } from 'antd';
-import { FolderOutlined, FolderOpenOutlined, FileOutlined, FileTextOutlined, ReloadOutlined,  } from '@ant-design/icons';
+import { FolderOutlined, FileOutlined, FileTextOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 import { designTokens } from '../../../theme/tokens';
 import { Icon } from '../../atoms/Icon';
@@ -280,7 +280,7 @@ export const FileBrowser: React.FC<FileBrowserProps> = ({
               {onRefresh && (
                 <Tooltip title="Refresh">
                   <Button 
-                    icon={<ReloadOutlined />} 
+                    icon={<Icon name="ReloadOutlined" />} 
                     size="small"
                     onClick={onRefresh}
                   />
@@ -326,7 +326,7 @@ export const FileBrowser: React.FC<FileBrowserProps> = ({
             onExpand={handleExpand}
             switcherIcon={({ expanded, isLeaf }) => {
               if (isLeaf) return null;
-              return expanded ? <FolderOpenOutlined /> : <FolderOutlined />;
+              return expanded ? <Icon name="FolderOpenOutlined" /> : <Icon name="FolderOutlined" />;
             }}
           />
         ) : (

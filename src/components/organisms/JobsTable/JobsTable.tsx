@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Table, Space, Button, Dropdown, Checkbox, Input, Tag, Avatar, Tooltip } from 'antd';
 import type { TableProps, ColumnsType } from 'antd/es/table';
-import { MoreOutlined, PauseCircleOutlined, StopOutlined, EyeOutlined,  } from '@ant-design/icons';
+
 import styled from 'styled-components';
 import { JobStatusIndicator } from '../../molecules/JobStatusIndicator';
 import { ResourceMetrics } from '../../molecules/ResourceMetrics';
@@ -212,7 +212,7 @@ export const JobsTable: React.FC<JobsTableProps> = ({
     {
       key: 'view',
       label: 'View Details',
-      icon: <EyeOutlined />,
+      icon: <Icon name="EyeOutlined" />,
       onClick: () => handleJobAction('view', job.id),
     },
     {
@@ -225,14 +225,14 @@ export const JobsTable: React.FC<JobsTableProps> = ({
     {
       key: 'pause',
       label: 'Pause',
-      icon: <PauseCircleOutlined />,
+      icon: <Icon name="PauseCircleOutlined" />,
       disabled: job.status !== 'running',
       onClick: () => handleJobAction('pause', job.id),
     },
     {
       key: 'stop',
       label: 'Stop',
-      icon: <StopOutlined />,
+      icon: <Icon name="StopOutlined" />,
       disabled: !['running', 'queued', 'paused'].includes(job.status),
       onClick: () => handleJobAction('stop', job.id),
     },
@@ -259,13 +259,13 @@ export const JobsTable: React.FC<JobsTableProps> = ({
     {
       key: 'pause',
       label: 'Pause Selected',
-      icon: <PauseCircleOutlined />,
+      icon: <Icon name="PauseCircleOutlined" />,
       onClick: () => handleBulkAction('pause'),
     },
     {
       key: 'stop',
       label: 'Stop Selected',
-      icon: <StopOutlined />,
+      icon: <Icon name="StopOutlined" />,
       onClick: () => handleBulkAction('stop'),
     },
     {
@@ -415,7 +415,7 @@ export const JobsTable: React.FC<JobsTableProps> = ({
             placement="bottomRight"
           >
             <ActionButton 
-              icon={<MoreOutlined />} 
+              icon={<Icon name="MoreOutlined" />} 
               size="small"
               aria-label={`Actions for ${job.name}`}
             />

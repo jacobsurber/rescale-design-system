@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { Select, Spin, Tag } from 'antd';
 import type { SelectProps } from 'antd';
-import { LoadingOutlined,  } from '@ant-design/icons';
+
 import styled from 'styled-components';
 import { Icon } from '../../atoms/Icon';
 
@@ -302,7 +302,7 @@ export const EnhancedSelect: React.FC<EnhancedSelectProps> = ({
           value: '__loading__',
           label: (
             <LoadingState>
-              <Spin indicator={<LoadingOutlined />} />
+              <Spin indicator={<Icon name="LoadingOutlined" />} />
               <span className="loading-text">{loadingText}</span>
             </LoadingState>
           ),
@@ -362,7 +362,7 @@ export const EnhancedSelect: React.FC<EnhancedSelectProps> = ({
       options={getSelectOptions()}
       maxTagCount={maxTagCount}
       allowClear
-      suffixIcon={loading ? <LoadingOutlined /> : <Icon name="SearchOutlined" />}
+      suffixIcon={loading ? <Icon name="LoadingOutlined" /> : <Icon name="SearchOutlined" />}
       notFoundContent={null} // We handle empty state manually
     />
   );

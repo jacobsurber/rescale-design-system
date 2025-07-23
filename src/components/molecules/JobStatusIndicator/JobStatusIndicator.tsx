@@ -1,6 +1,6 @@
 import React from 'react';
 import { Progress, Tag } from 'antd';
-import { ExclamationCircleOutlined, LoadingOutlined } from '@ant-design/icons';
+
 import styled, { keyframes, css } from 'styled-components';
 import { Icon } from '../../atoms/Icon';
 
@@ -166,13 +166,13 @@ export const JobStatusIndicator: React.FC<JobStatusIndicatorProps> = ({
   const getStatusIcon = () => {
     switch (status) {
       case 'running':
-        return <LoadingOutlined />;
+        return <Icon name="LoadingOutlined" />;
       case 'completed':
         return <Icon name="CheckCircleOutlined" />;
       case 'failed':
         return <Icon name="CloseCircleOutlined" />;
       case 'warning':
-        return <ExclamationCircleOutlined />;
+        return <Icon name="ExclamationCircleOutlined" />;
       case 'queued':
         return <Icon name="ClockCircleOutlined" />;
       case 'pending':
