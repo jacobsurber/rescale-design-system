@@ -54,7 +54,6 @@ export default {
           jsx: 'react-jsx',
           esModuleInterop: true,
         },
-        isolatedModules: true,
       },
     ],
   },

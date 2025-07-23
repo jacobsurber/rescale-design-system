@@ -6,7 +6,7 @@ import userEvent from '@testing-library/user-event';
 // import { axe, toHaveNoViolations } from 'jest-axe';
 import { RescaleThemeProvider } from '../theme/ThemeProvider';
 import rescaleTheme from '../theme/rescaleTheme';
-import type { ChatMessage } from '../components/rescale/AssistantChat/AssistantChat';
+import type { ChatMessage } from '../components/organisms/AssistantChat/AssistantChat';
 
 // Temporarily mock axe until jest-axe is properly installed
 const axe = async (container: Element) => ({ violations: [] });

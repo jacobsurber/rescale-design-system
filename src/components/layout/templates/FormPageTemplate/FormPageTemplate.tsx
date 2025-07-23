@@ -177,6 +177,7 @@ export const FormPageTemplate: React.FC<FormPageTemplateProps> = ({
 }) => {
   const isMultiStep = steps && steps.length > 0;
   const isLastStep = isMultiStep && currentStep === steps.length - 1;
+  const hasUnsavedChanges = isDirty;
   const isFirstStep = currentStep === 0;
 
   const renderMessages = () => (

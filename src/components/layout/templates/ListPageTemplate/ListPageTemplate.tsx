@@ -158,6 +158,7 @@ export const ListPageTemplate: React.FC<ListPageTemplateProps> = ({
                     onChange={(e) => onSearchChange?.(e.target.value)}
                     prefix={<SearchOutlined />}
                     allowClear
+                    loading={searchLoading}
                   />
                 </Col>
                 

@@ -6,48 +6,9 @@ import styled, { css } from 'styled-components';
 import { buttonVariants } from '../../../utils/animations';
 import { useAnimationVariants } from '../../../providers/MotionProvider';
 import { designTokens } from '../../../theme/tokens';
+import { buttonSizes, type ButtonSize, type ButtonVariant } from './Button.constants';
 
-// Button size definitions using design tokens
-export const buttonSizes = {
-  xs: {
-    height: '24px',
-    padding: '0 8px',
-    fontSize: designTokens.typography.fontSize.xs,
-    iconSize: '12px',
-    borderRadius: designTokens.borderRadius.sm,
-  },
-  sm: {
-    height: '28px', 
-    padding: '0 12px',
-    fontSize: designTokens.typography.fontSize.sm,
-    iconSize: '14px',
-    borderRadius: designTokens.borderRadius.base,
-  },
-  md: {
-    height: '32px',
-    padding: '0 16px', 
-    fontSize: designTokens.typography.fontSize.base,
-    iconSize: '16px',
-    borderRadius: designTokens.borderRadius.base,
-  },
-  lg: {
-    height: '40px',
-    padding: '0 20px',
-    fontSize: designTokens.typography.fontSize.lg,
-    iconSize: '18px',
-    borderRadius: designTokens.borderRadius.md,
-  },
-  xl: {
-    height: '48px',
-    padding: '0 24px',
-    fontSize: designTokens.typography.fontSize.xl,
-    iconSize: '20px',
-    borderRadius: designTokens.borderRadius.md,
-  },
-} as const;
-
-export type ButtonSize = keyof typeof buttonSizes;
-export type ButtonVariant = 'primary' | 'secondary' | 'ghost' | 'text' | 'danger' | 'success' | 'warning';
+export type { ButtonSize, ButtonVariant };
 export type ButtonShape = 'default' | 'round' | 'circle';
 
 export interface ButtonProps extends Omit<AntButtonProps, 'variant' | 'size' | 'shape'> {

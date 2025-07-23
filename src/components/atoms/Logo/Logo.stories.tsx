@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Logo, logoSizes, softwareLogoMap, type LogoSize, type LogoVariant } from './Logo';
+import { Logo, logoSizes, softwareLogoMap, type LogoSize } from './Logo';
 import { Space, Row, Col, Tooltip } from 'antd';
 
 const meta: Meta<typeof Logo> = {

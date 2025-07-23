@@ -14,37 +14,45 @@ expect.extend({
 
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
+  root: Element | null = null;
+  rootMargin: string = '0px';
+  thresholds: ReadonlyArray<number> = [0];
   
-  observe() {
-    return null;
+  constructor(_callback: IntersectionObserverCallback, _options?: IntersectionObserverInit) {}
+  
+  observe(_target: Element): void {
+    // Mock implementation
   }
   
-  disconnect() {
-    return null;
+  disconnect(): void {
+    // Mock implementation
   }
   
-  unobserve() {
-    return null;
+  unobserve(_target: Element): void {
+    // Mock implementation
   }
-};
+  
+  takeRecords(): IntersectionObserverEntry[] {
+    return [];
+  }
+} as any;
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
-  constructor() {}
+  constructor(_callback: ResizeObserverCallback) {}
   
-  observe() {
-    return null;
+  observe(_target: Element, _options?: ResizeObserverOptions): void {
+    // Mock implementation
   }
   
-  disconnect() {
-    return null;
+  disconnect(): void {
+    // Mock implementation
   }
   
-  unobserve() {
-    return null;
+  unobserve(_target: Element): void {
+    // Mock implementation
   }
-};
+} as any;
 
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {

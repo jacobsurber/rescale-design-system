@@ -277,40 +277,5 @@ export const AnimatedFeedback: React.FC<AnimatedFeedbackProps> = ({
   );
 };
 
-/**
- * useRipple - Hook for creating ripple effects
- */
-export const useRipple = () => {
-  const [ripples, setRipples] = useState<Array<{ id: number; x: number; y: number }>>([]);
-
-  const createRipple = (event: React.MouseEvent) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
-    
-    const newRipple = { id: Date.now(), x, y };
-    setRipples(prev => [...prev, newRipple]);
-
-    // Remove ripple after animation completes
-    setTimeout(() => {
-      setRipples(prev => prev.filter(ripple => ripple.id !== newRipple.id));
-    }, 600);
-  };
-
-  const RippleEffect = () => (
-    <>
-      {ripples.map((ripple) => (
-        <Ripple
-          key={ripple.id}
-          show={true}
-          x={ripple.x}
-          y={ripple.y}
-        />
-      ))}
-    </>
-  );
-
-  return { createRipple, RippleEffect };
-};
 
 export default AnimatedFeedback;

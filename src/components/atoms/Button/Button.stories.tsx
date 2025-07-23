@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Button, buttonSizes, type ButtonVariant, type ButtonSize } from './Button';
+import { Button, type ButtonVariant, type ButtonSize } from './Button';
+import { buttonSizes } from './Button.constants';
 import { Space, Row, Col, Divider } from 'antd';
 import { 
   PlusOutlined, 

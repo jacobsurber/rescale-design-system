@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 import { Button } from 'antd';
-import { AnimatedFeedback, useRipple } from './AnimatedFeedback';
+import { AnimatedFeedback, useRipple } from './';
 import { MotionProvider } from '../../../providers/MotionProvider';
 import styled from 'styled-components';
 

@@ -2,37 +2,10 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { designTokens } from '../../../theme/tokens';
 import * as AntIcons from '@ant-design/icons';
+import { iconSizes, type IconSize, type IconThemeColor } from './Icon.constants';
 
-// Icon size definitions using design tokens
-export const iconSizes = {
-  xs: {
-    size: '12px',
-    fontSize: 12,
-  },
-  sm: {
-    size: '14px', 
-    fontSize: 14,
-  },
-  md: {
-    size: '16px',
-    fontSize: 16,
-  },
-  lg: {
-    size: '20px',
-    fontSize: 20,
-  },
-  xl: {
-    size: '24px',
-    fontSize: 24,
-  },
-  '2xl': {
-    size: '32px',
-    fontSize: 32,
-  },
-} as const;
-
-export type IconSize = keyof typeof iconSizes;
-export type IconColor = 'primary' | 'secondary' | 'success' | 'warning' | 'error' | 'disabled' | 'inherit';
+export type { IconSize };
+export type IconColor = IconThemeColor | 'inherit';
 
 // Common Ant Design icon names for type safety
 export type AntIconName = keyof typeof AntIcons;
@@ -162,7 +135,7 @@ export const Icon: React.FC<IconProps> = React.memo(({
   ...props
 }) => {
   // Get the Ant Design icon component
-  const AntIconComponent = AntIcons[name] as React.ComponentType<any>;
+  const AntIconComponent = AntIcons[name] as React.ComponentType<React.SVGProps<SVGSVGElement>>;
   
   if (!AntIconComponent) {
     console.warn(`Icon "${name}" not found in @ant-design/icons`);
@@ -178,7 +151,7 @@ export const Icon: React.FC<IconProps> = React.memo(({
   const handleKeyDown = (event: React.KeyboardEvent<HTMLSpanElement>) => {
     if (clickable && onClick && (event.key === 'Enter' || event.key === ' ')) {
       event.preventDefault();
-      onClick(event as any);
+      onClick(event as React.MouseEvent<HTMLSpanElement>);
     }
   };
   
