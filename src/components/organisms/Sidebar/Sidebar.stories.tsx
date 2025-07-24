@@ -73,19 +73,14 @@ type Story = StoryObj<typeof Sidebar>;
 
 const defaultMenuItems = [
   {
-    key: 'dashboard',
-    icon: <DashboardOutlined />,
-    label: 'Dashboard',
+    key: 'workspace',
+    label: 'Acme Motors Workspace',
+    className: 'workspace-item',
   },
   {
     key: 'jobs',
     icon: <CloudOutlined />,
     label: 'Jobs',
-    children: [
-      { key: 'all-jobs', label: 'All Jobs' },
-      { key: 'running-jobs', label: 'Running Jobs' },
-      { key: 'completed-jobs', label: 'Completed Jobs' },
-    ],
   },
   {
     key: 'workflows',
@@ -93,52 +88,85 @@ const defaultMenuItems = [
     label: 'Workflows',
   },
   {
-    key: 'analytics',
-    icon: <BarChartOutlined />,
-    label: 'Analytics',
-    children: [
-      { key: 'usage-reports', label: 'Usage Reports' },
-      { key: 'cost-analysis', label: 'Cost Analysis' },
-      { key: 'performance', label: 'Performance' },
-    ],
-  },
-  {
-    key: 'data',
-    icon: <FileTextOutlined />,
-    label: 'Data Management',
-  },
-  {
-    key: 'monitoring',
+    key: 'workstations',
     icon: <MonitorOutlined />,
-    label: 'Monitoring',
+    label: 'Workstations',
   },
   {
-    key: 'integrations',
+    key: 'storage',
+    icon: <CloudOutlined />,
+    label: 'Storage',
+  },
+  {
+    key: 'files',
+    icon: <FileTextOutlined />,
+    label: 'Files',
+  },
+  // Section divider for Rescale Data
+  {
+    key: 'rescale-data-header',
+    label: 'Rescale Data',
+    className: 'section-header',
+    disabled: true,
+  },
+  {
+    key: 'overview',
+    icon: <BarChartOutlined />,
+    label: 'Overview',
+  },
+  {
+    key: 'connectors',
     icon: <ApiOutlined />,
-    label: 'Integrations',
+    label: 'Connectors',
   },
   {
-    key: 'organization',
+    key: 'lakehouse',
     icon: <BankOutlined />,
-    label: 'Organization',
-    children: [
-      { key: 'users', label: 'Users' },
-      { key: 'teams', label: 'Teams' },
-      { key: 'permissions', label: 'Permissions' },
-    ],
+    label: 'Lakehouse',
   },
   {
-    key: 'settings',
+    key: 'lineage',
+    icon: <DeploymentUnitOutlined />,
+    label: 'Lineage',
+  },
+  // Section divider for Rescale AI
+  {
+    key: 'rescale-ai-header',
+    label: 'Rescale AI',
+    className: 'section-header',
+    disabled: true,
+  },
+  {
+    key: 'ai-overview',
+    icon: <BarChartOutlined />,
+    label: 'Overview',
+  },
+  {
+    key: 'ai-datasets',
+    icon: <CloudOutlined />,
+    label: 'AI Datasets',
+  },
+  {
+    key: 'model-builder',
     icon: <SettingOutlined />,
-    label: 'Settings',
+    label: 'Model Builder',
+  },
+  {
+    key: 'deployed-models',
+    icon: <DeploymentUnitOutlined />,
+    label: 'Deployed AI Models',
+  },
+  {
+    key: 'ai-ecosystem',
+    icon: <ApiOutlined />,
+    label: 'AI Ecosystem',
   },
 ];
 
 const defaultUserProfile = {
-  name: 'Dr. Sarah Chen',
-  email: 'sarah.chen@rescale.com',
-  role: 'Senior Engineer',
-  avatar: 'https://images.unsplash.com/photo-1494790108755-2616b332c1c1?w=100&h=100&fit=crop&crop=face',
+  name: 'John Doe',
+  email: 'jdoe@rescale.com',
+  role: 'Engineer',
 };
 
 export const Default: Story = {

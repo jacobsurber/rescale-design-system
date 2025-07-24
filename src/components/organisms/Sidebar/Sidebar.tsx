@@ -46,31 +46,46 @@ export interface SidebarProps {
 }
 
 const SidebarContainer = styled.div<{ $collapsed: boolean }>`
-  width: ${props => props.$collapsed ? '64px' : '280px'};
+  width: ${props => props.$collapsed ? '64px' : '248px'};
   min-height: 100vh;
   background: #FFFFFF;
-  border-right: 1px solid #E9F0FF;
+  border-right: 1px solid #F0F0F0;
   display: flex;
   flex-direction: column;
   transition: width 0.2s ease;
   position: relative;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   .ant-menu {
     border-right: none;
     flex: 1;
     background: transparent;
-    padding: 8px 0;
+    padding: 16px 0;
+    
+    // Section headers (like "Rescale Data", "Rescale AI")
+    .section-header {
+      padding: 8px 24px 4px 24px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #8F99B8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 16px;
+      
+      &:first-child {
+        margin-top: 0;
+      }
+    }
     
     .ant-menu-item {
-      height: 40px;
-      line-height: 40px;
-      margin: 2px 12px;
-      border-radius: 8px;
-      padding: 0 16px;
+      height: 36px;
+      line-height: 36px;
+      margin: 1px 16px;
+      border-radius: 6px;
+      padding: 0 12px;
       font-size: 14px;
       font-weight: 400;
-      color: #606D95;
+      color: #000000;
       
       &.ant-menu-item-selected {
         background-color: #E5F4FF;
@@ -86,55 +101,40 @@ const SidebarContainer = styled.div<{ $collapsed: boolean }>`
       }
       
       &:hover:not(.ant-menu-item-selected) {
-        background-color: #F3F7FF;
-        color: #606D95;
+        background-color: #F8F9FA;
+        color: #000000;
       }
       
       .ant-menu-item-icon {
-        color: #8F99B8;
+        color: #0272C3;
         font-size: 16px;
-        margin-right: 12px;
+        margin-right: 8px;
+        min-width: 16px;
       }
     }
     
-    .ant-menu-submenu {
-      .ant-menu-submenu-title {
-        height: 40px;
-        line-height: 40px;
-        margin: 2px 12px;
-        border-radius: 8px;
-        padding: 0 16px;
-        font-size: 14px;
-        font-weight: 500;
-        color: #606D95;
-        
-        &:hover {
-          background-color: #F3F7FF;
-        }
-        
-        .ant-menu-submenu-arrow {
-          color: #8F99B8;
-        }
-      }
+    .workspace-item {
+      height: 44px;
+      margin: 4px 16px;
+      padding: 0 12px;
+      border-radius: 8px;
+      font-weight: 500;
+      background-color: #F8F9FA;
+      border: 1px solid #E9ECEF;
       
-      .ant-menu-sub {
-        background: transparent;
+      .workspace-icon {
+        width: 24px;
+        height: 24px;
+        background: #0272C3;
+        border-radius: 4px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
         
-        .ant-menu-item {
-          margin-left: 32px;
-          padding-left: 32px;
-          
-          &::before {
-            content: '';
-            position: absolute;
-            left: 24px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background-color: #A5B2D3;
-          }
+        &::after {
+          content: '📁';
+          font-size: 12px;
         }
       }
     }
@@ -142,12 +142,12 @@ const SidebarContainer = styled.div<{ $collapsed: boolean }>`
 `;
 
 const SidebarHeader = styled.div<{ $collapsed: boolean }>`
-  padding: 16px 20px;
+  padding: 16px 24px;
   display: flex;
   align-items: center;
   justify-content: ${props => props.$collapsed ? 'center' : 'flex-start'};
-  border-bottom: 1px solid #E9F0FF;
-  height: 64px;
+  border-bottom: 1px solid #F0F0F0;
+  height: 60px;
   background: #FFFFFF;
 `;
 
@@ -158,23 +158,30 @@ const Logo = styled.div<{ $collapsed: boolean }>`
   
   .logo-text {
     font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 16px;
     color: #000000;
     display: ${props => props.$collapsed ? 'none' : 'block'};
   }
   
   .logo-icon {
-    width: 32px;
-    height: 32px;
-    background: #3399BB;
-    border-radius: 6px;
+    width: 24px;
+    height: 24px;
+    background: #0272C3;
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    position: relative;
+    
+    // Rescale cloud icon approximation
+    &::before {
+      content: '☁';
+      font-size: 14px;
+    }
   }
 `;
 
@@ -196,10 +203,74 @@ const CollapseButton = styled.button`
 `;
 
 const UserSection = styled.div<{ $collapsed: boolean }>`
-  padding: 16px 20px;
-  border-top: 1px solid #E9F0FF;
+  padding: 16px 24px;
+  border-top: 1px solid #F0F0F0;
   background: #FFFFFF;
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  
+  .footer-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 14px;
+    color: #0272C3;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: #F8F9FA;
+      border-radius: 4px;
+      padding: 6px 8px;
+      margin: 0 -8px;
+    }
+    
+    .footer-icon {
+      width: 16px;
+      font-size: 14px;
+      color: #0272C3;
+    }
+  }
+  
+  .submit-feedback {
+    background: #0272C3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 8px 0;
+    
+    &:hover {
+      background: #025AA3;
+    }
+  }
+  
+  .user-email {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 14px;
+    color: #000000;
+    
+    .user-avatar {
+      width: 24px;
+      height: 24px;
+      background: #0272C3;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
 `;
 
 const UserProfile = styled.div<{ $collapsed: boolean }>`
@@ -313,8 +384,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
     <SidebarContainer $collapsed={collapsed} className={className} style={style}>
       <SidebarHeader $collapsed={collapsed}>
         <Logo $collapsed={collapsed}>
-          <div className="logo-icon">R</div>
-          <span className="logo-text">Rescale</span>
+          <div className="logo-icon"></div>
+          <span className="logo-text">rescale</span>
         </Logo>
         {!collapsed && (
           <CollapseButton onClick={handleCollapseToggle} aria-label="Collapse sidebar">
@@ -338,47 +409,34 @@ export const Sidebar: React.FC<SidebarProps> = ({
         inlineCollapsed={collapsed}
       />
 
-      {userProfile && (
-        <UserSection $collapsed={collapsed}>
-          <UserProfile $collapsed={collapsed} onClick={onUserProfileClick}>
-            <Avatar 
-              size={32} 
-              src={userProfile.avatar} 
-              icon={!userProfile.avatar && <UserOutlined />}
-            />
-            <div className="user-info">
-              <Text className="user-name">{userProfile.name}</Text>
-              <Text className="user-email">{userProfile.email}</Text>
+      <UserSection $collapsed={collapsed}>
+        {!collapsed && (
+          <>
+            <div className="footer-item" onClick={onHelpClick}>
+              <span className="footer-icon">💡</span>
+              Help
             </div>
-          </UserProfile>
-
-          <UserActions $collapsed={collapsed}>
-            {collapsed ? (
-              <>
-                <Tooltip title="Help" placement="right">
-                  <ActionButton onClick={onHelpClick} aria-label="Help">
-                    <QuestionCircleOutlined />
-                  </ActionButton>
-                </Tooltip>
-                <Tooltip title="Logout" placement="right">
-                  <ActionButton onClick={onLogoutClick} aria-label="Logout">
-                    <LogoutOutlined />
-                  </ActionButton>
-                </Tooltip>
-              </>
-            ) : (
-              <>
-                <ActionButton onClick={onHelpClick} aria-label="Help">
-                  <QuestionCircleOutlined />
-                </ActionButton>
-                <ActionButton onClick={onLogoutClick} aria-label="Logout">
-                  <LogoutOutlined />
-                </ActionButton>
-              </>
+            
+            <div className="footer-item">
+              <span className="footer-icon">🔄</span>
+              Disable New UI
+            </div>
+            
+            <button className="submit-feedback">
+              Submit Feedback
+            </button>
+            
+            {userProfile && (
+              <div className="user-email">
+                <div className="user-avatar">
+                  {userProfile.name ? userProfile.name.charAt(0).toUpperCase() : 'U'}
+                </div>
+                {userProfile.email}
+              </div>
             )}
-          </UserActions>
-        </UserSection>
-      )}
+          </>
+        )}
+      </UserSection>
     </SidebarContainer>
   );
 };
