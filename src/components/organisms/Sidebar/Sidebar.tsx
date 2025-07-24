@@ -1,7 +1,7 @@
 import React from 'react';
 import { Menu, Avatar, Typography, Tooltip } from 'antd';
 import styled from 'styled-components';
-import { MenuFoldOutlined, MenuUnfoldOutlined, UserOutlined, QuestionCircleOutlined, LogoutOutlined, DisconnectOutlined } from '@ant-design/icons';
+import { MenuFoldOutlined, MenuUnfoldOutlined, UserOutlined, QuestionCircleOutlined, LogoutOutlined, DisconnectOutlined, PlusOutlined } from '@ant-design/icons';
 
 const { Text } = Typography;
 
@@ -54,45 +54,64 @@ const SidebarContainer = styled.div<{ $collapsed: boolean }>`
   flex-direction: column;
   transition: width 0.2s ease;
   position: relative;
-  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Roboto', sans-serif;
 
   .ant-menu {
     border-right: none;
     flex: 1;
     background: transparent;
-    padding: 16px 0;
+    padding: 0;
     
     // Section headers (like "Rescale Data", "Rescale AI")
     .section-header {
-      padding: 8px 24px 4px 24px;
+      padding: 16px 16px 8px 16px;
       font-size: 12px;
       font-weight: 500;
       color: #8F99B8;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-top: 16px;
+      text-transform: none;
+      letter-spacing: 0;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
       
       &:first-child {
-        margin-top: 0;
+        margin-top: 16px;
+      }
+      
+      .beta-badge {
+        background: #8F99B8;
+        color: white;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-size: 10px;
+        font-weight: 500;
+        text-transform: uppercase;
       }
     }
     
     .ant-menu-item {
-      height: 36px;
-      line-height: 36px;
-      margin: 1px 16px;
-      border-radius: 6px;
-      padding: 0 12px;
+      height: 40px;
+      line-height: 22px;
+      margin: 0;
+      border-radius: 0;
+      padding: 9px 16px;
       font-size: 14px;
       font-weight: 400;
-      color: #000000;
+      color: #1890FF;
+      background: transparent;
+      
+      &:not(.workspace-item):not(.section-header) {
+        border-left: 3px solid transparent;
+      }
       
       &.ant-menu-item-selected {
-        background-color: #E5F4FF;
-        color: #0272C3;
+        background-color: #F3F7FF;
+        color: #1890FF;
+        border-left: 3px solid #1890FF;
         
         .ant-menu-item-icon {
-          color: #0272C3;
+          color: #1890FF;
         }
         
         &::after {
@@ -101,60 +120,95 @@ const SidebarContainer = styled.div<{ $collapsed: boolean }>`
       }
       
       &:hover:not(.ant-menu-item-selected) {
-        background-color: #F8F9FA;
-        color: #000000;
+        background-color: #F3F7FF;
+        color: #1890FF;
       }
       
       .ant-menu-item-icon {
-        color: #0272C3;
+        color: #1890FF;
         font-size: 16px;
-        margin-right: 8px;
+        margin-right: 12px;
         min-width: 16px;
       }
     }
     
     .workspace-item {
-      height: 44px;
-      margin: 4px 16px;
-      padding: 0 12px;
-      border-radius: 8px;
-      font-weight: 500;
-      background-color: #F8F9FA;
-      border: 1px solid #E9ECEF;
+      height: 40px;
+      margin: 8px 16px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-weight: 400;
+      background-color: #F3F7FF;
+      border: 1px solid #D9E9FF;
+      color: #000000;
+      display: flex;
+      align-items: center;
       
       .workspace-icon {
-        width: 24px;
-        height: 24px;
-        background: #0272C3;
-        border-radius: 4px;
+        width: 20px;
+        height: 20px;
+        background: #1890FF;
+        border-radius: 3px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         margin-right: 8px;
+        color: white;
+        font-size: 10px;
         
         &::after {
-          content: '📁';
-          font-size: 12px;
+          content: '🏢';
         }
+      }
+      
+      .external-link-icon {
+        margin-left: auto;
+        color: #8F99B8;
+        font-size: 12px;
       }
     }
   }
 `;
 
 const SidebarHeader = styled.div<{ $collapsed: boolean }>`
-  padding: 16px 24px;
+  padding: 16px;
   display: flex;
   align-items: center;
-  justify-content: ${props => props.$collapsed ? 'center' : 'flex-start'};
+  justify-content: space-between;
   border-bottom: 1px solid #F0F0F0;
   height: 60px;
   background: #FFFFFF;
 `;
 
+const NewButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  margin: 16px;
+  background: transparent;
+  border: 1px solid #D9E9FF;
+  border-radius: 6px;
+  color: #1890FF;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: #F3F7FF;
+    border-color: #1890FF;
+  }
+  
+  .ant-btn-icon {
+    font-size: 14px;
+  }
+`;
+
 const Logo = styled.div<{ $collapsed: boolean }>`
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   
   .logo-text {
     font-family: 'Roboto', sans-serif;
@@ -165,22 +219,22 @@ const Logo = styled.div<{ $collapsed: boolean }>`
   }
   
   .logo-icon {
-    width: 24px;
-    height: 24px;
-    background: #0272C3;
-    border-radius: 4px;
+    width: 28px;
+    height: 16px;
+    background: #1890FF;
+    border-radius: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 8px;
     position: relative;
     
-    // Rescale cloud icon approximation
+    // Rescale logo approximation  
     &::before {
-      content: '☁';
-      font-size: 14px;
+      content: '⚡';
+      font-size: 10px;
     }
   }
 `;
@@ -188,17 +242,17 @@ const Logo = styled.div<{ $collapsed: boolean }>`
 const CollapseButton = styled.button`
   background: none;
   border: none;
-  padding: var(--rescale-space-2);
+  padding: 8px;
   cursor: pointer;
-  border-radius: var(--rescale-radius-base);
-  color: var(--rescale-color-gray-700);
+  border-radius: 4px;
+  color: #8F99B8;
   display: flex;
   align-items: center;
   justify-content: center;
   
   &:hover {
-    background-color: var(--rescale-color-gray-100);
-    color: var(--rescale-color-brand-blue);
+    background-color: #F3F7FF;
+    color: #1890FF;
   }
 `;
 
@@ -385,7 +439,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       <SidebarHeader $collapsed={collapsed}>
         <Logo $collapsed={collapsed}>
           <div className="logo-icon"></div>
-          <span className="logo-text">rescale</span>
+          {!collapsed && <span className="logo-text">rescale</span>}
         </Logo>
         {!collapsed && (
           <CollapseButton onClick={handleCollapseToggle} aria-label="Collapse sidebar">
@@ -401,12 +455,20 @@ export const Sidebar: React.FC<SidebarProps> = ({
         )}
       </SidebarHeader>
 
+      {!collapsed && (
+        <NewButton>
+          <PlusOutlined />
+          New
+        </NewButton>
+      )}
+
       <Menu
         mode="inline"
         selectedKeys={selectedKey ? [selectedKey] : []}
         items={menuItems}
         onSelect={handleMenuSelect}
         inlineCollapsed={collapsed}
+        style={{ borderRight: 'none' }}
       />
 
       <UserSection $collapsed={collapsed}>

@@ -172,7 +172,7 @@ const defaultUserProfile = {
 export const Default: Story = {
   args: {
     items: defaultMenuItems,
-    selectedKey: 'dashboard',
+    selectedKey: 'jobs',
     collapsed: false,
     userProfile: defaultUserProfile,
     onSelect: action('onSelect'),
