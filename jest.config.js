@@ -56,12 +56,19 @@ export default {
         },
       },
     ],
+    '^.+\\.m?js$': 'babel-jest',
   },
   testTimeout: 10000,
   // For handling dynamic imports and ES modules
   transformIgnorePatterns: [
     'node_modules/(?!(@ant-design|antd|@babel|@storybook)/)',
   ],
+  extensionsToTreatAsEsm: ['.js'],
+  globals: {
+    'ts-jest': {
+      useESM: true,
+    },
+  },
   // Accessibility testing setup
   testEnvironmentOptions: {
     url: 'http://localhost:3000',
