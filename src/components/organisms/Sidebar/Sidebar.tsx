@@ -2,6 +2,8 @@ import React from 'react';
 import { Menu, Avatar, Typography, Tooltip } from 'antd';
 import styled from 'styled-components';
 import { Icon } from '../../atoms/Icon';
+// Ensure these icons are included in the bundle
+import { MenuFoldOutlined, MenuUnfoldOutlined, UserOutlined, QuestionCircleOutlined, LogoutOutlined } from '@ant-design/icons';
 
 const { Text } = Typography;
 
