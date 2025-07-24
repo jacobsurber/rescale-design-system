@@ -1,0 +1,324 @@
+name: Design System Validation
+
+on:
+  pull_request:
+    paths:
+      - 'src/components/**'
+      - 'src/theme/**'
+      - 'figma-mcp.config.js'
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      validation_type:
+        description: 'Type of validation to run'
+        required: false
+        default: 'full'
+        type: choice
+        options:
+          - full
+          - tokens-only
+          - components-only
+          - accessibility-only
+
+jobs:
+  design-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    
+    strategy:
+      matrix:
+        node-version: [18, 20]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Needed for design drift detection
+      
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Check MCP Configuration
+        run: |
+          echo "🔍 Validating MCP configuration..."
+          node -e "
+            import config from './figma-mcp.config.js';
+            console.log('✅ Configuration loaded successfully');
+            console.log('Server:', config.server.host + ':' + config.server.port);
+            console.log('Features enabled:', Object.entries(config.features).filter(([k,v]) => v).map(([k]) => k).join(', '));
+          "
+      
+      - name: Run Design Token Validation
+        if: ${{ github.event.inputs.validation_type == 'full' || github.event.inputs.validation_type == 'tokens-only' }}
+        run: |
+          echo "🎨 Validating design tokens..."
+          npm run figma:validate -- --ci --type=tokens
+        continue-on-error: true
+        id: token-validation
+      
+      - name: Run Component Validation
+        if: ${{ github.event.inputs.validation_type == 'full' || github.event.inputs.validation_type == 'components-only' }}
+        run: |
+          echo "🧩 Validating components..."
+          npm run figma:validate -- --ci --type=components
+        continue-on-error: true
+        id: component-validation
+      
+      - name: Run Accessibility Validation
+        if: ${{ github.event.inputs.validation_type == 'full' || github.event.inputs.validation_type == 'accessibility-only' }}
+        run: |
+          echo "♿ Running accessibility validation..."
+          npm run figma:validate -- --ci --type=accessibility
+        continue-on-error: true
+        id: accessibility-validation
+      
+      - name: Detect Design Drift
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "🔍 Checking for design drift..."
+          # Compare design tokens between branches
+          git checkout main
+          npm run figma:extract -- --output=./temp/main-tokens.json --quiet || echo "Main branch extraction failed"
+          git checkout ${{ github.head_ref }}
+          npm run figma:extract -- --output=./temp/pr-tokens.json --quiet || echo "PR branch extraction failed"
+          
+          # Compare token files if both exist
+          if [[ -f "./temp/main-tokens.json" && -f "./temp/pr-tokens.json" ]]; then
+            node -e "
+              const fs = require('fs');
+              const mainTokens = JSON.parse(fs.readFileSync('./temp/main-tokens.json', 'utf8'));
+              const prTokens = JSON.parse(fs.readFileSync('./temp/pr-tokens.json', 'utf8'));
+              
+              const changes = [];
+              
+              // Check for color changes
+              Object.keys(prTokens.colors || {}).forEach(key => {
+                if (mainTokens.colors?.[key] !== prTokens.colors[key]) {
+                  changes.push(\`Color '\${key}' changed from \${mainTokens.colors?.[key]} to \${prTokens.colors[key]}\`);
+                }
+              });
+              
+              if (changes.length > 0) {
+                console.log('🚨 Design drift detected:');
+                changes.forEach(change => console.log('  • ' + change));
+                fs.writeFileSync('./drift-report.txt', changes.join('\n'));
+              } else {
+                console.log('✅ No design drift detected');
+              }
+            "
+          fi
+        continue-on-error: true
+      
+      - name: Run Visual Regression Tests
+        if: ${{ github.event.inputs.validation_type == 'full' }}
+        run: |
+          echo "📸 Running visual regression tests..."
+          npm run test:visual || echo "Visual tests completed with issues"
+        continue-on-error: true
+      
+      - name: Generate Validation Report
+        if: always()
+        run: |
+          echo "📊 Generating validation report..."
+          
+          # Create validation summary
+          mkdir -p ./validation/reports
+          
+          cat > ./validation/reports/summary.json << EOF
+          {
+            "timestamp": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+            "pr_number": "${{ github.event.number }}",
+            "commit_sha": "${{ github.sha }}",
+            "validation_results": {
+              "tokens": {
+                "status": "${{ steps.token-validation.outcome }}",
+                "details": "Design token validation completed"
+              },
+              "components": {
+                "status": "${{ steps.component-validation.outcome }}",
+                "details": "Component validation completed"
+              },
+              "accessibility": {
+                "status": "${{ steps.accessibility-validation.outcome }}",
+                "details": "Accessibility validation completed"
+              }
+            },
+            "overall_status": "${{ job.status }}"
+          }
+          EOF
+          
+          # Generate HTML report
+          node -e "
+            const fs = require('fs');
+            const summary = JSON.parse(fs.readFileSync('./validation/reports/summary.json', 'utf8'));
+            
+            const html = \`
+            <!DOCTYPE html>
+            <html>
+            <head>
+              <title>Design System Validation Report</title>
+              <style>
+                body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 40px; }
+                h1 { color: #0066cc; }
+                .status-pass { color: #28a745; }
+                .status-failure { color: #dc3545; }
+                .status-cancelled { color: #6c757d; }
+                .summary { background: #f8f9fa; padding: 20px; border-radius: 8px; }
+                table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+                th, td { padding: 12px; text-align: left; border-bottom: 1px solid #dee2e6; }
+                th { background-color: #e9ecef; }
+              </style>
+            </head>
+            <body>
+              <h1>🎨 Design System Validation Report</h1>
+              <div class=\"summary\">
+                <p><strong>Generated:</strong> \${summary.timestamp}</p>
+                <p><strong>PR #:</strong> \${summary.pr_number || 'N/A'}</p>
+                <p><strong>Commit:</strong> \${summary.commit_sha.substring(0, 8)}</p>
+              </div>
+              
+              <h2>Validation Results</h2>
+              <table>
+                <tr><th>Check</th><th>Status</th><th>Details</th></tr>
+                <tr>
+                  <td>Design Tokens</td>
+                  <td class=\"status-\${summary.validation_results.tokens.status}\">\${summary.validation_results.tokens.status.toUpperCase()}</td>
+                  <td>\${summary.validation_results.tokens.details}</td>
+                </tr>
+                <tr>
+                  <td>Components</td>
+                  <td class=\"status-\${summary.validation_results.components.status}\">\${summary.validation_results.components.status.toUpperCase()}</td>
+                  <td>\${summary.validation_results.components.details}</td>
+                </tr>
+                <tr>
+                  <td>Accessibility</td>
+                  <td class=\"status-\${summary.validation_results.accessibility.status}\">\${summary.validation_results.accessibility.status.toUpperCase()}</td>
+                  <td>\${summary.validation_results.accessibility.details}</td>
+                </tr>
+              </table>
+            </body>
+            </html>
+            \`;
+            
+            fs.writeFileSync('./validation/reports/report.html', html);
+            console.log('✅ Validation report generated');
+          "
+      
+      - name: Upload Validation Artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: validation-report-node-${{ matrix.node-version }}
+          path: |
+            validation/reports/
+            drift-report.txt
+          retention-days: 30
+      
+      - name: Comment PR with Results
+        if: github.event_name == 'pull_request' && matrix.node-version == '20'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            
+            let summary = {};
+            try {
+              summary = JSON.parse(fs.readFileSync('./validation/reports/summary.json', 'utf8'));
+            } catch (error) {
+              console.log('Could not read validation summary');
+              return;
+            }
+            
+            let driftReport = '';
+            try {
+              driftReport = fs.readFileSync('./drift-report.txt', 'utf8');
+            } catch (error) {
+              // No drift detected
+            }
+            
+            const getStatusIcon = (status) => {
+              switch(status) {
+                case 'success': return '✅';
+                case 'failure': return '❌';
+                case 'cancelled': return '⚠️';
+                default: return '⏳';
+              }
+            };
+            
+            const comment = `## 🎨 Design System Validation Results
+            
+            **Commit:** \`${summary.commit_sha?.substring(0, 8)}\`
+            **Generated:** ${summary.timestamp}
+            
+            | Check | Status | Details |
+            |-------|--------|---------|
+            | Design Tokens | ${getStatusIcon(summary.validation_results?.tokens?.status)} ${summary.validation_results?.tokens?.status?.toUpperCase() || 'UNKNOWN'} | ${summary.validation_results?.tokens?.details || 'No details'} |
+            | Components | ${getStatusIcon(summary.validation_results?.components?.status)} ${summary.validation_results?.components?.status?.toUpperCase() || 'UNKNOWN'} | ${summary.validation_results?.components?.details || 'No details'} |
+            | Accessibility | ${getStatusIcon(summary.validation_results?.accessibility?.status)} ${summary.validation_results?.accessibility?.status?.toUpperCase() || 'UNKNOWN'} | ${summary.validation_results?.accessibility?.details || 'No details'} |
+            
+            ${driftReport ? `### 🚨 Design Drift Detected\n\n\`\`\`\n${driftReport}\n\`\`\`` : '### ✅ No Design Drift Detected'}
+            
+            [📊 View Detailed Report](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
+            
+            ---
+            <sub>🤖 Generated by Design System Validation • [Rescale Design System](https://github.com/${{ github.repository }})</sub>
+            `;
+            
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: comment
+            });
+      
+      - name: Set Job Status
+        if: always()
+        run: |
+          if [[ "${{ steps.token-validation.outcome }}" == "failure" ]] || \
+             [[ "${{ steps.component-validation.outcome }}" == "failure" ]] || \
+             [[ "${{ steps.accessibility-validation.outcome }}" == "failure" ]]; then
+            echo "❌ Validation failed - check results above"
+            exit 1
+          else
+            echo "✅ All validations passed"
+          fi
+
+  # Separate job for MCP health check (only runs on specific events)
+  mcp-health-check:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Run MCP Health Check
+        run: |
+          echo "🏥 Running MCP health check..."
+          node scripts/figma-mcp-health-monitor.js --fix || echo "Health check completed with issues"
+        continue-on-error: true
+      
+      - name: Upload Health Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mcp-health-report
+          path: .mcp-cache/
+          retention-days: 7

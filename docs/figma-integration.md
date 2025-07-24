@@ -1,213 +1,367 @@
 # Figma Integration Guide
 
-This guide explains how to use the Figma integration tools included with the Rescale Design System to sync design tokens, extract components, and maintain consistency between design and code.
+This guide explains how to use the Figma MCP (Model Context Protocol) integration tools included with the Rescale Design System to sync design tokens, extract components, and maintain consistency between design and code.
+
+> **🚀 New MCP Integration**: We've migrated from REST API to MCP for better performance, real-time updates, and no authentication requirements. See [Advanced MCP Features](./figma-mcp-advanced-features.md) for cutting-edge capabilities.
 
 ## Table of Contents
 
-- [Setup](#setup)
+- [MCP Setup](#mcp-setup)
 - [Available Scripts](#available-scripts)
-- [Figma API Client](#figma-api-client)
+- [MCP Tools Overview](#mcp-tools-overview)
 - [Design Token Extraction](#design-token-extraction)
-- [Color System Sync](#color-system-sync)
-- [Component Preparation](#component-preparation)
+- [Real-time Features](#real-time-features)
+- [Asset Extraction](#asset-extraction)
+- [Design Validation](#design-validation)
 - [File Organization](#file-organization)
 - [Best Practices](#best-practices)
+- [Legacy API Support](#legacy-api-support)
 
-## Setup
+## MCP Setup
 
-### 1. Get Figma API Token
+**No authentication required!** The MCP integration works directly with your Figma desktop app.
 
-1. Go to [Figma account settings](https://www.figma.com/settings)
-2. Navigate to "Personal Access Tokens"
-3. Create a new token with `file_content:read` scope
-4. Copy the token
+### Prerequisites
 
-### 2. Configure Environment
+1. **Figma Desktop App** - Install and run the Figma desktop application
+2. **MCP Server** - Ensure the MCP server is available (usually auto-configured)
+3. **Node.js 18+** - Required for running the extraction scripts
 
-Add to your `.env` file:
-
-```bash
-FIGMA_API_TOKEN=figd_YOUR_TOKEN_HERE
-FIGMA_FILE_ID=YOUR_FILE_ID_HERE
-```
-
-Or export directly:
+### Quick Setup
 
 ```bash
-export FIGMA_API_TOKEN="figd_YOUR_TOKEN_HERE"
+# 1. Ensure Figma desktop is running
+open -a Figma
+
+# 2. Open your design file in Figma
+# 3. Select the frame or component you want to extract
+
+# 4. Run any MCP tool
+npm run figma:extract
 ```
 
-### 3. Find Your File ID
+### Verification
 
-Your Figma file ID is in the URL:
-```
-https://www.figma.com/file/FILE_ID_HERE/File-Name
+Test your MCP connection:
+
+```bash
+# This should show available MCP tools
+curl http://localhost:3845/tools 2>/dev/null || echo "MCP server not available"
 ```
 
 ## Available Scripts
 
-### Extract Design Tokens
+### Core MCP Tools
 
-Extract all design tokens from your Figma file:
-
-```bash
-npm run figma:extract-tokens
-
-# Output:
-# - figma-data/design-tokens.json
-# - figma-data/design-tokens.css
-# - figma-data/design-tokens.js
-# - figma-data/design-tokens.d.ts
-```
-
-### Sync Color System
-
-Synchronize colors between Figma and code:
+#### Extract Design Tokens
+Interactive CLI for comprehensive token extraction:
 
 ```bash
-npm run figma:sync-colors
+npm run figma:extract
 
-# Output:
-# - figma-data/colors.json
-# - figma-data/colors.css
-# - figma-data/colors.js
-# - figma-data/colors.scss
-# - figma-data/color-documentation.md
+# Features:
+# - All tokens (colors, typography, spacing)
+# - Colors only extraction
+# - Typography only extraction
+# - Component code generation
+# - Full export with stories
 ```
 
-### Generate Component Specs
-
-Create detailed component specifications:
+#### Color-Focused Extraction
 
 ```bash
-npm run figma:generate-specs
+npm run figma:colors
 
-# Output:
-# - figma-data/component-specs/
-# - figma-data/component-documentation.md
+# Advanced color extraction:
+# - Organized by color type/brightness
+# - Multiple export formats (CSS, JS, SCSS, JSON)
+# - TypeScript definitions
+# - Color palette stories
 ```
 
-### Prepare Figma File
-
-Comprehensive file preparation and analysis:
+#### Storybook Sync
 
 ```bash
-npm run figma:prepare
+npm run figma:sync-storybook
 
-# This runs a 10-step process:
-# 1. Connect to Figma API
-# 2. Analyze file structure
-# 3. Create design system pages
-# 4. Extract and organize colors
-# 5. Extract typography system
-# 6. Process components
-# 7. Generate specifications
-# 8. Create design tokens
-# 9. Generate documentation
-# 10. Optimize file structure
+# Generates:
+# - Token documentation stories
+# - Color palette displays
+# - Typography showcases
+# - Component stories with specs
 ```
 
-## Figma API Client
+#### Automated Sync
 
-### Basic Usage
+```bash
+npm run figma:auto-sync
 
-```typescript
-import { FigmaApiClient } from 'rescale-design-system/lib/figma-api-client';
-
-const client = new FigmaApiClient(process.env.FIGMA_API_TOKEN);
-const fileId = 'YOUR_FILE_ID';
-
-// Get file data
-const file = await client.getFile(fileId);
-
-// Extract colors
-const colors = await client.getAllColors();
-
-// Extract text styles
-const textStyles = await client.getAllTextStyles();
-
-// Extract components
-const components = await client.getAllComponents();
+# CI/CD ready automation:
+# - Watch mode for continuous sync
+# - Auto-commit to git
+# - Build Storybook after sync
+# - Change detection and metadata
 ```
 
-### Advanced Features
+### Advanced MCP Tools
 
-#### Search for Nodes
+#### Real-time Sync
 
-```typescript
-// Search by name
-const buttons = await client.searchNodesByName('button');
+```bash
+npm run figma:realtime
 
-// Search by type
-const frames = await client.searchNodesByType('FRAME');
+# Live synchronization modes:
+# - Token sync (updates as you work)
+# - Component sync (generates code from selections)
+# - Asset sync (extracts assets in real-time)
+# - Validation mode (continuous compliance checking)
 ```
 
-#### Extract Specific Data
+#### Smart Asset Extraction
 
-```typescript
-// Get all colors with context
-const colorsWithContext = await client.getAllColors();
-// Returns: Array<{
-//   name: string;
-//   color: FigmaColor;
-//   hex: string;
-//   context: string;
-// }>
+```bash
+npm run figma:assets
 
-// Get component specifications
-const specs = await client.getComponentSpecs(componentId);
+# Professional asset workflow:
+# - SVG code extraction (not images)
+# - Batch icon extraction
+# - React component generation
+# - Icon system setup
+# - Automatic optimization (40-60% size reduction)
 ```
 
-#### Export Images
+#### Design Validation
 
-```typescript
-// Export node as image
-const imageUrl = await client.exportNodeAsImage(
-  nodeId,
-  'PNG', // format: 'PNG' | 'JPG' | 'SVG' | 'PDF'
-  2      // scale: 1-4
-);
+```bash
+npm run figma:validate
+
+# Comprehensive validation suite:
+# - Visual accuracy testing
+# - Token compliance audit
+# - Accessibility validation (WCAG 2.1 AA)
+# - CI/CD integration
+# - HTML reports with diff images
+```
+
+## MCP Tools Overview
+
+### Direct Desktop Integration
+
+The MCP tools work directly with your Figma desktop app, providing instant access to design data:
+
+```javascript
+// Example: Extract from currently selected node
+import { mcp__figma-dev-mode-mcp-server__get_code } from './mcp-tools';
+
+// Get code for selected component
+const componentCode = await mcp__figma-dev-mode-mcp-server__get_code({
+  nodeId: "", // Current selection
+  clientName: "claude code",
+  clientLanguages: "typescript",
+  clientFrameworks: "react"
+});
+```
+
+### Real-time Selection Tracking
+
+```javascript
+// Get variable definitions from current selection
+const variables = await mcp__figma-dev-mode-mcp-server__get_variable_defs({
+  nodeId: "705-19295" // Specific component
+});
+// Returns: { 'primary/500': '#3B82F6', 'spacing/md': '16px' }
+```
+
+### Asset Server Access
+
+```javascript
+// Direct access to Figma's asset server
+const imageData = await mcp__figma-dev-mode-mcp-server__get_image({
+  nodeId: "123:456"
+});
+// Returns actual asset data, not URLs
+```
+
+### Code Connect Mapping
+
+```javascript
+// Map Figma components to codebase locations
+const codeMap = await mcp__figma-dev-mode-mcp-server__get_code_connect_map();
+// Returns: { '1:2': { codeConnectSrc: 'components/Button.tsx' } }
 ```
 
 ## Design Token Extraction
 
-### Token Structure
+### MCP-Powered Token Extraction
 
-The extraction process creates tokens in multiple formats:
+The MCP extraction provides real-time access to Figma's variable system:
 
 ```javascript
-// design-tokens.json
+// Real-time token extraction from current selection
+const extractedTokens = await extractor.generateTokens(outputDir);
+
+// Output structure:
 {
   "colors": {
-    "primary-500": "#3B82F6",
-    "primary-600": "#2563EB",
-    // ...
+    "primary/500": { 
+      hex: "#3B82F6", 
+      rgb: { r: 0.23, g: 0.51, b: 0.96 },
+      name: "Primary 500" 
+    }
   },
   "typography": {
-    "font-size-base": "16px",
-    "font-weight-medium": 500,
-    // ...
+    "heading/h1": {
+      fontFamily: "Inter",
+      fontSize: 32,
+      fontWeight: 700,
+      lineHeight: 40
+    }
   },
   "spacing": {
-    "spacing-4": "16px",
-    "spacing-8": "32px",
-    // ...
+    "spacing-md": "16px",
+    "spacing-lg": "24px"
   }
 }
 ```
 
-### Using Extracted Tokens
+### Hot Reload Integration
 
 ```typescript
-import tokens from './figma-data/design-tokens.json';
+// Tokens are automatically updated when Figma changes
+import { designTokens } from './src/theme/tokens/realtime';
 
-// In your components
+// Your components stay in sync
 const Button = styled.button`
-  background-color: ${tokens.colors['primary-500']};
-  font-size: ${tokens.typography['font-size-base']};
-  padding: ${tokens.spacing['spacing-4']};
+  background-color: ${designTokens.colors['primary/500'].hex};
+  font-size: ${designTokens.typography['button/medium'].fontSize}px;
+  padding: ${designTokens.spacing['spacing-md']};
 `;
 ```
+
+## Real-time Features
+
+### Live Token Sync
+
+```bash
+# Start real-time token synchronization
+npm run figma:realtime
+
+# Select mode 1 (Token Sync)
+# Now any frame you select in Figma automatically extracts its tokens!
+```
+
+### Component Generation
+
+```bash
+# Real-time component generation
+npm run figma:realtime
+
+# Select mode 2 (Component Sync)
+# Select a component in Figma -> React code is generated instantly
+```
+
+### Validation Monitoring
+
+```bash
+# Continuous design validation
+npm run figma:realtime
+
+# Select mode 4 (Validation Mode)
+# Validates your implementations against Figma specs in real-time
+```
+
+## Asset Extraction
+
+### SVG Code Extraction
+
+Unlike traditional image exports, MCP provides direct SVG code:
+
+```bash
+# Extract individual icon
+npm run figma:assets
+# Select option 1, choose an icon in Figma
+# Get optimized SVG code, not a rendered image!
+```
+
+### Batch Icon Extraction
+
+```bash
+# Extract all icons from a frame
+npm run figma:assets
+# Select option 3
+# All icons in the selected frame are extracted and optimized
+```
+
+### React Component Generation
+
+```bash
+# Generate React components from icons
+npm run figma:assets
+# Select option 4
+# Icons become fully-typed React components with props
+```
+
+Example generated component:
+
+```typescript
+export const ArrowIcon: React.FC<ArrowIconProps> = ({
+  size = 24,
+  color = 'currentColor',
+  className,
+  ...props
+}) => {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" className={className} {...props}>
+      <path d="M12 2L22 7V17L12 22L2 17V7L12 2Z" stroke={color} strokeWidth="2"/>
+    </svg>
+  );
+};
+```
+
+## Design Validation
+
+### Automated Validation
+
+```bash
+# Validate component implementations
+npm run figma:validate
+
+# Options:
+# 1. Single component validation
+# 2. Directory validation (atoms/molecules/organisms)
+# 3. Design token audit
+# 4. Visual regression testing
+# 5. Accessibility validation
+```
+
+### CI/CD Integration
+
+The validator creates GitHub Actions workflows:
+
+```yaml
+# Auto-generated workflow
+name: Design Validation
+on: [pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm run figma:validate --ci
+      - name: Comment PR with results
+        # Adds validation results to PR comments
+```
+
+### Validation Reports
+
+HTML reports with detailed results:
+
+- Visual diff images showing discrepancies
+- Token compliance audit
+- Accessibility score (WCAG 2.1 AA)
+- Component-by-component breakdown
+- Actionable recommendations
 
 ## Color System Sync
 
@@ -348,114 +502,173 @@ caption/small
 
 ## Best Practices
 
-### 1. Regular Syncing
+### 1. Selection-Based Workflow
 
-Set up a CI/CD pipeline to sync tokens regularly:
-
-```yaml
-# .github/workflows/sync-figma.yml
-name: Sync Figma Tokens
-on:
-  schedule:
-    - cron: '0 0 * * *' # Daily
-  workflow_dispatch:
-
-jobs:
-  sync:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - run: npm install
-      - run: npm run figma:extract-tokens
-        env:
-          FIGMA_API_TOKEN: ${{ secrets.FIGMA_API_TOKEN }}
-      - uses: peter-evans/create-pull-request@v5
-        with:
-          title: 'Update design tokens from Figma'
-```
-
-### 2. Version Control
-
-Track changes to design tokens:
+Work with designers to establish selection-based workflows:
 
 ```bash
-# .gitignore
-figma-data/*.json
-!figma-data/design-tokens.json
-!figma-data/colors.json
+# Workflow example:
+# 1. Designer selects component/frame in Figma
+# 2. Developer runs extraction tool
+# 3. Tokens/assets are extracted from selection
+# 4. Code is automatically updated
 ```
 
-### 3. Validation
+### 2. Real-time Development
 
-Validate extracted tokens before use:
-
-```typescript
-import { validateTokens } from './utils/token-validator';
-
-const tokens = require('./figma-data/design-tokens.json');
-
-if (!validateTokens(tokens)) {
-  throw new Error('Invalid token structure');
-}
-```
-
-### 4. Documentation
-
-Keep documentation in sync:
+Use real-time sync during active development:
 
 ```bash
-# After token extraction
-npm run figma:generate-docs
+# Start real-time sync during design reviews
+npm run figma:realtime
 
-# Generates:
-# - Token reference
-# - Component usage guide
-# - Migration notes
+# Tokens update as designers make changes
+# Components validate automatically
+# Assets extract on selection
 ```
 
-### 5. Error Handling
+### 3. Automated Validation
 
-Handle API limitations gracefully:
+Set up continuous validation:
 
-```typescript
-try {
-  const colors = await client.getAllColors();
-} catch (error) {
-  if (error.status === 429) {
-    // Rate limited - wait and retry
-    await delay(1000);
-    return retry();
+```json
+// package.json
+{
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run figma:validate",
+      "pre-push": "npm run figma:validate --strict"
+    }
   }
-  // Fall back to cached data
-  return getCachedColors();
 }
+```
+
+### 4. Asset Organization
+
+Organize extracted assets systematically:
+
+```
+src/
+├── assets/
+│   ├── icons/
+│   │   ├── svg/              # Raw SVGs from Figma
+│   │   ├── components/       # React components
+│   │   └── index.ts          # Barrel exports
+│   └── images/
+│       └── optimized/        # Processed images
+└── theme/
+    └── tokens/
+        ├── colors.json       # Color tokens
+        ├── typography.json   # Typography tokens
+        └── realtime/         # Hot-reload tokens
+```
+
+### 5. Design System Rules
+
+Use MCP to generate design system documentation:
+
+```javascript
+// Generate comprehensive design system rules
+const rules = await mcp__figma-dev-mode-mcp-server__create_design_system_rules({
+  clientName: "design-system",
+  clientFrameworks: "react",
+  clientLanguages: "typescript"
+});
+```
+
+### 6. Component Mapping
+
+Maintain mapping between Figma and code:
+
+```javascript
+// Use code connect mapping for consistency
+const mapping = await mcp__figma-dev-mode-mcp-server__get_code_connect_map();
+
+// Ensure Figma components map to actual code locations
+// mapping['1:2'] = { codeConnectSrc: 'src/components/Button.tsx' }
+```
+
+## Legacy API Support
+
+For backward compatibility, the original REST API tools are still available:
+
+### Legacy Scripts
+
+```bash
+# Legacy API-based tools (require FIGMA_API_TOKEN)
+npm run figma:extract-legacy
+npm run figma:colors-legacy
+npm run figma:sync-storybook-legacy
+npm run figma:auto-sync-legacy
+```
+
+### Migration from API to MCP
+
+| API Script | MCP Equivalent | Key Improvements |
+|------------|----------------|------------------|
+| `figma:extract-tokens` | `figma:extract` | Real-time selection, no tokens needed |
+| `figma:sync-colors` | `figma:colors` | Live color extraction, better organization |
+| `figma:generate-specs` | `figma:assets` | SVG code, React components |
+| `figma:prepare` | `figma:realtime` | Live sync, validation, hot reload |
+
+### When to Use Legacy API
+
+- **CI/CD pipelines** that can't access Figma desktop
+- **Automated scripts** running without human interaction
+- **File-based extraction** from specific Figma file IDs
+- **Batch processing** of multiple Figma files
+
+### Legacy Setup
+
+If you need the legacy API tools:
+
+```bash
+# Set up API token
+export FIGMA_API_TOKEN="figd_your_token_here"
+export FIGMA_FILE_ID="your_file_id"
+
+# Use legacy tools
+npm run figma:extract-legacy
 ```
 
 ## Troubleshooting
 
-### Common Issues
+### MCP Issues
 
-1. **"Invalid token" error**
-   - Check token has `file_content:read` scope
-   - Ensure token hasn't expired
-   - Verify file access permissions
+1. **"MCP server not available"**
+   - Ensure Figma desktop app is running
+   - Check `curl http://localhost:3845/tools`
+   - Restart Figma if needed
 
-2. **"File too large" error**
-   - Use pagination for large files
-   - Extract specific pages/nodes
-   - Increase timeout settings
+2. **"No selection found"**
+   - Select a frame or component in Figma
+   - Ensure the selection contains extractable content
+   - Try extracting from individual nodes
 
-3. **"Rate limit exceeded"**
-   - Add delays between requests
-   - Batch operations
-   - Use caching
+3. **"Asset optimization failed"**
+   - Check SVG content is valid
+   - Ensure sufficient disk space
+   - Try extracting individual assets
+
+### Performance Issues
+
+If extraction is slow:
+
+```bash
+# Use specific node targeting
+npm run figma:assets
+# Select individual assets instead of bulk extraction
+
+# Check MCP server health
+curl http://localhost:3845/health
+```
 
 ### Debug Mode
 
-Enable verbose logging:
+Enable verbose logging for MCP tools:
 
 ```bash
-DEBUG=figma:* npm run figma:extract-tokens
+DEBUG=figma-mcp:* npm run figma:extract
 ```
 
 ## Migration Guide

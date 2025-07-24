@@ -201,16 +201,15 @@ designTokens.spacing[8]   // 32px
 
 ## 🎨 Figma Integration
 
-The design system includes powerful Figma integration tools:
+The design system includes powerful Figma MCP (Model Context Protocol) integration tools that work directly with the Figma desktop app:
 
-### Setup Figma Access
+### Setup Figma MCP Access
 
-1. Get your Figma API token from [Figma account settings](https://www.figma.com/settings)
-2. Set the environment variable:
+1. Install and open the Figma desktop application
+2. Select the frame or component you want to extract from in Figma
+3. Ensure the MCP server is available on your system
 
-```bash
-export FIGMA_API_TOKEN="your-token-here"
-```
+**No API tokens required!** The MCP integration works directly with your Figma desktop app.
 
 ### Available Tools
 
@@ -219,12 +218,12 @@ export FIGMA_API_TOKEN="your-token-here"
 ```bash
 npm run figma:extract
 
-# Interactive CLI tool that extracts:
-# - Colors and color styles
+# Interactive MCP-based CLI tool that extracts:
+# - Colors and color styles from selected frames
 # - Typography and text styles
 # - Spacing tokens from frames
 # - Component specifications
-# - Effects and animations
+# - Real-time extraction from Figma desktop
 ```
 
 #### 🎯 Colors-Only Extractor
@@ -232,7 +231,8 @@ npm run figma:extract
 ```bash
 npm run figma:colors
 
-# Focused color extraction with:
+# Focused MCP color extraction with:
+# - Live extraction from selected Figma frames
 # - Organized color categories
 # - Multiple export formats (CSS, JS, SCSS, JSON)
 # - TypeScript definitions
@@ -244,42 +244,35 @@ npm run figma:colors
 ```bash
 npm run figma:sync-storybook
 
-# Complete design system sync:
-# - Generates Storybook stories for design tokens
+# Complete MCP design system sync:
+# - Generates Storybook stories from Figma selections
 # - Creates organized color, typography, and spacing displays
-# - Updates design token files
-# - Auto-categorizes design elements
+# - Updates design token files in real-time
+# - Auto-categorizes design elements from Figma
 ```
 
 #### 🤖 Automated Sync (CI/CD Ready)
 
 ```bash
-# Set environment variables first:
-export FIGMA_API_TOKEN="figd_your_token"
-export FIGMA_FILE_ID="your_file_id"
-
 npm run figma:auto-sync
 
-# Automated sync with smart features:
-# - Only syncs when Figma file changes
+# MCP-based automated sync with smart features:
+# - Real-time monitoring of Figma changes
 # - Tracks sync history and metadata
 # - Optional auto-commit to git
 # - CI/CD pipeline integration
+# - Watch mode for continuous sync
 ```
 
-#### 🌐 Browser Interface
+#### 🚀 MCP Advantages
 
-For non-technical users, open the browser-based extractor:
+The new MCP integration provides several advantages over traditional API-based extraction:
 
-```bash
-open scripts/figma-extractor.html
-
-# User-friendly web interface:
-# - No command line knowledge required
-# - Visual feedback and progress tracking
-# - Direct file downloads
-# - Error handling with clear messages
-```
+- **No API tokens needed** - Works directly with Figma desktop app
+- **Real-time extraction** - Immediate access to selected frames
+- **Live updates** - Changes in Figma reflect immediately
+- **Better accuracy** - Direct access to Figma's rendering engine
+- **Simplified workflow** - No need to manage file IDs or tokens
 
 ### Integration Documentation
 
@@ -349,11 +342,11 @@ npm run lint             # Run ESLint
 npm run lint:fix         # Fix linting issues
 npm run format           # Format code with Prettier
 
-# Figma Integration
-npm run figma:extract        # Interactive design token extraction
-npm run figma:colors         # Extract colors only
-npm run figma:sync-storybook # Sync with Storybook
-npm run figma:auto-sync      # Automated CI/CD sync
+# Figma MCP Integration
+npm run figma:extract        # Interactive MCP design token extraction
+npm run figma:colors         # Extract colors from Figma MCP
+npm run figma:sync-storybook # MCP-based Storybook sync
+npm run figma:auto-sync      # Automated MCP sync with CI/CD
 npm run typecheck        # Check TypeScript types
 ```
 
