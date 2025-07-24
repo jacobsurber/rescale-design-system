@@ -31,17 +31,14 @@
     </style>
   </head>
   <body>
-    <div id="root">Loading React app...</div>
-    <script>
-      console.log('HTML loaded');
-      window.addEventListener('load', () => {
-        console.log('Window loaded');
-        setTimeout(() => {
-          const root = document.getElementById('root');
-          console.log('Root element after 2s:', root?.innerHTML);
-        }, 2000);
-      });
-    </script>
+    <div id="root">
+      <div style="display: flex; align-items: center; justify-content: center; height: 100vh; font-family: Inter, sans-serif; color: #666;">
+        <div style="text-align: center;">
+          <div style="font-size: 24px; margin-bottom: 8px;">🎨</div>
+          <div>Loading Figma MCP Dashboard...</div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/dashboard/main.tsx"></script>
   </body>
 </html>
