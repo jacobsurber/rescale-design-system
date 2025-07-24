@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 const action = (name: string) => () => console.log(name);
-import { BankOutlined, BarChartOutlined, DeploymentUnitOutlined, MonitorOutlined, DashboardOutlined, FileTextOutlined, ApiOutlined, CloudOutlined, SettingOutlined } from '@ant-design/icons';
+import { BankOutlined, BarChartOutlined, DeploymentUnitOutlined, MonitorOutlined, DashboardOutlined, FileTextOutlined, ApiOutlined, CloudOutlined, SettingOutlined, FolderOutlined, DatabaseOutlined, NodeIndexOutlined, BranchesOutlined, LinkOutlined } from '@ant-design/icons';
 import { Sidebar } from './Sidebar';
 
 const meta: Meta<typeof Sidebar> = {
@@ -78,7 +78,7 @@ const defaultMenuItems = [
       <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
         <div className="workspace-icon"></div>
         <span className="workspace-text">Acme Motors Workspace</span>
-        <ExternalLinkOutlined className="external-link-icon" />
+        <LinkOutlined className="external-link-icon" />
       </div>
     ),
     className: 'workspace-item',
