@@ -28,6 +28,9 @@ export * from './components/layout';
 // Utility Components
 export * from './components/utils';
 
+// Dashboard Components
+export * from './dashboard';
+
 // Utilities
 export * from './utils';
 

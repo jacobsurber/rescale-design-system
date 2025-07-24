@@ -29,7 +29,7 @@ A comprehensive, production-ready design system built on top of Ant Design for R
 - **📱 Responsive Design**: Mobile-first approach with responsive components
 - **♿ Accessibility**: WCAG 2.1 AA compliant components with ARIA support
 - **🎭 Animation System**: Smooth animations powered by Framer Motion
-- **🎨 Figma Integration**: Tools for syncing with Figma design files
+- **🎨 Figma MCP Integration**: Real-time design token extraction with web dashboard
 - **📚 Comprehensive Documentation**: Storybook with interactive examples
 - **🧪 Testing Suite**: Unit tests, accessibility tests, and visual regression testing
 - **🚀 Performance Optimized**: Code splitting, lazy loading, and optimized bundles
@@ -202,6 +202,23 @@ designTokens.spacing[8]   // 32px
 ## 🎨 Figma Integration
 
 The design system includes powerful Figma MCP (Model Context Protocol) integration tools that work directly with the Figma desktop app:
+
+### 🎛️ Web Dashboard
+
+**NEW!** A beautiful web interface for real-time design token extraction:
+
+```bash
+npm run dashboard
+```
+
+- **Real-time Connection**: Live monitoring of MCP server status
+- **Visual Token Browser**: Interactive grid of extracted design tokens  
+- **Selection Detection**: Automatically detects your current Figma selection
+- **One-click Copy**: Copy token names and values to clipboard
+- **Live Updates**: Real-time synchronization with Figma changes
+- **Component Gallery**: Browse and validate React components (coming soon)
+
+Visit http://localhost:3001/dashboard.html after running the command.
 
 ### Setup Figma MCP Access
 

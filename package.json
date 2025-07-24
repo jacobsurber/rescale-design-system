@@ -69,6 +69,8 @@
     "figma:sync-storybook-legacy": "node scripts/legacy/figma-to-storybook.js",
     "figma:auto-sync-legacy": "node scripts/legacy/auto-sync-figma.js",
     "ci:debug": "node scripts/ci-debug.js",
+    "dashboard": "vite --config vite.config.dashboard.ts",
+    "dashboard:build": "vite build --config vite.config.dashboard.ts",
     "preview": "vite preview",
     "preview:all": "npm run build:all && vite preview",
     "storybook": "storybook dev -p 6006",
