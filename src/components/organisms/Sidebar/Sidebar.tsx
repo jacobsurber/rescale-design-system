@@ -81,12 +81,15 @@ const SidebarContainer = styled.div<{ $collapsed: boolean }>`
       
       .beta-badge {
         background: #8F99B8;
-        color: white;
+        color: #FFFFFF;
         padding: 2px 6px;
-        border-radius: 3px;
-        font-size: 10px;
-        font-weight: 500;
+        border-radius: 2px;
+        font-size: 9px;
+        font-weight: 600;
         text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-left: 6px;
+        display: inline-block;
       }
     }
     
@@ -139,32 +142,48 @@ const SidebarContainer = styled.div<{ $collapsed: boolean }>`
       border-radius: 6px;
       font-weight: 400;
       background-color: #F3F7FF;
-      border: 1px solid #D9E9FF;
+      border: 1px solid #E6F3FF;
       color: #000000;
       display: flex;
       align-items: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        background-color: #E6F3FF;
+        border-color: #B3DCFF;
+      }
       
       .workspace-icon {
-        width: 20px;
-        height: 20px;
-        background: #1890FF;
-        border-radius: 3px;
+        width: 16px;
+        height: 16px;
+        background: transparent;
+        border-radius: 0;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         margin-right: 8px;
-        color: white;
-        font-size: 10px;
+        color: #1890FF;
+        font-size: 14px;
         
-        &::after {
-          content: '🏢';
+        &::before {
+          content: '📁';
+          font-size: 14px;
         }
+      }
+      
+      .workspace-text {
+        flex: 1;
+        font-size: 14px;
+        color: #000000;
+        font-weight: 400;
       }
       
       .external-link-icon {
         margin-left: auto;
         color: #8F99B8;
         font-size: 12px;
+        opacity: 0.7;
       }
     }
   }
@@ -183,12 +202,12 @@ const SidebarHeader = styled.div<{ $collapsed: boolean }>`
 const NewButton = styled.button`
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  margin: 16px;
+  gap: 6px;
+  padding: 6px 12px;
+  margin: 12px 16px 16px 16px;
   background: transparent;
-  border: 1px solid #D9E9FF;
-  border-radius: 6px;
+  border: 1px solid #E6F3FF;
+  border-radius: 4px;
   color: #1890FF;
   font-size: 14px;
   font-weight: 400;
@@ -197,11 +216,12 @@ const NewButton = styled.button`
   
   &:hover {
     background: #F3F7FF;
-    border-color: #1890FF;
+    border-color: #B3DCFF;
   }
   
-  .ant-btn-icon {
-    font-size: 14px;
+  .plus-icon {
+    font-size: 12px;
+    font-weight: 500;
   }
 `;
 
@@ -219,22 +239,22 @@ const Logo = styled.div<{ $collapsed: boolean }>`
   }
   
   .logo-icon {
-    width: 28px;
+    width: 24px;
     height: 16px;
-    background: #1890FF;
-    border-radius: 2px;
+    background: transparent;
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #000000;
     font-weight: 400;
-    font-size: 8px;
+    font-size: 16px;
     position: relative;
     
-    // Rescale logo approximation  
+    // Rescale cloud logo approximation
     &::before {
-      content: '⚡';
-      font-size: 10px;
+      content: '☁️';
+      font-size: 14px;
     }
   }
 `;
@@ -457,7 +477,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 
       {!collapsed && (
         <NewButton>
-          <PlusOutlined />
+          <span className="plus-icon">+</span>
           New
         </NewButton>
       )}

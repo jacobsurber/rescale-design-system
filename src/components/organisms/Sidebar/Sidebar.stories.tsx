@@ -74,7 +74,13 @@ type Story = StoryObj<typeof Sidebar>;
 const defaultMenuItems = [
   {
     key: 'workspace',
-    label: 'Acme Motors Workspace',
+    label: (
+      <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
+        <div className="workspace-icon"></div>
+        <span className="workspace-text">Acme Motors Workspace</span>
+        <ExternalLinkOutlined className="external-link-icon" />
+      </div>
+    ),
     className: 'workspace-item',
   },
   {
@@ -105,7 +111,12 @@ const defaultMenuItems = [
   // Section divider for Rescale Data
   {
     key: 'rescale-data-header',
-    label: 'Rescale Data',
+    label: (
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        Rescale Data
+        <span className="beta-badge">BETA</span>
+      </div>
+    ),
     className: 'section-header',
     disabled: true,
   },
@@ -132,7 +143,12 @@ const defaultMenuItems = [
   // Section divider for Rescale AI
   {
     key: 'rescale-ai-header',
-    label: 'Rescale AI',
+    label: (
+      <div style={{ display: 'flex', alignItems: 'center' }}>
+        Rescale AI
+        <span className="beta-badge">BETA</span>
+      </div>
+    ),
     className: 'section-header',
     disabled: true,
   },
