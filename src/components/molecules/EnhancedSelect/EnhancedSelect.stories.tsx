@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 const action = (name: string) => () => console.log(name);
 import { BugOutlined, RocketOutlined, BarChartOutlined } from '@ant-design/icons';
 import { EnhancedSelect } from './EnhancedSelect';
+import { Icon } from '../../atoms/Icon';
 
 const meta: Meta<typeof EnhancedSelect> = {
   title: 'Forms/EnhancedSelect',
