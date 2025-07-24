@@ -9,6 +9,7 @@ import {
   Spin,
   Typography,
   Badge,
+  Select,
 } from 'antd';
 import { 
   MessageOutlined, 
@@ -109,13 +110,18 @@ export interface AssistantChatProps {
 
 const ChatDrawer = styled(Drawer)`
   .ant-drawer-content-wrapper {
-    width: 380px !important;
+    width: 400px !important;
     max-width: calc(100vw - 32px);
+    background: #FFFFFF;
+    border-radius: 12px 0 0 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
   }
   
   .ant-drawer-header {
-    padding: var(--rescale-space-4);
-    border-bottom: 1px solid var(--rescale-color-gray-200);
+    padding: 16px 20px;
+    border-bottom: 1px solid #F0F0F0;
+    background: #FFFFFF;
+    position: relative;
   }
   
   .ant-drawer-body {
@@ -123,30 +129,96 @@ const ChatDrawer = styled(Drawer)`
     display: flex;
     flex-direction: column;
     height: calc(100vh - 120px);
+    background: #FFFFFF;
+  }
+  
+  .ant-drawer-close {
+    display: none;
   }
 `;
 
 const ChatHeader = styled.div`
   display: flex;
   align-items: center;
-  gap: var(--rescale-space-3);
+  justify-content: center;
+  position: relative;
+  width: 100%;
 `;
 
-const AssistantInfo = styled.div`
+const CloseButton = styled.button`
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: none;
+  border-radius: 50%;
   display: flex;
-  flex-direction: column;
-  flex: 1;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #0272C3;
+  font-size: 16px;
+  
+  &:hover {
+    background: #F3F7FF;
+  }
 `;
 
-const AssistantName = styled.span`
-  font-size: var(--rescale-font-size-base);
-  font-weight: var(--rescale-font-weight-semibold);
-  color: var(--rescale-color-gray-900);
+const AssistantBadge = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: #FFFFFF;
+  border: 1px solid #0272C3;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #0272C3;
+  
+  .logo-icon {
+    width: 16px;
+    height: 16px;
+    background: #0272C3;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 8px;
+    
+    &::before {
+      content: '☁️';
+      font-size: 10px;
+    }
+  }
 `;
 
-const AssistantStatus = styled.span`
-  font-size: var(--rescale-font-size-xs);
-  color: var(--rescale-color-success);
+const UserAvatar = styled(Avatar)`
+  background-color: #0272C3;
+  color: white;
+  font-weight: 500;
+`;
+
+const AssistantAvatar = styled.div`
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #0272C3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  flex-shrink: 0;
+  
+  &::before {
+    content: '\u2601\ufe0f';
+    font-size: 14px;
+  }
 `;
 
 const MessagesContainer = styled.div`
@@ -167,21 +239,24 @@ const MessageGroup = styled.div<{ $sender: string }>`
 
 const MessageBubble = styled.div<{ $sender: string }>`
   max-width: 75%;
-  padding: var(--rescale-space-3);
-  border-radius: var(--rescale-radius-lg);
-  font-size: var(--rescale-font-size-sm);
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 14px;
   line-height: 1.5;
+  font-family: 'Roboto', sans-serif;
   
   ${props => props.$sender === 'user' 
     ? `
-      background: var(--rescale-color-brand-blue);
+      background: #0272C3;
       color: white;
-      border-bottom-right-radius: var(--rescale-radius-xs);
+      border-bottom-right-radius: 4px;
+      margin-left: auto;
     ` 
     : `
-      background: var(--rescale-color-gray-100);
-      color: var(--rescale-color-gray-900);
-      border-bottom-left-radius: var(--rescale-radius-xs);
+      background: #F3F7FF;
+      color: #000000;
+      border-bottom-left-radius: 4px;
+      border: 1px solid #E6F3FF;
     `
   }
 `;
@@ -204,9 +279,36 @@ const TypingIndicator = styled.div`
 `;
 
 const InputContainer = styled.div`
-  padding: var(--rescale-space-4);
-  border-top: 1px solid var(--rescale-color-gray-200);
-  background: var(--rescale-color-white);
+  padding: 16px 20px;
+  border-top: 1px solid #F0F0F0;
+  background: #FFFFFF;
+`;
+
+const InputSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+`;
+
+const ContextRow = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #8F99B8;
+`;
+
+const ContextSelect = styled(Select)`
+  .ant-select-selector {
+    border: 1px solid #0272C3 !important;
+    border-radius: 4px;
+    background: #FFFFFF;
+  }
+  
+  .ant-select-selection-item {
+    color: #0272C3;
+    font-weight: 500;
+  }
 `;
 
 const InputRow = styled.div`
@@ -215,25 +317,47 @@ const InputRow = styled.div`
   align-items: flex-end;
 `;
 
-const MessageInput = styled(TextArea)`
+const MessageInput = styled(Input)`
   flex: 1;
-  border-radius: var(--rescale-radius-base);
-  resize: none;
+  border-radius: 8px;
+  border: 1px solid #0272C3;
+  padding: 12px 16px;
+  font-size: 14px;
   
   &.ant-input {
-    min-height: 40px;
-    max-height: 120px;
+    height: 44px;
+  }
+  
+  &::placeholder {
+    color: #8F99B8;
+  }
+  
+  &:focus {
+    border-color: #0272C3;
+    box-shadow: 0 0 0 2px rgba(2, 114, 195, 0.1);
   }
 `;
 
 const SendButton = styled(Button)`
   flex-shrink: 0;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #0272C3;
+  border-color: #0272C3;
+  
+  &:hover {
+    background: #025AA3;
+    border-color: #025AA3;
+  }
+  
+  &:focus {
+    background: #025AA3;
+    border-color: #025AA3;
+  }
 `;
 
 const EmptyState = styled.div`
@@ -362,10 +486,11 @@ export const AssistantChat: React.FC<AssistantChatProps> = ({
 
   const renderMessage = (message: ChatMessage) => (
     <MessageGroup key={message.id} $sender={message.sender}>
-      <Avatar
-        size={32}
-        icon={message.sender === 'user' ? userAvatar : assistantAvatar}
-      />
+      {message.sender === 'user' ? (
+        <UserAvatar size={32}>JD</UserAvatar>
+      ) : (
+        <AssistantAvatar />
+      )}
       <div>
         <MessageBubble $sender={message.sender}>
           {message.content}
@@ -399,21 +524,13 @@ export const AssistantChat: React.FC<AssistantChatProps> = ({
       <ChatDrawer
         title={
           <ChatHeader>
-            <Avatar icon={assistantAvatar} />
-            <AssistantInfo>
-              <AssistantName>{assistantName}</AssistantName>
-              <AssistantStatus>Online</AssistantStatus>
-            </AssistantInfo>
-            <HeaderActions>
-              {messages.length > 0 && (
-                <Button
-                  type="text"
-                  icon={<ClearOutlined />}
-                  onClick={onClear}
-                  size="small"
-                />
-              )}
-            </HeaderActions>
+            <CloseButton onClick={() => handleToggle()}>
+              ✕
+            </CloseButton>
+            <AssistantBadge>
+              <div className="logo-icon"></div>
+              Assistant
+            </AssistantBadge>
           </ChatHeader>
         }
         placement={position.includes('Right') ? 'right' : 'left'}
@@ -443,7 +560,7 @@ export const AssistantChat: React.FC<AssistantChatProps> = ({
             
             {isTyping && (
               <MessageGroup $sender="assistant">
-                <Avatar size={32} icon={assistantAvatar} />
+                <AssistantAvatar />
                 <TypingIndicator>
                   <Spin size="small" />
                   {assistantName} is typing...
@@ -456,24 +573,38 @@ export const AssistantChat: React.FC<AssistantChatProps> = ({
         )}
         
         <InputContainer>
-          <InputRow>
-            <MessageInput
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
-              onKeyPress={handleKeyPress}
-              placeholder={placeholder}
-              maxLength={maxLength}
-              autoSize={{ minRows: 1, maxRows: 4 }}
-              disabled={loading}
-            />
-            <SendButton
-              type="primary"
-              icon={<SendOutlined />}
-              onClick={handleSendMessage}
-              disabled={!inputValue.trim() || loading}
-              loading={loading}
-            />
-          </InputRow>
+          <InputSection>
+            <InputRow>
+              <MessageInput
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+                onKeyPress={handleKeyPress}
+                placeholder="Ask Rescale Assistant..."
+                maxLength={maxLength}
+                disabled={loading}
+              />
+              <SendButton
+                type="primary"
+                icon={<SendOutlined />}
+                onClick={handleSendMessage}
+                disabled={!inputValue.trim() || loading}
+                loading={loading}
+              />
+            </InputRow>
+            <ContextRow>
+              <span>Context</span>
+              <ContextSelect
+                defaultValue="jobs"
+                size="small"
+                style={{ width: 80 }}
+                options={[
+                  { value: 'jobs', label: 'Jobs' },
+                  { value: 'workflows', label: 'Workflows' },
+                  { value: 'general', label: 'General' },
+                ]}
+              />
+            </ContextRow>
+          </InputSection>
         </InputContainer>
       </ChatDrawer>
     </>
