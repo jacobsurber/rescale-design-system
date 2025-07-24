@@ -46,83 +46,135 @@ export interface SidebarProps {
 }
 
 const SidebarContainer = styled.div<{ $collapsed: boolean }>`
-  width: ${props => props.$collapsed ? '64px' : '240px'};
+  width: ${props => props.$collapsed ? '64px' : '280px'};
   min-height: 100vh;
-  background: var(--rescale-color-white);
-  border-right: 1px solid var(--rescale-color-gray-300);
+  background: #FFFFFF;
+  border-right: 1px solid #E9F0FF;
   display: flex;
   flex-direction: column;
-  transition: width var(--rescale-duration-normal) var(--rescale-easing-ease-in-out);
+  transition: width 0.2s ease;
   position: relative;
+  font-family: 'Roboto', sans-serif;
 
   .ant-menu {
     border-right: none;
     flex: 1;
+    background: transparent;
+    padding: 8px 0;
     
     .ant-menu-item {
-      height: 44px;
-      line-height: 44px;
-      margin: 0;
-      border-radius: 0;
+      height: 40px;
+      line-height: 40px;
+      margin: 2px 12px;
+      border-radius: 8px;
+      padding: 0 16px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #606D95;
       
       &.ant-menu-item-selected {
-        background-color: var(--rescale-color-light-blue);
-        color: var(--rescale-color-brand-blue);
+        background-color: #E5F4FF;
+        color: #0272C3;
         
         .ant-menu-item-icon {
-          color: var(--rescale-color-brand-blue);
+          color: #0272C3;
+        }
+        
+        &::after {
+          display: none;
         }
       }
       
       &:hover:not(.ant-menu-item-selected) {
-        background-color: var(--rescale-color-gray-100);
+        background-color: #F3F7FF;
+        color: #606D95;
+      }
+      
+      .ant-menu-item-icon {
+        color: #8F99B8;
+        font-size: 16px;
+        margin-right: 12px;
       }
     }
     
-    .ant-menu-submenu-title {
-      height: 44px;
-      line-height: 44px;
-      margin: 0;
-      border-radius: 0;
+    .ant-menu-submenu {
+      .ant-menu-submenu-title {
+        height: 40px;
+        line-height: 40px;
+        margin: 2px 12px;
+        border-radius: 8px;
+        padding: 0 16px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #606D95;
+        
+        &:hover {
+          background-color: #F3F7FF;
+        }
+        
+        .ant-menu-submenu-arrow {
+          color: #8F99B8;
+        }
+      }
       
-      &:hover {
-        background-color: var(--rescale-color-gray-100);
+      .ant-menu-sub {
+        background: transparent;
+        
+        .ant-menu-item {
+          margin-left: 32px;
+          padding-left: 32px;
+          
+          &::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #A5B2D3;
+          }
+        }
       }
     }
   }
 `;
 
 const SidebarHeader = styled.div<{ $collapsed: boolean }>`
-  padding: var(--rescale-space-4);
+  padding: 16px 20px;
   display: flex;
   align-items: center;
-  justify-content: ${props => props.$collapsed ? 'center' : 'space-between'};
-  border-bottom: 1px solid var(--rescale-color-gray-300);
-  height: 56px;
+  justify-content: ${props => props.$collapsed ? 'center' : 'flex-start'};
+  border-bottom: 1px solid #E9F0FF;
+  height: 64px;
+  background: #FFFFFF;
 `;
 
 const Logo = styled.div<{ $collapsed: boolean }>`
   display: flex;
   align-items: center;
-  gap: var(--rescale-space-3);
+  gap: 12px;
   
   .logo-text {
-    font-weight: var(--rescale-font-weight-bold);
-    font-size: var(--rescale-font-size-lg);
-    color: var(--rescale-color-brand-blue);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
     display: ${props => props.$collapsed ? 'none' : 'block'};
   }
   
   .logo-icon {
     width: 32px;
     height: 32px;
-    background: var(--rescale-color-brand-blue);
-    border-radius: var(--rescale-radius-base);
+    background: #3399BB;
+    border-radius: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    font-weight: var(--rescale-font-weight-bold);
+    font-weight: 500;
+    font-size: 16px;
   }
 `;
 
@@ -144,24 +196,23 @@ const CollapseButton = styled.button`
 `;
 
 const UserSection = styled.div<{ $collapsed: boolean }>`
-  padding: var(--rescale-space-4);
-  border-top: 1px solid var(--rescale-color-gray-300);
-  display: flex;
-  flex-direction: column;
-  gap: var(--rescale-space-2);
+  padding: 16px 20px;
+  border-top: 1px solid #E9F0FF;
+  background: #FFFFFF;
+  margin-top: auto;
 `;
 
 const UserProfile = styled.div<{ $collapsed: boolean }>`
   display: flex;
   align-items: center;
-  gap: var(--rescale-space-3);
-  padding: var(--rescale-space-3);
-  border-radius: var(--rescale-radius-base);
+  gap: 12px;
+  padding: 8px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color var(--rescale-duration-normal);
+  transition: background-color 0.2s ease;
   
   &:hover {
-    background-color: var(--rescale-color-gray-100);
+    background-color: #F3F7FF;
   }
   
   .user-info {
@@ -170,38 +221,43 @@ const UserProfile = styled.div<{ $collapsed: boolean }>`
     flex: 1;
     
     .user-name {
-      font-weight: var(--rescale-font-weight-medium);
-      color: var(--rescale-color-gray-900);
-      font-size: var(--rescale-font-size-sm);
+      font-family: 'Roboto', sans-serif;
+      font-weight: 500;
+      color: #000000;
+      font-size: 14px;
+      line-height: 20px;
     }
     
     .user-email {
-      color: var(--rescale-color-gray-500);
-      font-size: var(--rescale-font-size-xs);
+      color: #767676;
+      font-size: 12px;
+      line-height: 16px;
     }
   }
 `;
 
 const UserActions = styled.div<{ $collapsed: boolean }>`
   display: flex;
-  gap: var(--rescale-space-1);
+  gap: 8px;
   justify-content: ${props => props.$collapsed ? 'center' : 'flex-start'};
+  margin-top: 8px;
 `;
 
 const ActionButton = styled.button`
   background: none;
   border: none;
-  padding: var(--rescale-space-2);
+  padding: 8px;
   cursor: pointer;
-  border-radius: var(--rescale-radius-base);
-  color: var(--rescale-color-gray-500);
+  border-radius: 6px;
+  color: #8F99B8;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.2s ease;
   
   &:hover {
-    background-color: var(--rescale-color-gray-100);
-    color: var(--rescale-color-brand-blue);
+    background-color: #F3F7FF;
+    color: #0272C3;
   }
 `;
 
