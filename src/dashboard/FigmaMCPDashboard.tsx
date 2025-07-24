@@ -6,7 +6,7 @@ import {
   DisconnectOutlined, 
   ReloadOutlined,
   BgColorsOutlined,
-  ComponentOutlined,
+  BlockOutlined,
   EyeOutlined,
   DownloadOutlined,
   SyncOutlined,
@@ -366,14 +366,14 @@ export const FigmaMCPDashboard: FC = () => {
           <TabPane 
             tab={
               <span>
-                <ComponentOutlined />
+                <BlockOutlined />
                 Components
               </span>
             } 
             key="components"
           >
             <SelectionPreview>
-              <ComponentOutlined style={{ fontSize: 48, color: '#d9d9d9' }} />
+              <BlockOutlined style={{ fontSize: 48, color: '#d9d9d9' }} />
               <div style={{ marginTop: 16 }}>
                 <Text type="secondary">
                   Component gallery and validation coming soon...

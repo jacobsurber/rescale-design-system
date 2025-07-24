@@ -47,15 +47,17 @@ export interface TopBarProps {
 
 const TopBarContainer = styled.div`
   height: 56px;
-  background: var(--rescale-color-white);
-  border-bottom: 1px solid var(--rescale-color-gray-300);
+  background: #FFFFFF;
+  border-bottom: 1px solid #E8E8E8;
   display: flex;
   align-items: center;
-  padding: 0 var(--rescale-space-6);
-  gap: var(--rescale-space-6);
+  padding: 0 24px;
+  gap: 24px;
   position: sticky;
   top: 0;
-  z-index: var(--rescale-z-sticky);
+  z-index: 100;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 `;
 
 const BreadcrumbSection = styled.div`

@@ -10,21 +10,54 @@ import { designTokens } from '../../../theme/tokens';
 import { Icon } from '../../atoms/Icon';
 
 const StyledTable = styled(Table)`
+  /* Table header styling to match Figma */
   .ant-table-thead > tr > th {
-    background: ${designTokens.colors.semantic.background.secondary};
-    border-bottom: 1px solid ${designTokens.colors.semantic.border.primary};
-    font-weight: ${designTokens.typography.fontWeight.semibold};
-    color: ${designTokens.colors.semantic.text.primary};
+    background: ${designTokens.colors.neutral.white};
+    border-bottom: 1px solid ${designTokens.colors.neutral.gray200};
+    font-family: ${designTokens.typography.fontFamily.primary};
+    font-size: ${designTokens.typography.fontSize.sm}px;
+    font-weight: ${designTokens.typography.fontWeight.medium};
+    color: ${designTokens.colors.neutral.characterPrimary};
+    padding: 12px 16px;
+    height: 44px; /* Match Figma row height */
+  }
+  
+  /* Table body styling to match Figma */
+  .ant-table-tbody > tr > td {
+    font-family: ${designTokens.typography.fontFamily.primary};
+    font-size: ${designTokens.typography.fontSize.sm}px;
+    color: ${designTokens.colors.neutral.characterPrimary};
+    padding: 12px 16px;
+    height: 44px; /* Match Figma row height */
+    border-bottom: 1px solid ${designTokens.colors.neutral.gray200};
   }
   
   .ant-table-tbody > tr {
+    background: ${designTokens.colors.neutral.white};
+    
     &:hover > td {
-      background: ${designTokens.colors.semantic.background.hover};
+      background: ${designTokens.colors.primary.goldenPurple1};
     }
   }
   
-  .ant-table-row-selected {
-    background: ${designTokens.colors.brand.lightBlue};
+  /* Selection styling */
+  .ant-table-row-selected > td {
+    background: ${designTokens.colors.primary.lightBlue} !important;
+  }
+  
+  /* Remove default Ant Design borders and spacing */
+  .ant-table-container {
+    border: none;
+  }
+  
+  .ant-table {
+    border: none;
+    background: ${designTokens.colors.neutral.white};
+  }
+  
+  /* Ensure proper spacing matches Figma */
+  .ant-table-cell {
+    vertical-align: middle;
   }
 `;
 
@@ -112,6 +145,11 @@ export interface Job {
   progress?: number; // percentage
   description?: string;
   tags?: string[];
+  
+  // Additional fields from Figma design
+  folder?: string;
+  runTime?: string;
+  type?: string;
 }
 
 export interface JobsTableProps extends Omit<TableProps<Job>, 'dataSource' | 'columns'> {
@@ -342,7 +380,13 @@ export const JobsTable: React.FC<JobsTableProps> = ({
       width: 200,
       render: (software: Software[]) => (
         <SoftwareLogoGrid 
-          software={software}
+          items={software.map((s, index) => ({
+            id: `${s.name}-${index}`,
+            name: s.name,
+            logo: s.logo,
+            software: s.name,
+            version: s.version,
+          }))}
           maxVisible={3}
           size="small"
         />
@@ -375,16 +419,23 @@ export const JobsTable: React.FC<JobsTableProps> = ({
       dataIndex: 'resources',
       key: 'resources',
       width: 150,
-      render: (resources: ResourceUsage) => (
-        <ResourceMetrics 
-          cpu={resources.cpu}
-          memory={resources.memory}
-          storage={resources.storage}
-          gpu={resources.gpu}
-          size="small"
-          layout="compact"
-        />
-      ),
+      render: (resources: ResourceUsage) => {
+        const metrics = [
+          { type: 'cpu' as const, usage: resources.cpu || 0, label: 'CPU' },
+          { type: 'memory' as const, usage: resources.memory || 0, label: 'Memory' },
+          ...(resources.storage ? [{ type: 'storage' as const, usage: resources.storage, label: 'Storage' }] : []),
+          ...(resources.gpu ? [{ type: 'network' as const, usage: resources.gpu, label: 'GPU' }] : []),
+        ].filter(metric => metric.usage > 0);
+        
+        return (
+          <ResourceMetrics 
+            metrics={metrics}
+            size="small"
+            layout="horizontal"
+            showDetails={false}
+          />
+        );
+      },
     },
     {
       title: 'Created',

@@ -8,48 +8,80 @@
 // COLORS
 // =============================================================================
 
-// Primary Brand Colors (Figma Extracted Values)
+// Primary Brand Colors (Figma Extracted Values - Updated from MCP)
 export const primaryColors = {
-  brandBlue: '#0272c3',     // Figma 2.5 Flow [JS] - Primary brand
-  darkBlue: '#455f87',      // Figma 2.5 Flow [JS] - Dark variant
-  lightBlue: '#f3f7ff',     // Figma 2.5 Flow [JS] - Light background
-  skyBlue: '#40A9FF',       // Keep existing for compatibility
-  lightBlueAlt: '#f0f5ff',  // Figma alternative light blue
+  // Core Rescale Brand Colors (from Figma MCP extraction)
+  rescaleBlue: '#3399BB',    // Main Rescale Blue brand color
+  brandBlue: '#0091F8',      // Primary/6 - Main interactive blue
+  darkBlue: '#005694',       // Primary/8 - Dark variant for text/emphasis
+  lightBlue: '#E5F4FF',      // Primary/1 - Light background tint
+  mediumBlue: '#0272C3',     // Primary/7 - Medium blue for secondary actions
+  
+  // Golden Purple palette (from Figma extraction)
+  goldenPurple1: '#F3F7FF',  // Lightest tint
+  goldenPurple2: '#E9F0FF',  // Light tint
+  goldenPurple3: '#BDCBEB',  // Medium light
+  goldenPurple4: '#A5B2D3',  // Medium
+  goldenPurple5: '#8F99B8',  // Medium dark
+  goldenPurple6: '#7B87AB',  // Dark
+  goldenPurple7: '#606D95',  // Darkest
+  
+  // Legacy support
+  skyBlue: '#40A9FF',        // Keep for backward compatibility
 } as const;
 
-// Neutral Colors (Enhanced Figma Scale)
+// Neutral Colors (Updated from Figma MCP extraction)
 export const neutralColors = {
-  gray900: '#1F1F1F',       // Figma tokens - Darkest text
-  gray800: '#262626',       // Figma tokens - Dark text
-  gray700: '#434343',       // Figma tokens - Secondary text
-  gray600: '#595959',       // Figma tokens - Muted text
-  gray500: '#8C8C8C',       // Figma tokens - Disabled text
-  gray400: '#BFBFBF',       // Figma tokens - Placeholder
-  gray300: '#D9D9D9',       // Figma tokens - Light borders
-  gray200: '#E8E8E8',       // Figma tokens - Subtle borders
-  gray100: '#f5f6f7',       // Figma 2.5 Flow [JS] - Light backgrounds
-  gray50: '#FAFAFA',        // Figma tokens - Lightest backgrounds
+  // Core neutrals from Figma variables
+  neutral1: '#FFFFFF',      // Pure white backgrounds
+  neutral13: '#000000',     // Pure black text/elements
   
-  // Border-specific grays from Figma
+  // Character colors for text
+  characterPrimary: '#000000',    // Primary text color (85% opacity in some contexts)
+  characterPrimaryInverse: '#FFFFFF', // Inverse text on dark backgrounds
+  
+  // Conditional colors
+  conditionalSiderBackground: '#FFFFFF', // Sidebar background
+  
+  // Geek Blue palette
+  geekBlue1: '#F0F5FF',     // Light blue background
+  
+  // Legacy grays (keeping for compatibility)
+  gray900: '#1F1F1F',       // Darkest text
+  gray800: '#262626',       // Dark text  
+  gray700: '#434343',       // Secondary text
+  gray600: '#595959',       // Muted text
+  gray500: '#8C8C8C',       // Disabled text
+  gray400: '#BFBFBF',       // Placeholder
+  gray300: '#D9D9D9',       // Light borders
+  gray200: '#E8E8E8',       // Subtle borders
+  gray100: '#f5f6f7',       // Light backgrounds
+  gray50: '#FAFAFA',        // Lightest backgrounds
+  
+  // Border-specific grays
   grayBorder: '#dfdfdf',    // Figma border color
-  grayBorderLight: '#dcdcdc', // Figma light border color
+  grayBorderLight: '#dcdcdc', // Light border color
   
   // Basic colors
   white: '#FFFFFF',
   black: '#000000',
   
-  // Background colors from Figma
-  backgroundLight: '#CCCCCC', // Figma page backgrounds
-  backgroundDark: '#555E69',  // Figma dark backgrounds
-  backgroundJob: '#dee4ec',   // Figma Job Setup & Status pages
+  // Background colors
+  backgroundLight: '#CCCCCC', // Page backgrounds
+  backgroundDark: '#555E69',  // Dark backgrounds
+  backgroundJob: '#dee4ec',   // Job pages
 } as const;
 
-// Status Colors (Updated from Figma)
+// Status Colors (Updated from Figma MCP extraction)
 export const statusColors = {
-  success: '#50c878',       // Figma 2.5 Flow [JS] - Success green
-  warning: '#FA8C16',       // Keep existing
-  error: '#FF4D4F',         // Keep existing
-  info: '#1890FF',          // Keep existing
+  success: '#50c878',       // Success green
+  warning: '#FA8C16',       // Warning orange
+  error: '#FF4D4F',         // Error red
+  info: '#1890FF',          // Info blue
+  
+  // Tag colors from Figma
+  tagBlue: '#3499BB',       // Blue tags (matches rescaleBlue)
+  tagRed: '#D62B1F',        // Red tags for important/urgent items
 } as const;
 
 // Accent Colors (Figma Extracted)
@@ -72,9 +104,12 @@ export const interactionColors = {
 
 export const typography = {
   fontFamily: {
-    primary: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', // Figma primary
-    display: 'Figtree, "Roboto", sans-serif',   // Figma display font
+    primary: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', // From Figma MCP extraction
+    display: 'Figtree, "Roboto", sans-serif',   // Display font
     inter: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif', // Fallback
+    
+    // Specific font definitions from Figma
+    bodyRegular: 'Roboto', // Body/regular font from extraction
   },
   fontSize: {
     xs: 12,

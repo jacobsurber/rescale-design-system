@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Progress, Tooltip, Card } from 'antd';
 import { ApiOutlined, CloudServerOutlined, ThunderboltOutlined } from '@ant-design/icons';
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import { Icon } from '../../atoms/Icon';
 
 export interface ResourceMetric {
@@ -83,7 +83,7 @@ const MetricsContainer = styled.div<{
     `;
   }}
   
-  ${props => props.$animated && `
+  ${props => props.$animated && css`
     animation: ${fadeInUp} 0.6s ease-out;
   `}
 `;
@@ -118,7 +118,7 @@ const MetricItem = styled.div<{
     }
   `}
   
-  ${props => props.$animated && `
+  ${props => props.$animated && css`
     animation: ${fadeInUp} ${props.$animationDuration}ms ease-out;
     animation-delay: ${props.$index * 100}ms;
     animation-fill-mode: both;

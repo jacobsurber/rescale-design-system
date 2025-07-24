@@ -1,6 +1,5 @@
 import type { FC } from 'react';
-import { ConfigProvider } from 'antd';
-import { FigmaMCPDashboard } from './FigmaMCPDashboard';
+import { MinimalDashboard } from './MinimalDashboard';
 
 /**
  * Standalone Figma MCP Dashboard App
@@ -8,19 +7,7 @@ import { FigmaMCPDashboard } from './FigmaMCPDashboard';
  * This can be served independently from the main design system
  */
 export const DashboardApp: FC = () => {
-  return (
-    <ConfigProvider
-      theme={{
-        token: {
-          colorPrimary: '#3B82F6',
-          borderRadius: 8,
-          fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
-        },
-      }}
-    >
-      <FigmaMCPDashboard />
-    </ConfigProvider>
-  );
+  return <MinimalDashboard />;
 };
 
 export default DashboardApp;
