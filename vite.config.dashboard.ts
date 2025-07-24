@@ -4,7 +4,9 @@ import path from 'path';
 
 // Configuration for the standalone dashboard app
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react({
+    jsxRuntime: 'automatic'
+  })],
   root: '.',
   build: {
     outDir: 'dist-dashboard',
@@ -15,6 +17,9 @@ export default defineConfig({
   server: {
     port: 3001,
     open: '/dashboard.html',
+  },
+  esbuild: {
+    jsx: 'automatic',
   },
   resolve: {
     alias: {

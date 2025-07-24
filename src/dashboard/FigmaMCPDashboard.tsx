@@ -1,4 +1,5 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
+import type { FC } from 'react';
 import { Card, Badge, Button, Tabs, Space, Typography, Alert, Spin, Tag, message } from 'antd';
 import { 
   WifiOutlined, 
@@ -83,7 +84,7 @@ const StatusIndicator = styled(Badge)<{ connected: boolean }>`
   }
 `;
 
-export const FigmaMCPDashboard: React.FC = () => {
+export const FigmaMCPDashboard: FC = () => {
   const {
     // Connection state
     connected,

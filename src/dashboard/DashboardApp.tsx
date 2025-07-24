@@ -1,15 +1,13 @@
-import React from 'react';
+import type { FC } from 'react';
 import { ConfigProvider } from 'antd';
 import { FigmaMCPDashboard } from './FigmaMCPDashboard';
-import { RescaleThemeProvider } from '../theme/ThemeProvider';
-import '../index.css';
 
 /**
  * Standalone Figma MCP Dashboard App
  * 
  * This can be served independently from the main design system
  */
-export const DashboardApp: React.FC = () => {
+export const DashboardApp: FC = () => {
   return (
     <ConfigProvider
       theme={{
@@ -20,9 +18,7 @@ export const DashboardApp: React.FC = () => {
         },
       }}
     >
-      <RescaleThemeProvider>
-        <FigmaMCPDashboard />
-      </RescaleThemeProvider>
+      <FigmaMCPDashboard />
     </ConfigProvider>
   );
 };

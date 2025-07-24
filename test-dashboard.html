@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Test</title>
+</head>
+<body>
+    <div id="root">Loading...</div>
+    <script>
+        console.log('Test page loaded');
+        console.log('Root element:', document.getElementById('root'));
+        
+        // Test if we can access the dashboard URL
+        fetch('/dashboard.html')
+            .then(response => response.text())
+            .then(html => {
+                console.log('Dashboard HTML loaded successfully');
+                console.log('Contains React script:', html.includes('main.tsx'));
+            })
+            .catch(error => {
+                console.error('Failed to load dashboard:', error);
+            });
+    </script>
+</body>
+</html>

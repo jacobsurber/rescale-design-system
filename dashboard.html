@@ -31,7 +31,17 @@
     </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">Loading React app...</div>
+    <script>
+      console.log('HTML loaded');
+      window.addEventListener('load', () => {
+        console.log('Window loaded');
+        setTimeout(() => {
+          const root = document.getElementById('root');
+          console.log('Root element after 2s:', root?.innerHTML);
+        }, 2000);
+      });
+    </script>
     <script type="module" src="/src/dashboard/main.tsx"></script>
   </body>
 </html>
