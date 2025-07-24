@@ -12,7 +12,7 @@ export type AntIconName = keyof typeof AntIcons;
 
 export interface IconProps {
   /** Ant Design icon name */
-  name: AntIconName | string; // Allow string for flexibility
+  name: AntIconName;
   /** Icon size */
   size?: IconSize;
   /** Icon color theme */
@@ -110,19 +110,6 @@ const StyledIcon = styled.span<{
   }
 `;
 
-// Fallback icon component
-const FallbackIcon = styled.span`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 1em;
-  height: 1em;
-  &:before {
-    content: '?';
-    font-weight: bold;
-  }
-`;
-
 /**
  * Icon - Standardized icon component wrapping Ant Design icons
  * 
@@ -147,38 +134,12 @@ export const Icon: React.FC<IconProps> = React.memo(({
   'aria-label': ariaLabel,
   ...props
 }) => {
-  // Get the Ant Design icon component - handle both direct component and string name
-  let AntIconComponent: React.ComponentType<any> | null = null;
-  
-  // Check if name is already a React component (for backward compatibility)
-  if (React.isValidElement(name)) {
-    return name as React.ReactElement;
-  }
-  
-  // Try to get icon by string name
-  if (typeof name === 'string' && name in AntIcons) {
-    AntIconComponent = (AntIcons as any)[name];
-  }
+  // Get the Ant Design icon component
+  const AntIconComponent = AntIcons[name] as React.ComponentType<React.SVGProps<SVGSVGElement>>;
   
   if (!AntIconComponent) {
     console.warn(`Icon "${name}" not found in @ant-design/icons`);
-    // Return a fallback icon
-    return (
-      <StyledIcon
-        {...props}
-        className={className}
-        style={style}
-        onClick={onClick}
-        tabIndex={clickable ? 0 : undefined}
-        role={clickable ? 'button' : 'img'}
-        aria-label={ariaLabel || `${name} (icon not found)`}
-        $size={size}
-        $color={color}
-        $clickable={clickable}
-      >
-        <FallbackIcon />
-      </StyledIcon>
-    );
+    return null;
   }
   
   const handleClick = (event: React.MouseEvent<HTMLSpanElement>) => {
@@ -190,7 +151,7 @@ export const Icon: React.FC<IconProps> = React.memo(({
   const handleKeyDown = (event: React.KeyboardEvent<HTMLSpanElement>) => {
     if (clickable && onClick && (event.key === 'Enter' || event.key === ' ')) {
       event.preventDefault();
-      onClick(event as any);
+      onClick(event as React.MouseEvent<HTMLSpanElement>);
     }
   };
   
